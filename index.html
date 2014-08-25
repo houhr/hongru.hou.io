@@ -30,13 +30,13 @@
           <div class="center-middle">
             <h1>Hongru Hou</h1>
             <p>
-              A <span class="glow">handcraftsman</span> @ CCA
+              A <span id="typing"></span> @ CCA
             </p>
           </div>
         </div>
       </header>
 
-      <img id="me" src="image/walking.jpg" alt="Walking" />
+      <img id="me" src="images/walking.jpg" alt="Walking" />
 
       <section id="resume">
         <a class="ratio-inner" href="files/Hongru_Hou_Resume.pdf">
@@ -132,5 +132,18 @@
       </footer>
     </main>
   </div><!-- wrapper end -->
+
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/typed.js"></script>
+  <script>
+    $(function(){
+      $("#typing").typed({
+        strings: ["", "designer", "developer", "translator", "writer", "handcraftsman"],
+        typeSpeed: 100,
+        backDelay: 1000
+      });
+    });
+  </script>
+
 </body>
 </html>

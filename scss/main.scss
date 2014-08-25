@@ -108,12 +108,6 @@ nav {
 
 }
 
-@keyframes glow {
-  to {
-    text-shadow: 0 0 0.2em $c-primary, 0 0 0.2em $c-primary, 0 0 0.2em $c-primary;
-  }
-}
-
 header {
   @include ratio(100%, 100%);
   background-color: $c-b;
@@ -129,9 +123,6 @@ header {
     margin-bottom: 0;
   }
 
-  .glow {
-    animation: glow 1.5s infinite alternate;
-  }
 }
 
 #me {
@@ -380,4 +371,16 @@ and (min-width : 960px) {
 
 nav .fa-bars {
   display: none;
+}
+
+// Animation CSS
+.typed-cursor{
+    opacity: 1;
+    animation: blink .8s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

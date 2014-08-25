@@ -68,17 +68,6 @@ nav i {
   right: 0.5em;
 }
 
-@-webkit-keyframes glow {
-  to {
-    text-shadow: 0 0 0.2em #b5e285, 0 0 0.2em #b5e285, 0 0 0.2em #b5e285;
-  }
-}
-
-@keyframes glow {
-  to {
-    text-shadow: 0 0 0.2em #b5e285, 0 0 0.2em #b5e285, 0 0 0.2em #b5e285;
-  }
-}
 header {
   position: relative;
   width: 100%;
@@ -97,10 +86,6 @@ header h1 {
 }
 header p {
   margin-bottom: 0;
-}
-header .glow {
-  -webkit-animation: glow 1.5s infinite alternate;
-          animation: glow 1.5s infinite alternate;
 }
 
 #me {
@@ -441,4 +426,34 @@ footer p a {
 }
 nav .fa-bars {
   display: none;
+}
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink .8s infinite;
+          animation: blink .8s infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
