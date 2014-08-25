@@ -1,0 +1,13 @@
+// Clear fix
+
+&:before,
+&:after {
+    content: " ";
+    display: table;
+}
+&:after {
+    clear: both;
+}
+& {
+    *zoom: 1;
+}

@@ -1,0 +1,383 @@
+@import '../css/normalize.css',
+        '../css/font-awesome.min.css';
+
+// Color
+$c-primary: #b5e285;
+$c-secondary: #e28585;
+$c-w: #fff;
+$c-b: #000;
+$c-g: #bbb;
+
+// Font-family
+
+$ff-head: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+$ff-head-sc: "Alegreya Sans SC", Arial, "Helvetica Neue", Helvetica, sans-serif;
+$ff-body: "Alegreya", Georgia, Times, "Times New Roman", serif;
+$ff-body-sc: "Alegreya SC", Georgia, Times, "Times New Roman", serif;
+
+// Font-size (Scale: 1.414)
+$fs-b-4: 3.998em;  // 72px
+$fs-b-3: 2.827em;  // 51px
+$fs-b-2: 1.999em;  // 36px
+$fs-b-1: 1.414em;  // 25px
+$fs-base: 18px;    // 1em
+$fs-s-1: 0.707em;  // 13px
+$fs-s-2: 0.5em;    // 9px
+
+// Main style
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff-body;
+  font-size: $fs-base;
+}
+
+.sc {
+  font-family: $ff-body-sc;
+}
+
+h1 {
+  font-family: $ff-head-sc;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+a {
+  text-decoration: none;
+  color: $c-primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin ratio($width, $percent) {
+  position: relative;
+  width: $width;
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: $percent;  //  100% = 1:1; 50% = 2:1; 200% = 1:2
+  }
+
+}
+
+.ratio-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.center-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+nav {
+  position: relative;
+  top: 0;
+  z-index: 9999;
+  background-color: $c-primary;
+  width: 100%;
+  height: 4em;
+
+  #logo {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+  }
+
+  i {
+    color: $c-w;
+    font-size: 2em;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+  }
+
+}
+
+@keyframes glow {
+  to {
+    text-shadow: 0 0 0.2em $c-primary, 0 0 0.2em $c-primary, 0 0 0.2em $c-primary;
+  }
+}
+
+header {
+  @include ratio(100%, 100%);
+  background-color: $c-b;
+  color: $c-primary;
+
+  h1 {
+    color: $c-primary;
+    font-size: $fs-b-2;
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .glow {
+    animation: glow 1.5s infinite alternate;
+  }
+}
+
+#me {
+  width: 100%;
+  display: block;
+}
+
+#resume {
+  display: none;
+}
+
+#artist-statement {
+  clear: both;
+  padding: 2em;
+  font-size: $fs-base;
+  background-color: $c-w;
+
+  p:first-child:first-letter {
+    float: left;
+    line-height: 0.8em;
+    font-size: 5em;
+    padding-right: 0.08em;
+    margin-left: -0.06em;
+    color: $c-primary;
+  }
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+#link {
+  @import 'clearfix';
+
+  a {
+    background-color: $c-b;
+    color: $c-w;
+
+    &:hover {
+      background-color: $c-primary;
+      color: $c-b;
+    }
+  }
+}
+
+#linkedin {
+  @include ratio(50%, 100%);
+  float: left;
+
+  a {
+    background-color: $c-primary;
+    color: $c-w;
+
+    &:hover {
+      background-color: $c-b;
+      color: $c-primary;
+    }
+  }
+
+  i {
+    font-size: 4em;
+  }
+}
+
+#email, #twitter, #dribbble, #github {
+  float: left;
+  background-color: #000;
+
+  i {
+    font-size: 2em;
+  }
+}
+
+#email {
+  @include ratio(25%, 100%);
+}
+#twitter {
+  @include ratio(25%, 100%);
+}
+#dribbble {
+  @include ratio(25%, 100%);
+}
+#github {
+  @include ratio(25%, 100%);
+}
+
+#map {
+  @include ratio(100%, 100%);
+  position: fixed;
+  bottom: 0;
+  z-index: -9999;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+footer {
+  @include ratio(100%, 50%);
+  background-color: $c-primary;
+
+  p {
+    margin: 0;
+    bottom: auto !important;
+    font-size: 0.7em;
+
+    svg {
+      padding-bottom: 1em;
+    }
+
+    a {
+      color: $c-b;
+    }
+  }
+}
+
+
+
+@media only screen
+and (min-width : 640px) {
+
+  header {
+    @include ratio(100%, 50%);
+    float: left;
+  }
+
+  #me {
+    @include ratio(100%, 50%);
+    float: right;
+  }
+
+  #resume {
+    @include ratio(50%, 100%);
+    display: block;
+    transform: translate(100%, 100%);
+
+    a {
+      background-color: $c-primary;
+      color: $c-w;
+
+      &:hover {
+        background-color: $c-b;
+        color: $c-primary;
+      }
+    }
+
+    p {
+      font-family: $ff-head-sc;
+      font-size: $fs-b-2;
+      margin-top: .2em;
+      margin-bottom: -.3em;
+    }
+  }
+
+  #artist-statement {
+    padding: 15%;
+  }
+
+  #email, #twitter, #dribbble, #github {
+    @include ratio(25%, 100%);
+  }
+
+  #linkedin {
+    display: none;
+  }
+
+  footer {
+    @include ratio(100%, 25%);
+  }
+}
+
+@media only screen
+and (max-width : 959px) {
+
+  #link {
+    margin-bottom: 50%;
+  }
+
+}
+
+@media only screen
+and (min-width : 960px) {
+
+  body {
+    background-color: #eee;
+  }
+
+  #wrapper {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  nav .fa-bars {
+    display: none;
+  }
+
+  header {
+    @include ratio(320px, 100%);
+    float: left;
+  }
+
+  #me {
+    @include ratio(640px, 50%);
+    float: left;
+  }
+
+  #resume {
+    @include ratio(320px, 100%);
+    transform: translate(200%, 100%);
+  }
+
+  #artist-statement {
+    width: 640px;
+    float: left;
+    padding: 77px;
+  }
+
+  #social {
+    margin-top: 320px;
+    width: 320px;
+    float: right;
+  }
+
+  #email, #twitter, #dribbble, #github {
+    @include ratio(320px, 50%);
+  }
+
+  #map {
+    @include ratio(640px, 50%);
+    z-index: auto;
+    position: absolute;
+    bottom: 320px;
+  }
+
+  footer {
+    @include ratio(960px, 320px);
+  }
+}
+
+nav .fa-bars {
+  display: none;
+}
