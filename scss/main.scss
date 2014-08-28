@@ -84,18 +84,29 @@ a {
   text-align: center;
 }
 
+.logo {
+  width: 26px;
+  height: 26px;
+  fill: $c-b;
+}
+
 nav {
   position: relative;
   top: 0;
   z-index: 9999;
   background-color: $c-primary;
   width: 100%;
-  height: 4em;
+  height: 80px;
+  text-align: center;
+  display: table;
 
-  #logo {
-    position: absolute;
-    top: 1em;
-    left: 1em;
+  a {
+    display: table-cell;
+    vertical-align: middle;
+
+    .logo {
+      fill: $c-w;
+    }
   }
 
   i {
@@ -233,10 +244,10 @@ footer {
   p {
     margin: 0;
     bottom: auto !important;
-    font-size: 0.7em;
+    font-size: $fs-s-1;
 
-    svg {
-      padding-bottom: 1em;
+    .logo {
+      margin-bottom: 1em;
     }
 
     a {
