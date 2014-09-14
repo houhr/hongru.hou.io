@@ -1,5 +1,10 @@
-@import '../css/normalize.css',
-        '../css/font-awesome.min.css';
+---
+---
+
+@charset "utf-8";
+
+@import 'normalize',
+        'font-awesome.min';
 
 // Color
 $c-primary: #b5e285;
