@@ -37,6 +37,7 @@ $fs-s-2: 0.5em;    // 9px
 body {
   font-family: $ff-body;
   font-size: $fs-base;
+  line-height: 135%;
 }
 
 .sc {
@@ -90,8 +91,8 @@ a {
 }
 
 .logo {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   fill: $c-b;
 }
 
@@ -294,7 +295,7 @@ and (min-width : 640px) {
     p {
       font-family: $ff-head-sc;
       font-size: $fs-b-2;
-      margin-top: .2em;
+      margin-top: .5em;
       margin-bottom: -.3em;
     }
   }
