@@ -124,7 +124,7 @@ nav {
 
 }
 
-header {
+#intro {
   @include ratio(100%, 100%);
   background-color: $c-b;
   color: $c-primary;
@@ -266,7 +266,7 @@ footer {
 @media only screen
 and (min-width : 640px) {
 
-  header {
+  #intro {
     @include ratio(100%, 50%);
     float: left;
   }
@@ -342,7 +342,7 @@ and (min-width : 960px) {
     display: none;
   }
 
-  header {
+  #intro {
     @include ratio(320px, 100%);
     float: left;
   }
