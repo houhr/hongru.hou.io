@@ -93,14 +93,14 @@ a {
 .logo {
   width: 24px;
   height: 24px;
-  fill: $c-b;
+  fill: $c-primary;
 }
 
 nav {
   position: relative;
   top: 0;
   z-index: 9999;
-  background-color: $c-primary;
+  background-color: $c-b;
   width: 100%;
   height: 80px;
   text-align: center;
@@ -111,7 +111,7 @@ nav {
     vertical-align: middle;
 
     .logo {
-      fill: $c-w;
+      fill: $c-primary;
     }
   }
 
@@ -127,11 +127,11 @@ nav {
 
 #intro {
   @include ratio(100%, 100%);
-  background-color: $c-b;
-  color: $c-primary;
+  background-color: $c-primary;
+  color: $c-b;
 
   h1 {
-    color: $c-primary;
+    color: $c-b;
     font-size: $fs-b-2;
     margin-top: 0;
   }
@@ -179,12 +179,12 @@ nav {
   @import 'clearfix';
 
   a {
-    background-color: $c-b;
+    background-color: $c-primary;
     color: $c-w;
 
     &:hover {
-      background-color: $c-primary;
-      color: $c-b;
+      background-color: $c-b;
+      color: $c-primary;
     }
   }
 }
@@ -210,7 +210,6 @@ nav {
 
 #email, #twitter, #dribbble, #github {
   float: left;
-  background-color: #000;
 
   i {
     font-size: 2em;
@@ -245,7 +244,8 @@ nav {
 
 footer {
   @include ratio(100%, 50%);
-  background-color: $c-primary;
+  background-color: $c-b;
+  color: $c-w;
 
   p {
     margin: 0;
@@ -257,7 +257,7 @@ footer {
     }
 
     a {
-      color: $c-b;
+      color: $c-w;
     }
   }
 }
@@ -283,12 +283,12 @@ and (min-width : 640px) {
     transform: translate(100%, 100%);
 
     a {
-      background-color: $c-primary;
-      color: $c-w;
+      background-color: $c-b;
+      color: $c-primary;
 
       &:hover {
-        background-color: $c-b;
-        color: $c-primary;
+        background-color: $c-primary;
+        color: $c-b;
       }
     }
 
