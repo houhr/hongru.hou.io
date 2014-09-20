@@ -40,7 +40,12 @@ body {
   line-height: 135%;
 }
 
-.sc {
+abbr[title] {
+  text-transform: lowercase;
+  border-bottom-width: 0;
+}
+
+abbr, .sc {
   font-family: $ff-body-sc;
 }
 
