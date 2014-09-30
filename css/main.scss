@@ -41,12 +41,14 @@ body {
 }
 
 abbr[title] {
+  font-family: $ff-body-sc;
   text-transform: lowercase;
   border-bottom-width: 0;
 }
 
-abbr, .sc {
+.sc {
   font-family: $ff-body-sc;
+  letter-spacing: 0.0556em; /* 0.0556em ≈ 1px */
 }
 
 h1 {
