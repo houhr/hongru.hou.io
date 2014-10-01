@@ -77,12 +77,12 @@ void drawDial() {
   // Draw date
   stroke(0);
   fill(255);
-  rect(cx - 7, cy + 40, 14, 18);
+  rect(cx - 8, cy + 40, 14, 18);
   fill(255, 0, 0);
-  rect(cx - 7, cy + 40, 14, 5);
+  rect(cx - 8, cy + 40, 14, 5);
   fill(0);
   textSize(9);
-  text(day(), cx, cy + 51);
+  text(day(), cx, cy + 52);
 
 }
 
