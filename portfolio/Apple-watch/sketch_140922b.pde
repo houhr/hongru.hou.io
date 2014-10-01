@@ -119,7 +119,7 @@ void draw() {
   line(h + offsetX, 0 + offsetY, h + offsetX, goldenSection * 0.55 + offsetY);
 
   strokeWeight(4);
-  line(m + offsetX, goldenSection + (ch - goldenSection) * 0.3 + offsetY, m + offsetX, ch + offsetY);
+  line(m + offsetX, goldenSection + (ch - goldenSection) * 0.32 + offsetY, m + offsetX, ch + offsetY);
 
   stroke(255, 120, 120);
   strokeWeight(2);
