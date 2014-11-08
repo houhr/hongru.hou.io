@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload');
 
 gulp.task('css', function() {
-  return gulp.src('scss/main.scss')
+  return gulp.src('css/main.scss')
     .pipe(sass({ style: 'expanded' }))
     .on('error', notify.onError("<%= error.message %>"))
     .pipe(autoprefixer('last 2 version', '> 5%'))
@@ -26,7 +26,7 @@ gulp.task('images', function() {
 
 // Watch
 gulp.task('watch', function() {
-    gulp.watch('scss/main.scss', ['css']);
+    gulp.watch('css/main.scss', ['css']);
 
     gulp.watch('src/images/original/**/*', ['images']);
 
