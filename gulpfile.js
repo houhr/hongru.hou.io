@@ -28,7 +28,7 @@ gulp.task('images', function() {
 gulp.task('watch', function() {
     gulp.watch('css/main.scss', ['css']);
 
-    gulp.watch('src/images/original/**/*', ['images']);
+    gulp.watch('images/original/**/*', ['images']);
 
     livereload.listen();
     gulp.watch(['css/main.min.css']).on('change', livereload.changed);

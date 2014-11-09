@@ -110,7 +110,7 @@ nav {
     padding: 0;
 
     li {
-      @include ratio(33.33%, 100%);
+      @include ratio(20%, 100%);
       float: left;
       background-color: $c-b;
       text-align: center;
@@ -343,6 +343,66 @@ ol#blog{
   }
 }
 
+ul#publication {
+  @import 'clearfix';
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.publication-list {
+  position: relative;
+  overflow: hidden;
+}
+
+.publication-image-wrapper {
+  @include ratio(100%, 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.publication-disc {
+  @include ratio(100%, 100%);
+
+  position: absolute;
+  top: 0;
+
+  p {
+    margin: 0 auto 2em auto;
+    padding: 0 1em;
+
+    &:last-child {
+      margin: 0 auto;
+    }
+
+    a {
+
+      background-color: $c-primary;
+      color: $c-b;
+      padding: .5em 1em;
+    }
+  }
+
+}
+
+.publication-title{
+  font-family: $ff-head;
+  font-size: $fs-b-1;
+  margin: 0 1em 1em 1em;
+
+  span {
+    font-style: italic;
+  }
+}
+
+.publication-image {
+  width: 100%;
+  filter: blur(15px);
+  position: absolute;
+  top: 0;
+}
+
+
 /*
  * --------------------
  *     CSS for iPad
@@ -351,14 +411,6 @@ ol#blog{
 
 @media only screen
 and (min-width : 640px) {
-
-  nav {
-
-      ul li {
-        @include ratio(33.33%, 50%);
-      }
-
-  }
 
   #intro {
     @include ratio(100%, 50%);
@@ -470,6 +522,29 @@ and (min-width : 640px) {
       margin: 0 auto 2em auto;
     }
 
+  }
+
+  ul#publication {
+    border-right: 1px solid $c-primary;
+  }
+
+  .publication-list {
+    width: 33.33%;
+    float: left;
+    border-left: 1px solid $c-primary;
+  }
+
+  .publication-image-wrapper {
+    //@include ratio(100%, 100%);
+  }
+
+  .publication-image {
+    filter: blur(0);
+  }
+
+  .publication-disc {
+    position: relative;
+    top: auto;
   }
 
 }

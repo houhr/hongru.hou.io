@@ -26,8 +26,6 @@ Temporary Items
 
 ### Sass ###
 .sass-cache
-
-### gulp ###
 node_modules
-
 _site
+images/original/

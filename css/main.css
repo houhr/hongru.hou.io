@@ -2400,7 +2400,7 @@ nav ul {
 }
 nav ul li {
   position: relative;
-  width: 33.33%;
+  width: 20%;
   float: left;
   background-color: #000;
   text-align: center;
@@ -2657,22 +2657,86 @@ ol#blog {
   color: #000;
 }
 
+ul#publication {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul#publication:before, ul#publication:after {
+  content: " ";
+  display: table;
+}
+ul#publication:after {
+  clear: both;
+}
+ul#publication {
+  *zoom: 1;
+}
+
+.publication-list {
+  position: relative;
+  overflow: hidden;
+}
+
+.publication-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.publication-image-wrapper:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.publication-disc {
+  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.publication-disc:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.publication-disc p {
+  margin: 0 auto 2em auto;
+  padding: 0 1em;
+}
+.publication-disc p:last-child {
+  margin: 0 auto;
+}
+.publication-disc p a {
+  background-color: #b5e285;
+  color: #000;
+  padding: .5em 1em;
+}
+
+.publication-title {
+  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.414em;
+  margin: 0 1em 1em 1em;
+}
+.publication-title span {
+  font-style: italic;
+}
+
+.publication-image {
+  width: 100%;
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
+  position: absolute;
+  top: 0;
+}
+
 /*
  * --------------------
  *     CSS for iPad
  * --------------------
  */
 @media only screen and (min-width: 640px) {
-  nav ul li {
-    position: relative;
-    width: 33.33%;
-  }
-  nav ul li:before {
-    content: "";
-    display: block;
-    padding-top: 50%;
-  }
-
   #intro {
     position: relative;
     width: 100%;
@@ -2814,6 +2878,26 @@ ol#blog {
     padding: 0;
     width: 66.66%;
     margin: 0 auto 2em auto;
+  }
+
+  ul#publication {
+    border-right: 1px solid #b5e285;
+  }
+
+  .publication-list {
+    width: 33.33%;
+    float: left;
+    border-left: 1px solid #b5e285;
+  }
+
+  .publication-image {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+
+  .publication-disc {
+    position: relative;
+    top: auto;
   }
 }
 @media only screen and (max-width: 959px) {
