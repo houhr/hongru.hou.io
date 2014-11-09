@@ -1,0 +1,23 @@
+---
+layout: default
+title: Blog
+---
+
+
+
+  <ol id="blog">
+    {% for post in site.posts %}
+      <li class="blog-post-list">
+        <div class="ratio-inner">
+          <div class="center-middle">
+            <h2 class="post-title">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+
+  <p class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a></p>
