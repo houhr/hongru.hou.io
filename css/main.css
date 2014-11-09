@@ -2342,10 +2342,6 @@ abbr[title] {
   /* 0.0556em ≈ 1px */
 }
 
-h1 {
-  font-family: "Alegreya Sans SC", Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-
 .nowrap {
   white-space: nowrap;
 }
@@ -2428,6 +2424,7 @@ nav ul li a {
 #intro h1 {
   color: #000;
   font-size: 1.999em;
+  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   margin-top: 0;
 }
 #intro p {
@@ -2780,8 +2777,8 @@ ul#publication {
     color: #b5e285;
   }
   #resume p {
-    font-family: "Alegreya Sans SC", Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1.999em;
+    font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.414em;
     margin-top: .5em;
     margin-bottom: -.3em;
   }
