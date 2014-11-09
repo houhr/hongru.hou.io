@@ -2417,7 +2417,7 @@ nav ul li a {
 #intro {
   position: relative;
   width: 100%;
-  background-color: #b5e285;
+  background-color: #fff;
   color: #000;
 }
 #intro:before {
@@ -2475,8 +2475,10 @@ nav ul li a {
   *zoom: 1;
 }
 #link a {
-  background-color: #b5e285;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+  border-top: 1px solid #b5e285;
+  border-left: 1px solid #b5e285;
 }
 #link a:hover {
   background-color: #000;
@@ -2494,8 +2496,9 @@ nav ul li a {
   padding-top: 100%;
 }
 #linkedin a {
-  background-color: #b5e285;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+  border-top: 1px solid #b5e285;
 }
 #linkedin a:hover {
   background-color: #000;
@@ -2705,12 +2708,12 @@ ol#blog {
     padding-top: 100%;
   }
   #resume a {
-    background-color: #000;
-    color: #b5e285;
-  }
-  #resume a:hover {
     background-color: #b5e285;
     color: #000;
+  }
+  #resume a:hover {
+    background-color: #000;
+    color: #b5e285;
   }
   #resume p {
     font-family: "Alegreya Sans SC", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -2824,20 +2827,21 @@ ol#blog {
  * --------------------
  */
 @media only screen and (min-width: 960px) {
-  #wrapper {
+  nav, main, footer {
     width: 960px;
     margin: 0 auto;
-    position: relative;
   }
 
-  nav .fa-bars {
-    display: none;
+  #wrapper {
+    position: relative;
   }
 
   #intro {
     position: relative;
     width: 320px;
     float: left;
+    border-left: 1px solid #b5e285;
+    border-bottom: 1px solid #b5e285;
   }
   #intro:before {
     content: "";
@@ -2879,6 +2883,9 @@ ol#blog {
     margin-top: 320px;
     width: 320px;
     float: right;
+  }
+  #social a {
+    border-right: 1px solid #b5e285;
   }
 
   #email, #twitter, #dribbble, #github {
@@ -2971,11 +2978,7 @@ ol#blog {
   .post .post-title {
     font-size: 2.827em;
   }
-  .post .post-content {
-    width: 50%;
-  }
   .post .post-comments {
-    width: 50%;
     margin: 0 auto;
     padding-bottom: 4em;
   }

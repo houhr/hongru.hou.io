@@ -127,7 +127,7 @@ nav {
 
 #intro {
   @include ratio(100%, 100%);
-  background-color: $c-primary;
+  background-color: $c-w;
   color: $c-b;
 
   h1 {
@@ -179,8 +179,10 @@ nav {
   @import 'clearfix';
 
   a {
-    background-color: $c-primary;
-    color: $c-w;
+    background-color: $c-w;
+    color: $c-b;
+    border-top: 1px solid $c-primary;
+    border-left: 1px solid $c-primary;
 
     &:hover {
       background-color: $c-b;
@@ -194,8 +196,9 @@ nav {
   float: left;
 
   a {
-    background-color: $c-primary;
-    color: $c-w;
+    background-color: $c-w;
+    color: $c-b;
+    border-top: 1px solid $c-primary;
 
     &:hover {
       background-color: $c-b;
@@ -373,12 +376,12 @@ and (min-width : 640px) {
     transform: translate(100%, 100%);
 
     a {
-      background-color: $c-b;
-      color: $c-primary;
+      background-color: $c-primary;
+      color: $c-b;
 
       &:hover {
-        background-color: $c-primary;
-        color: $c-b;
+        background-color: $c-b;
+        color: $c-primary;
       }
     }
 
@@ -489,19 +492,24 @@ and (max-width : 959px) {
 @media only screen
 and (min-width : 960px) {
 
-  #wrapper {
+  nav, main, footer {
     width: 960px;
     margin: 0 auto;
+  }
+
+  #wrapper {
     position: relative;
   }
 
-  nav .fa-bars {
-    display: none;
+  header {
+    //background-color: $c-b;
   }
 
   #intro {
     @include ratio(320px, 100%);
     float: left;
+    border-left: 1px solid $c-primary;
+    border-bottom: 1px solid $c-primary;
   }
 
   #me {
@@ -525,6 +533,10 @@ and (min-width : 960px) {
     margin-top: 320px;
     width: 320px;
     float: right;
+
+    a {
+      border-right: 1px solid $c-primary;
+    }
   }
 
   #email, #twitter, #dribbble, #github {
@@ -598,7 +610,7 @@ and (min-width : 960px) {
     }
 
     .post-content {
-      width: 50%;
+
 
       h2 {
 
@@ -610,7 +622,6 @@ and (min-width : 960px) {
     }
 
     .post-comments {
-      width: 50%;
       margin: 0 auto;
       padding-bottom: 4em;
     }
