@@ -98,33 +98,29 @@ a {
   width: 24px;
   height: 24px;
   fill: $c-primary;
+  vertical-align: middle;
 }
 
 nav {
-  position: relative;
-  top: 0;
-  z-index: 9999;
-  background-color: $c-b;
-  width: 100%;
-  height: 80px;
-  text-align: center;
-  display: table;
 
-  a {
-    display: table-cell;
-    vertical-align: middle;
+  ul {
+    @import 'clearfix';
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    .logo {
-      fill: $c-primary;
+    li {
+      @include ratio(33.33%, 100%);
+      float: left;
+      background-color: $c-b;
+      text-align: center;
+
+      a {
+        vertical-align: middle;
+      }
+
     }
-  }
 
-  i {
-    color: $c-w;
-    font-size: 2em;
-    position: absolute;
-    top: 0.5em;
-    right: 0.5em;
   }
 
 }
@@ -220,16 +216,7 @@ nav {
   }
 }
 
-#email {
-  @include ratio(25%, 100%);
-}
-#twitter {
-  @include ratio(25%, 100%);
-}
-#dribbble {
-  @include ratio(25%, 100%);
-}
-#github {
+#email, #twitter, #dribbble, #github {
   @include ratio(25%, 100%);
 }
 
@@ -266,10 +253,109 @@ footer {
   }
 }
 
+ol#blog{
+  @import 'clearfix';
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
+.blog-post-list {
+  @include ratio(100%, 50%);
+  border-bottom: 1px solid $c-primary;
+
+  .post-title {
+    padding: 0 1em;
+    font-family: $ff-head;
+    font-size: $fs-b-1;
+    margin: 1em 0 0;
+
+    .post-link {
+      color: $c-b;
+    }
+  }
+
+  .post-meta {
+    font-size: $fs-base;
+  }
+}
+
+.post {
+
+  .post-header {
+    @include ratio(100%, 50%);
+    background-color: $c-primary;
+  }
+
+  .post-title {
+    padding: 0 1em;
+    font-family: $ff-head;
+    font-size: $fs-b-1;
+    margin: 1em 0 0;
+  }
+
+  .post-link {
+    color: $c-b;
+  }
+
+  .post-meta {
+    font-size: $fs-base;
+  }
+
+
+  // Article style
+  .post-content {
+    padding: 1em;
+
+    p {
+      margin-bottom: 2em;
+    }
+
+    h2 {
+      font-size: $fs-base;
+      font-family: $ff-head;
+    }
+
+    blockquote {
+      margin-left: 0;
+      padding-left: 1em;
+      border-left: 1px solid $c-primary;
+    }
+
+  }
+
+  .post-comments {
+    padding: 1em;
+  }
+}
+
+.rss-subscribe {
+  margin: 0;
+  padding: 18px 0;
+  border-top: 1px solid $c-primary;
+  text-align: center;
+  background-color: $c-primary;
+  a {
+    color: $c-b;
+  }
+}
+
+/*
+ * --------------------
+ *     CSS for iPad
+ * --------------------
+ */
 
 @media only screen
 and (min-width : 640px) {
+
+  nav {
+
+      ul li {
+        @include ratio(33.33%, 50%);
+      }
+
+  }
 
   #intro {
     @include ratio(100%, 50%);
@@ -319,6 +405,70 @@ and (min-width : 640px) {
   footer {
     @include ratio(100%, 25%);
   }
+
+  .blog-post-list {
+
+    &:first-of-type {
+      @include ratio(100%, 50%);
+
+      .post-title {
+        font-size: $fs-b-2;
+
+        & + .post-meta {
+          font-size: $fs-b-1;
+        }
+
+      }
+    }
+
+    @include ratio(50%, 100%);
+    border-bottom: 1px solid $c-primary;
+    float: left;
+
+    &:nth-child(even) {
+      border-right: 1px solid $c-primary;
+    }
+
+    &:nth-child(odd) {
+      border-right: 1px solid $c-w;
+    }
+
+    &:nth-last-child(2) {
+      border-bottom: none;
+    }
+    &:nth-last-child(1) {
+      border-bottom: none;
+    }
+  }
+
+  .post {
+
+    .post-header {
+      @include ratio(100%, 50%);
+      background-color: $c-primary;
+    }
+    .post-title {
+      font-size: $fs-b-2;
+    }
+
+    .post-meta {
+      font-size: $fs-b-1;
+    }
+
+    .post-content {
+      padding: 0; //clear previous RWD
+      width: 66.66%;
+      margin: 4em auto;
+    }
+
+    .post-comments {
+      padding: 0; //clear previous RWD
+      width: 66.66%;
+      margin: 0 auto 2em auto;
+    }
+
+  }
+
 }
 
 @media only screen
@@ -330,12 +480,14 @@ and (max-width : 959px) {
 
 }
 
+/*
+ * --------------------
+ *     CSS for Mac
+ * --------------------
+ */
+
 @media only screen
 and (min-width : 960px) {
-
-  body {
-    background-color: #eee;
-  }
 
   #wrapper {
     width: 960px;
@@ -366,6 +518,7 @@ and (min-width : 960px) {
     width: 640px;
     float: left;
     padding: 77px;
+    border-left: 1px solid $c-primary;
   }
 
   #social {
@@ -388,6 +541,82 @@ and (min-width : 960px) {
   footer {
     @include ratio(960px, 320px);
   }
+
+  ol#blog {
+    border-left: 1px solid $c-primary;
+    border-right: 1px solid $c-primary;
+  }
+
+  .blog-post-list {
+
+    @include ratio(33.33%, 100%);
+    border-bottom: 1px solid $c-primary;
+    float: left;
+
+    &:first-of-type {
+      @include ratio(100%, 33.33%);
+
+      .post-title {
+        font-size: $fs-b-3;
+      }
+    }
+
+    &:nth-child(3n+2), &:nth-child(3n+3) {
+      border-right: 1px solid $c-primary;
+    }
+
+    &:nth-child(3n+4) {
+      border-right: 1px solid $c-w;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &:nth-last-child(2) {
+      border-bottom: none;
+    }
+
+    &:nth-last-child(3) {
+      border-bottom: none;
+    }
+
+  }
+
+
+  .post {
+
+    //border-left: 1px solid $c-primary;
+    //border-right: 1px solid $c-primary;
+
+    .post-header {
+      @include ratio(100%, 33.33%);
+      background-color: $c-primary;
+    }
+    .post-title {
+      font-size: $fs-b-3;
+    }
+
+    .post-content {
+      width: 50%;
+
+      h2 {
+
+      }
+
+      blockquote {
+
+      }
+    }
+
+    .post-comments {
+      width: 50%;
+      margin: 0 auto;
+      padding-bottom: 4em;
+    }
+
+  }
+
 }
 
 nav .fa-bars {

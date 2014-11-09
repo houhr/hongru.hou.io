@@ -2380,31 +2380,38 @@ a:hover {
   width: 24px;
   height: 24px;
   fill: #b5e285;
-}
-
-nav {
-  position: relative;
-  top: 0;
-  z-index: 9999;
-  background-color: #000;
-  width: 100%;
-  height: 80px;
-  text-align: center;
-  display: table;
-}
-nav a {
-  display: table-cell;
   vertical-align: middle;
 }
-nav a .logo {
-  fill: #b5e285;
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-nav i {
-  color: #fff;
-  font-size: 2em;
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
+nav ul:before, nav ul:after {
+  content: " ";
+  display: table;
+}
+nav ul:after {
+  clear: both;
+}
+nav ul {
+  *zoom: 1;
+}
+nav ul li {
+  position: relative;
+  width: 33.33%;
+  float: left;
+  background-color: #000;
+  text-align: center;
+}
+nav ul li:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+nav ul li a {
+  vertical-align: middle;
 }
 
 #intro {
@@ -2505,41 +2512,11 @@ nav i {
   font-size: 2em;
 }
 
-#email {
+#email, #twitter, #dribbble, #github {
   position: relative;
   width: 25%;
 }
-#email:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-
-#twitter {
-  position: relative;
-  width: 25%;
-}
-#twitter:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-
-#dribbble {
-  position: relative;
-  width: 25%;
-}
-#dribbble:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-
-#github {
-  position: relative;
-  width: 25%;
-}
-#github:before {
+#email:before, #twitter:before, #dribbble:before, #github:before {
   content: "";
   display: block;
   padding-top: 100%;
@@ -2586,7 +2563,113 @@ footer p a {
   color: #fff;
 }
 
+ol#blog {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ol#blog:before, ol#blog:after {
+  content: " ";
+  display: table;
+}
+ol#blog:after {
+  clear: both;
+}
+ol#blog {
+  *zoom: 1;
+}
+
+.blog-post-list {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #b5e285;
+}
+.blog-post-list:before {
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+.blog-post-list .post-title {
+  padding: 0 1em;
+  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.414em;
+  margin: 1em 0 0;
+}
+.blog-post-list .post-title .post-link {
+  color: #000;
+}
+.blog-post-list .post-meta {
+  font-size: 18px;
+}
+
+.post .post-header {
+  position: relative;
+  width: 100%;
+  background-color: #b5e285;
+}
+.post .post-header:before {
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+.post .post-title {
+  padding: 0 1em;
+  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.414em;
+  margin: 1em 0 0;
+}
+.post .post-link {
+  color: #000;
+}
+.post .post-meta {
+  font-size: 18px;
+}
+.post .post-content {
+  padding: 1em;
+}
+.post .post-content p {
+  margin-bottom: 2em;
+}
+.post .post-content h2 {
+  font-size: 18px;
+  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.post .post-content blockquote {
+  margin-left: 0;
+  padding-left: 1em;
+  border-left: 1px solid #b5e285;
+}
+.post .post-comments {
+  padding: 1em;
+}
+
+.rss-subscribe {
+  margin: 0;
+  padding: 18px 0;
+  border-top: 1px solid #b5e285;
+  text-align: center;
+  background-color: #b5e285;
+}
+.rss-subscribe a {
+  color: #000;
+}
+
+/*
+ * --------------------
+ *     CSS for iPad
+ * --------------------
+ */
 @media only screen and (min-width: 640px) {
+  nav ul li {
+    position: relative;
+    width: 33.33%;
+  }
+  nav ul li:before {
+    content: "";
+    display: block;
+    padding-top: 50%;
+  }
+
   #intro {
     position: relative;
     width: 100%;
@@ -2663,17 +2746,84 @@ footer p a {
     display: block;
     padding-top: 25%;
   }
+
+  .blog-post-list {
+    position: relative;
+    width: 50%;
+    border-bottom: 1px solid #b5e285;
+    float: left;
+  }
+  .blog-post-list:first-of-type {
+    position: relative;
+    width: 100%;
+  }
+  .blog-post-list:first-of-type:before {
+    content: "";
+    display: block;
+    padding-top: 50%;
+  }
+  .blog-post-list:first-of-type .post-title {
+    font-size: 1.999em;
+  }
+  .blog-post-list:first-of-type .post-title + .post-meta {
+    font-size: 1.414em;
+  }
+  .blog-post-list:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+  .blog-post-list:nth-child(even) {
+    border-right: 1px solid #b5e285;
+  }
+  .blog-post-list:nth-child(odd) {
+    border-right: 1px solid #fff;
+  }
+  .blog-post-list:nth-last-child(2) {
+    border-bottom: none;
+  }
+  .blog-post-list:nth-last-child(1) {
+    border-bottom: none;
+  }
+
+  .post .post-header {
+    position: relative;
+    width: 100%;
+    background-color: #b5e285;
+  }
+  .post .post-header:before {
+    content: "";
+    display: block;
+    padding-top: 50%;
+  }
+  .post .post-title {
+    font-size: 1.999em;
+  }
+  .post .post-meta {
+    font-size: 1.414em;
+  }
+  .post .post-content {
+    padding: 0;
+    width: 66.66%;
+    margin: 4em auto;
+  }
+  .post .post-comments {
+    padding: 0;
+    width: 66.66%;
+    margin: 0 auto 2em auto;
+  }
 }
 @media only screen and (max-width: 959px) {
   #link {
     margin-bottom: 50%;
   }
 }
+/*
+ * --------------------
+ *     CSS for Mac
+ * --------------------
+ */
 @media only screen and (min-width: 960px) {
-  body {
-    background-color: #eee;
-  }
-
   #wrapper {
     width: 960px;
     margin: 0 auto;
@@ -2722,6 +2872,7 @@ footer p a {
     width: 640px;
     float: left;
     padding: 77px;
+    border-left: 1px solid #b5e285;
   }
 
   #social {
@@ -2761,6 +2912,72 @@ footer p a {
     content: "";
     display: block;
     padding-top: 320px;
+  }
+
+  ol#blog {
+    border-left: 1px solid #b5e285;
+    border-right: 1px solid #b5e285;
+  }
+
+  .blog-post-list {
+    position: relative;
+    width: 33.33%;
+    border-bottom: 1px solid #b5e285;
+    float: left;
+  }
+  .blog-post-list:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+  .blog-post-list:first-of-type {
+    position: relative;
+    width: 100%;
+  }
+  .blog-post-list:first-of-type:before {
+    content: "";
+    display: block;
+    padding-top: 33.33%;
+  }
+  .blog-post-list:first-of-type .post-title {
+    font-size: 2.827em;
+  }
+  .blog-post-list:nth-child(3n+2), .blog-post-list:nth-child(3n+3) {
+    border-right: 1px solid #b5e285;
+  }
+  .blog-post-list:nth-child(3n+4) {
+    border-right: 1px solid #fff;
+  }
+  .blog-post-list:last-of-type {
+    border-bottom: none;
+  }
+  .blog-post-list:nth-last-child(2) {
+    border-bottom: none;
+  }
+  .blog-post-list:nth-last-child(3) {
+    border-bottom: none;
+  }
+
+  .post .post-header {
+    position: relative;
+    width: 100%;
+    background-color: #b5e285;
+  }
+  .post .post-header:before {
+    content: "";
+    display: block;
+    padding-top: 33.33%;
+  }
+  .post .post-title {
+    font-size: 2.827em;
+  }
+  .post .post-content {
+    width: 50%;
+  }
+  .post .post-comments {
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 4em;
   }
 }
 nav .fa-bars {
