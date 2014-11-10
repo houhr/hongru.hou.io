@@ -2395,19 +2395,24 @@ nav ul {
   *zoom: 1;
 }
 nav ul li {
-  position: relative;
   width: 20%;
   float: left;
-  background-color: #000;
   text-align: center;
 }
-nav ul li:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
 nav ul li a {
-  vertical-align: middle;
+  padding-top: 3.28em;
+  padding-bottom: 3.78em;
+  display: block;
+  background-color: #000;
+  border-top: 0.5em solid #000;
+}
+nav ul li a:hover {
+  border-top: 0.5em solid #b5e285;
+  text-decoration: none;
+}
+nav ul li a svg {
+  display: block;
+  margin: 0 auto;
 }
 
 #intro {
@@ -2474,8 +2479,6 @@ nav ul li a {
 #link a {
   background-color: #fff;
   color: #000;
-  border-top: 1px solid #b5e285;
-  border-left: 1px solid #b5e285;
 }
 #link a:hover {
   background-color: #000;
@@ -2495,7 +2498,6 @@ nav ul li a {
 #linkedin a {
   background-color: #fff;
   color: #000;
-  border-top: 1px solid #b5e285;
 }
 #linkedin a:hover {
   background-color: #000;
@@ -2877,14 +2879,13 @@ ul#publication {
     margin: 0 auto 2em auto;
   }
 
-  ul#publication {
-    border-right: 1px solid #b5e285;
-  }
-
   .publication-list {
     width: 33.33%;
     float: left;
     border-left: 1px solid #b5e285;
+  }
+  .publication-list:first-child {
+    border-left: 0;
   }
 
   .publication-image {
@@ -2921,8 +2922,6 @@ ul#publication {
     position: relative;
     width: 320px;
     float: left;
-    border-left: 1px solid #b5e285;
-    border-bottom: 1px solid #b5e285;
   }
   #intro:before {
     content: "";
@@ -2957,16 +2956,12 @@ ul#publication {
     width: 640px;
     float: left;
     padding: 77px;
-    border-left: 1px solid #b5e285;
   }
 
   #social {
     margin-top: 320px;
     width: 320px;
     float: right;
-  }
-  #social a {
-    border-right: 1px solid #b5e285;
   }
 
   #email, #twitter, #dribbble, #github {

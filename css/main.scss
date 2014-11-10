@@ -105,13 +105,26 @@ nav {
     padding: 0;
 
     li {
-      @include ratio(20%, 100%);
+      width: 20%;
       float: left;
-      background-color: $c-b;
       text-align: center;
 
       a {
-        vertical-align: middle;
+        padding-top: 3.28em;
+        padding-bottom: 3.78em;
+        display: block;
+        background-color: $c-b;
+        border-top: .5em solid $c-b;
+
+        &:hover {
+          border-top: .5em solid $c-primary;
+          text-decoration: none;
+        }
+
+        svg {
+          display:block;
+          margin: 0 auto;
+        }
       }
 
     }
@@ -177,8 +190,6 @@ nav {
   a {
     background-color: $c-w;
     color: $c-b;
-    border-top: 1px solid $c-primary;
-    border-left: 1px solid $c-primary;
 
     &:hover {
       background-color: $c-b;
@@ -194,7 +205,6 @@ nav {
   a {
     background-color: $c-w;
     color: $c-b;
-    border-top: 1px solid $c-primary;
 
     &:hover {
       background-color: $c-b;
@@ -520,14 +530,14 @@ and (min-width : 640px) {
 
   }
 
-  ul#publication {
-    border-right: 1px solid $c-primary;
-  }
-
   .publication-list {
     width: 33.33%;
     float: left;
     border-left: 1px solid $c-primary;
+
+    &:first-child {
+      border-left: 0;
+    }
   }
 
   .publication-image-wrapper {
@@ -579,8 +589,6 @@ and (min-width : 960px) {
   #intro {
     @include ratio(320px, 100%);
     float: left;
-    border-left: 1px solid $c-primary;
-    border-bottom: 1px solid $c-primary;
   }
 
   #me {
@@ -597,17 +605,12 @@ and (min-width : 960px) {
     width: 640px;
     float: left;
     padding: 77px;
-    border-left: 1px solid $c-primary;
   }
 
   #social {
     margin-top: 320px;
     width: 320px;
     float: right;
-
-    a {
-      border-right: 1px solid $c-primary;
-    }
   }
 
   #email, #twitter, #dribbble, #github {
