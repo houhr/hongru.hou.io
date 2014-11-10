@@ -2997,11 +2997,6 @@ ul#publication {
     padding-top: 320px;
   }
 
-  ol#blog {
-    border-left: 1px solid #b5e285;
-    border-right: 1px solid #b5e285;
-  }
-
   .blog-post-list {
     position: relative;
     width: 33.33%;
