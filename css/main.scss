@@ -628,11 +628,6 @@ and (min-width : 960px) {
     @include ratio(960px, 320px);
   }
 
-  ol#blog {
-    border-left: 1px solid $c-primary;
-    border-right: 1px solid $c-primary;
-  }
-
   .blog-post-list {
 
     @include ratio(33.33%, 100%);
