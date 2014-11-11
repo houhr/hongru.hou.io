@@ -34,6 +34,7 @@ body {
   font-family: $ff-body;
   font-size: $fs-base;
   line-height: 135%;
+  position: relative;
 }
 
 abbr[title] {
@@ -264,7 +265,7 @@ footer {
 
 ol#blog{
   @import 'clearfix';
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -339,7 +340,7 @@ ol#blog{
 }
 
 .rss-subscribe {
-  margin: 0;
+  margin: 0 auto;
   padding: 18px 0;
   border-top: 1px solid $c-primary;
   text-align: center;
@@ -351,7 +352,7 @@ ol#blog{
 
 ul#publication {
   @import 'clearfix';
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -408,6 +409,28 @@ ul#publication {
   top: 0;
 }
 
+ul#portfolio {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .video-contatiner {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 /*
  * --------------------
@@ -573,17 +596,9 @@ and (max-width : 959px) {
 @media only screen
 and (min-width : 960px) {
 
-  nav, main, footer {
+  nav, #about, #publication, #blog, .rss-subscribe, .post, footer {
     width: 960px;
     margin: 0 auto;
-  }
-
-  #wrapper {
-    position: relative;
-  }
-
-  header {
-    //background-color: $c-b;
   }
 
   #intro {
