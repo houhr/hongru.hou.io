@@ -15,10 +15,10 @@ PImage watch,
        logo;
 
 void setup() {
-  size(447, 440);
+  size(440, 440);
   smooth();
 
-  cx = width / 2 - 7.5;
+  cx = width / 2 - 5;
   cy = height / 2 + 1.5;
 
   radius = width / 4 * 0.8 + 2;

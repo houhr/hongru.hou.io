@@ -2566,19 +2566,19 @@ footer p a {
   color: #fff;
 }
 
-ol#blog {
+#blog {
   margin: 0 auto;
   padding: 0;
   list-style: none;
 }
-ol#blog:before, ol#blog:after {
+#blog:before, #blog:after {
   content: " ";
   display: table;
 }
-ol#blog:after {
+#blog:after {
   clear: both;
 }
-ol#blog {
+#blog {
   *zoom: 1;
 }
 
@@ -2605,44 +2605,44 @@ ol#blog {
   font-size: 18px;
 }
 
-.post .post-header {
+#blog-post .post-header {
   position: relative;
   width: 100%;
   background-color: #b5e285;
 }
-.post .post-header:before {
+#blog-post .post-header:before {
   content: "";
   display: block;
   padding-top: 50%;
 }
-.post .post-title {
+#blog-post .post-title {
   padding: 0 1em;
   font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.414em;
   margin: 1em 0 0;
 }
-.post .post-link {
+#blog-post .post-link {
   color: #000;
 }
-.post .post-meta {
+#blog-post .post-meta {
   font-size: 18px;
 }
-.post .post-content {
+#blog-post .post-content {
   padding: 1em;
 }
-.post .post-content p {
+#blog-post .post-content p {
   margin-bottom: 2em;
 }
-.post .post-content h2 {
+#blog-post .post-content h2 {
   font-size: 18px;
   font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-.post .post-content blockquote {
+#blog-post .post-content blockquote {
   margin-left: 0;
   padding-left: 1em;
   border-left: 1px solid #b5e285;
 }
-.post .post-comments {
+#blog-post .post-comments {
   padding: 1em;
 }
 
@@ -2657,19 +2657,19 @@ ol#blog {
   color: #000;
 }
 
-ul#publication {
+#publication {
   margin: 0 auto;
   padding: 0;
   list-style: none;
 }
-ul#publication:before, ul#publication:after {
+#publication:before, #publication:after {
   content: " ";
   display: table;
 }
-ul#publication:after {
+#publication:after {
   clear: both;
 }
-ul#publication {
+#publication {
   *zoom: 1;
 }
 
@@ -2731,25 +2731,73 @@ ul#publication {
   top: 0;
 }
 
-ul#portfolio {
+#portfolio {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-ul#portfolio .video-contatiner {
+#portfolio #model-making-head, #portfolio #processing-and-arduino-head {
   position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  background-size: cover;
 }
-ul#portfolio iframe {
+#portfolio #model-making-head:before, #portfolio #processing-and-arduino-head:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+#portfolio #model-making-head .portfolio-class-title, #portfolio #processing-and-arduino-head .portfolio-class-title {
+  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.414em;
+}
+#portfolio .head-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  position: absolute !important;
+}
+#portfolio .head-image-wrapper:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+#portfolio #model-making .head-image-wrapper {
+  background: url("/images/compressed/portfolio/model-making.jpg") no-repeat center center;
+  background-size: cover;
+}
+#portfolio #model-making .outside-sources {
+  position: relative;
+  width: 100%;
+}
+#portfolio #model-making .outside-sources:before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+#portfolio #processing-and-arduino .head-image-wrapper {
+  background: url("/images/compressed/portfolio/processing-and-arduino.jpg") no-repeat center center;
+  background-size: cover;
+}
+#portfolio #processing-and-arduino .outside-sources {
+  position: relative;
+  width: 100%;
+}
+#portfolio #processing-and-arduino .outside-sources:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+#portfolio iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+#portfolio .portfolio-class-content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -2874,28 +2922,28 @@ ul#portfolio iframe {
     border-bottom: none;
   }
 
-  .post .post-header {
+  #blog-post .post-header {
     position: relative;
     width: 100%;
     background-color: #b5e285;
   }
-  .post .post-header:before {
+  #blog-post .post-header:before {
     content: "";
     display: block;
     padding-top: 50%;
   }
-  .post .post-title {
+  #blog-post .post-title {
     font-size: 1.999em;
   }
-  .post .post-meta {
+  #blog-post .post-meta {
     font-size: 1.414em;
   }
-  .post .post-content {
+  #blog-post .post-content {
     padding: 0;
     width: 66.66%;
     margin: 4em auto;
   }
-  .post .post-comments {
+  #blog-post .post-comments {
     padding: 0;
     width: 66.66%;
     margin: 0 auto 2em auto;
@@ -2919,6 +2967,55 @@ ul#portfolio iframe {
     position: relative;
     top: auto;
   }
+
+  #portfolio #model-making-head, #portfolio #processing-and-arduino-head {
+    position: relative;
+    width: 100%;
+  }
+  #portfolio #model-making-head:before, #portfolio #processing-and-arduino-head:before {
+    content: "";
+    display: block;
+    padding-top: 50%;
+  }
+  #portfolio #model-making-head .portfolio-class-title, #portfolio #processing-and-arduino-head .portfolio-class-title {
+    font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.999em;
+  }
+  #portfolio #model-making-head .portfolio-class-disc, #portfolio #processing-and-arduino-head .portfolio-class-disc {
+    font-size: 1.414em;
+  }
+  #portfolio .head-image-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  #portfolio .head-image-wrapper:before {
+    content: "";
+    display: block;
+    padding-top: 50%;
+  }
+  #portfolio #processing-and-arduino .portfolio-class-content:before, #portfolio #processing-and-arduino .portfolio-class-content:after {
+    content: " ";
+    display: table;
+  }
+  #portfolio #processing-and-arduino .portfolio-class-content:after {
+    clear: both;
+  }
+  #portfolio #processing-and-arduino .portfolio-class-content {
+    *zoom: 1;
+  }
+  #portfolio #processing-and-arduino .portfolio-list {
+    width: 50%;
+    float: left;
+  }
+  #portfolio #processing-and-arduino .outside-sources {
+    position: relative;
+    width: 100%;
+  }
+  #portfolio #processing-and-arduino .outside-sources:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
 }
 @media only screen and (max-width: 959px) {
   #link {
@@ -2931,7 +3028,18 @@ ul#portfolio iframe {
  * --------------------
  */
 @media only screen and (min-width: 960px) {
-  nav, #about, #publication, #blog, .rss-subscribe, .post, footer {
+  header {
+    position: absolute;
+    left: 50%;
+    margin-left: -480px;
+    z-index: 9999;
+  }
+
+  #about, #publication, #blog, #blog-post, #model-making-head {
+    padding-top: 160px;
+  }
+
+  nav, #about, #publication, #blog, #blog-post, .rss-subscribe, footer {
     width: 960px;
     margin: 0 auto;
   }
@@ -3054,22 +3162,114 @@ ul#portfolio iframe {
     border-bottom: none;
   }
 
-  .post .post-header {
+  #blog-post .post-header {
     position: relative;
     width: 100%;
     background-color: #b5e285;
   }
-  .post .post-header:before {
+  #blog-post .post-header:before {
     content: "";
     display: block;
     padding-top: 33.33%;
   }
-  .post .post-title {
+  #blog-post .post-title {
     font-size: 2.827em;
   }
-  .post .post-comments {
+  #blog-post .post-comments {
     margin: 0 auto;
     padding-bottom: 4em;
+  }
+
+  #portfolio #model-making .head-image-wrapper {
+    height: 640px;
+  }
+  #portfolio #model-making #model-making-head {
+    width: 960px !important;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+  }
+  #portfolio #model-making #model-making-head:before {
+    content: "";
+    display: block;
+    padding-top: 33.33%;
+  }
+  #portfolio #model-making #model-making-head .ratio-inner {
+    margin-top: 160px;
+  }
+  #portfolio #model-making .portfolio-class-content {
+    width: 960px;
+    margin: 0 auto;
+    padding-bottom: 320px;
+  }
+  #portfolio #model-making .portfolio-class-content:before, #portfolio #model-making .portfolio-class-content:after {
+    content: " ";
+    display: table;
+  }
+  #portfolio #model-making .portfolio-class-content:after {
+    clear: both;
+  }
+  #portfolio #model-making .portfolio-class-content {
+    *zoom: 1;
+  }
+  #portfolio #model-making .portfolio-class-content .portfolio-list {
+    width: 33.33%;
+    float: left;
+  }
+  #portfolio #model-making .portfolio-class-content .portfolio-list .outside-sources {
+    background-color: #000;
+    position: relative;
+    width: 100%;
+  }
+  #portfolio #model-making .portfolio-class-content .portfolio-list .outside-sources:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+  #portfolio #processing-and-arduino .head-image-wrapper {
+    height: 500px;
+  }
+  #portfolio #processing-and-arduino #processing-and-arduino-head {
+    width: 960px !important;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+  }
+  #portfolio #processing-and-arduino #processing-and-arduino-head:before {
+    content: "";
+    display: block;
+    padding-top: 33.33%;
+  }
+  #portfolio #processing-and-arduino .portfolio-class-content {
+    width: 960px;
+    margin: 0 auto;
+    padding-bottom: 320px;
+  }
+  #portfolio #processing-and-arduino .portfolio-class-content:before, #portfolio #processing-and-arduino .portfolio-class-content:after {
+    content: " ";
+    display: table;
+  }
+  #portfolio #processing-and-arduino .portfolio-class-content:after {
+    clear: both;
+  }
+  #portfolio #processing-and-arduino .portfolio-class-content {
+    *zoom: 1;
+  }
+  #portfolio #processing-and-arduino .portfolio-class-content .portfolio-list {
+    width: 33.33%;
+    float: left;
+  }
+  #portfolio #processing-and-arduino .portfolio-class-content .portfolio-list .outside-sources {
+    background-color: #000;
+  }
+  #portfolio .head-image-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  #portfolio .head-image-wrapper:before {
+    content: "";
+    display: block;
+    padding-top: 75%;
   }
 }
 nav .fa-bars {

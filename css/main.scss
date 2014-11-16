@@ -263,7 +263,7 @@ footer {
   }
 }
 
-ol#blog{
+#blog{
   @import 'clearfix';
   margin: 0 auto;
   padding: 0;
@@ -290,7 +290,7 @@ ol#blog{
   }
 }
 
-.post {
+#blog-post {
 
   .post-header {
     @include ratio(100%, 50%);
@@ -350,7 +350,7 @@ ol#blog{
   }
 }
 
-ul#publication {
+#publication {
   @import 'clearfix';
   margin: 0 auto;
   padding: 0;
@@ -409,18 +409,51 @@ ul#publication {
   top: 0;
 }
 
-ul#portfolio {
+#portfolio {
   list-style: none;
   margin: 0;
   padding: 0;
 
-  .video-contatiner {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
+  #model-making-head, #processing-and-arduino-head {
+    @include ratio(100%, 100%);
+    background-size: cover;
+
+    .portfolio-class-title {
+      font-family: $ff-head;
+      font-size: $fs-b-1;
+    }
+  }
+
+  .head-image-wrapper {
+    @include ratio(100%, 100%);
     overflow: hidden;
-    max-width: 100%;
-    height: auto;
+    position: absolute !important;
+  }
+
+  #model-making {
+
+    .head-image-wrapper {
+      background: url("/images/compressed/portfolio/model-making.jpg") no-repeat center center;
+      background-size: cover;
+    }
+
+    .outside-sources {
+      @include ratio(100%, 56.25%);
+    }
+
+  }
+
+  #processing-and-arduino {
+
+    .head-image-wrapper {
+      background: url("/images/compressed/portfolio/processing-and-arduino.jpg") no-repeat center center;
+      background-size: cover;
+    }
+
+    .outside-sources {
+      @include ratio(100%, 100%);
+    }
+
   }
 
   iframe {
@@ -430,6 +463,13 @@ ul#portfolio {
     width: 100%;
     height: 100%;
   }
+
+  .portfolio-class-content {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
 }
 
 /*
@@ -525,7 +565,7 @@ and (min-width : 640px) {
     }
   }
 
-  .post {
+  #blog-post {
 
     .post-header {
       @include ratio(100%, 50%);
@@ -563,10 +603,6 @@ and (min-width : 640px) {
     }
   }
 
-  .publication-image-wrapper {
-    //@include ratio(100%, 100%);
-  }
-
   .publication-image {
     filter: blur(0);
   }
@@ -574,6 +610,43 @@ and (min-width : 640px) {
   .publication-disc {
     position: relative;
     top: auto;
+  }
+
+  #portfolio {
+
+    #model-making-head, #processing-and-arduino-head {
+      @include ratio(100%, 50%);
+
+      .portfolio-class-title {
+        font-family: $ff-head;
+        font-size: $fs-b-2;
+      }
+
+      .portfolio-class-disc {
+        font-size: $fs-b-1;
+      }
+    }
+
+    .head-image-wrapper {
+      @include ratio(100%, 50%);
+    }
+
+    #processing-and-arduino {
+
+      .portfolio-class-content {
+        @import 'clearfix';
+      }
+
+      .portfolio-list {
+        width: 50%;
+        float: left;
+      }
+
+      .outside-sources {
+        @include ratio(100%, 100%);
+      }
+    }
+
   }
 
 }
@@ -596,7 +669,18 @@ and (max-width : 959px) {
 @media only screen
 and (min-width : 960px) {
 
-  nav, #about, #publication, #blog, .rss-subscribe, .post, footer {
+  header {
+    position: absolute;
+    left: 50%;
+    margin-left: -480px;
+    z-index: 9999;
+  }
+
+  #about, #publication, #blog, #blog-post, #model-making-head {
+    padding-top: 160px;
+  }
+
+  nav, #about, #publication, #blog, #blog-post, .rss-subscribe, footer {
     width: 960px;
     margin: 0 auto;
   }
@@ -679,10 +763,7 @@ and (min-width : 960px) {
 
   }
 
-  .post {
-
-    //border-left: 1px solid $c-primary;
-    //border-right: 1px solid $c-primary;
+  #blog-post {
 
     .post-header {
       @include ratio(100%, 33.33%);
@@ -708,6 +789,85 @@ and (min-width : 960px) {
       margin: 0 auto;
       padding-bottom: 4em;
     }
+
+  }
+
+  #portfolio {
+
+
+
+    #model-making {
+
+      .head-image-wrapper {
+        height: 640px;
+      }
+
+      #model-making-head {
+        width: 960px !important;
+        margin: 0 auto;
+        @include ratio(100%, 33.33%);
+
+        .ratio-inner {
+          margin-top: 160px;
+        }
+
+      }
+
+      .portfolio-class-content {
+        width: 960px;
+        margin: 0 auto;
+        @import 'clearfix';
+        padding-bottom: 320px;
+
+        .portfolio-list {
+          width: 33.33%;
+          float: left;
+
+          .outside-sources {
+            background-color: $c-b;
+            @include ratio(100%, 100%);
+          }
+        }
+      }
+
+    }
+
+    #processing-and-arduino {
+
+      .head-image-wrapper {
+        height: 500px;
+      }
+
+      #processing-and-arduino-head {
+        width: 960px !important;
+        margin: 0 auto;
+        @include ratio(100%, 33.33%);
+      }
+
+      .portfolio-class-content {
+        width: 960px;
+        margin: 0 auto;
+        @import 'clearfix';
+        padding-bottom: 320px;
+
+
+        .portfolio-list {
+          width: 33.33%;
+          float: left;
+
+          .outside-sources {
+            background-color: $c-b;
+          }
+        }
+      }
+
+    }
+
+    .head-image-wrapper {
+      @include ratio(100%, 75%);
+    }
+
+
 
   }
 
