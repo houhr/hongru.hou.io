@@ -414,7 +414,7 @@ footer {
   margin: 0;
   padding: 0;
 
-  #model-making-head, #processing-and-arduino-head {
+  #ui-ux-design-head, #model-making-head, #processing-and-arduino-head {
     @include ratio(100%, 100%);
     background-size: cover;
 
@@ -428,6 +428,19 @@ footer {
     @include ratio(100%, 100%);
     overflow: hidden;
     position: absolute !important;
+  }
+
+  #ui-ux-design {
+
+    .head-image-wrapper {
+      background: url("/images/compressed/portfolio/ui-ux-design.png") no-repeat center center;
+      background-size: cover;
+    }
+
+    img {
+      display: block;
+      @include ratio(100%, 100%);
+    }
   }
 
   #model-making {
@@ -614,7 +627,7 @@ and (min-width : 640px) {
 
   #portfolio {
 
-    #model-making-head, #processing-and-arduino-head {
+    #ui-ux-design-head, #model-making-head, #processing-and-arduino-head {
       @include ratio(100%, 50%);
 
       .portfolio-class-title {
@@ -629,6 +642,17 @@ and (min-width : 640px) {
 
     .head-image-wrapper {
       @include ratio(100%, 50%);
+    }
+
+    #ui-ux-design {
+      .portfolio-class-content {
+        @import 'clearfix';
+      }
+
+      .portfolio-list {
+        width: 50%;
+        float: left;
+      }
     }
 
     #processing-and-arduino {
@@ -676,7 +700,7 @@ and (min-width : 960px) {
     z-index: 9999;
   }
 
-  #about, #publication, #blog, #blog-post, #model-making-head {
+  #about, #publication, #blog, #blog-post {
     padding-top: 160px;
   }
 
@@ -794,30 +818,59 @@ and (min-width : 960px) {
 
   #portfolio {
 
-
-
-    #model-making {
+    #ui-ux-design {
 
       .head-image-wrapper {
         height: 640px;
       }
-
-      #model-making-head {
+      
+      #ui-ux-design-head {
         width: 960px !important;
         margin: 0 auto;
         @include ratio(100%, 33.33%);
 
         .ratio-inner {
-          margin-top: 160px;
+          margin-top: 320px;
         }
 
       }
 
       .portfolio-class-content {
         width: 960px;
+        margin: 160px auto 0 auto;
+        @import 'clearfix';
+        padding-bottom: 160px;
+
+        .portfolio-list {
+          width: 33.33%;
+          float: left;
+
+          .outside-sources {
+            background-color: $c-b;
+
+          }
+        }
+      }
+
+    }
+
+    #model-making {
+
+      .head-image-wrapper {
+        height: 500px;
+      }
+
+      #model-making-head {
+        width: 960px !important;
+        margin: 0 auto;
+        @include ratio(100%, 33.33%);
+      }
+
+      .portfolio-class-content {
+        width: 960px;
         margin: 0 auto;
         @import 'clearfix';
-        padding-bottom: 320px;
+        padding-bottom: 160px;
 
         .portfolio-list {
           width: 33.33%;
@@ -831,6 +884,8 @@ and (min-width : 960px) {
       }
 
     }
+
+
 
     #processing-and-arduino {
 
@@ -848,7 +903,7 @@ and (min-width : 960px) {
         width: 960px;
         margin: 0 auto;
         @import 'clearfix';
-        padding-bottom: 320px;
+        padding-bottom: 160px;
 
 
         .portfolio-list {
@@ -866,8 +921,6 @@ and (min-width : 960px) {
     .head-image-wrapper {
       @include ratio(100%, 75%);
     }
-
-
 
   }
 

@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LBS Web</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        header {
+            background: url('image/bg.png') no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .wrapper {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        #logo {
+            width: 78px;
+            float: left;
+        }
+
+        nav {
+            position: relative;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: table-cell;
+            float: right;
+            padding-top: 3em;
+        }
+
+        nav ul li {
+            float: left;
+            margin-left: 2em;
+        }
+
+        nav ul li a {
+            color: #FFF;
+            text-decoration: none;
+            font-size: 20px;
+            padding-bottom: .5em;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 3px solid #3E7BBB;
+            text-decoration: none;
+            color: #FFF;
+        }
+
+        #welcome {
+            margin: 0;
+            color: #fff;
+            padding: 25em 0;
+        }
+
+        #welcome h1 {
+            font-size: 60px;
+            margin: 0;
+        }
+
+        #welcome p {
+            font-size: 30px;
+            margin: 1em 0;
+        }
+
+        #welcome a {
+            text-decoration: none;
+            border: 3px solid #3E7BBB;
+            background-color: #3E7BBB;
+            color: #FFF;
+            font-size: 30px;
+            padding: 0.5em 1.7em;
+            margin-right: 1.2em;
+        }
+
+        #welcome a:hover {
+            color: yellow;
+        }
+
+        #words {
+            padding: 10em 0;
+            font-size: 16px;
+        }
+
+        #words:before {
+            content: "“";
+            font-size: 500px;
+            color: #3E7BBB;
+            float: left;
+            position: relative;
+            top: -226px;
+            left: -18px;
+        }
+
+        #words:after {
+            content: "”";
+            font-size: 500px;
+            color: #3E7BBB;
+            float: right;
+            position: relative;
+            top: -272px;
+            right: -12px;
+        }
+
+        #words p {
+            width: 30em;
+            margin: 2em auto;
+        }
+
+        #calendar {
+            background: url('image/desk.png') no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 1000px;
+        }
+
+        #cal {
+            width: 842px;
+            height: 490px;
+            background-color: #FFF;
+            position: relative;
+            top: 245px;
+            left: 44px;
+        }
+
+        #cal .nav {
+            height: 40px;
+            width: 90%;
+            margin: 0 5%;
+            position: absolute;
+            bottom: 5%;
+        }
+
+        #cal .tab-content {
+            width: 90%;
+            margin: 0 5%;
+            position: absolute;
+            top: 5%;
+        }
+
+        .tab-pane {
+            width: 100%;
+            height: 387px;
+        }
+
+        .tab-pane img {
+            width: 40%;
+            height: 385px;
+            float: left;
+        }
+
+        .nav-pills>li>a {
+            border-radius: 0;
+        }
+
+        .nav-pills>li.active>a {
+            color: #FFF;
+            background-color: #3E7BBB;
+        }
+
+        .speaker {
+            position: relative;
+            text-align: center;
+        }
+
+        .speaker-name {
+            background-color: #000;
+            opacity: .65;
+            font-size: 30px;
+            color: #FFF;
+            width: 40%;
+            position: absolute;
+            padding-top: .5em;
+            padding-bottom: .5em;
+            top: 313px;
+        }
+
+        .speak-info {
+            width: 55%;
+            height: 385px;
+            overflow: auto;
+            float: right;
+            margin-left: 5%;
+            font-size: 18px;
+        }
+        .speak-info th{
+            font-weight: bold;
+            vertical-align: top;
+        }
+        .speak-info td,.speak-info th{
+            padding: 5px 0;
+        }
+
+
+
+
+        #resource h3{
+            font-size: 30px;
+            color: #3E7BBB;
+            margin: 0;
+            border-bottom: 1px solid #3E7BBB;
+            padding-bottom: 0.2em;
+            margin-bottom: 0.2em;
+        }
+
+        #resource a {
+            cursor: pointer;
+        }
+
+        #past, #outside {
+            width: 47.5%;
+            float: left;
+            padding: 10em 0;
+        }
+
+        #past {
+            margin-right: 5%;
+        }
+
+        #resource ol {
+            padding-left: 1.4em;
+        }
+
+        #resource li {
+            padding: .4em 0;
+        }
+
+        #resource a {
+            color: #3E7BBB;
+        }
+
+        #team {
+            width: 100%;
+            clear: both;
+        }
+
+        #team img {
+            width: 100%;
+            display:block;
+        }
+
+        footer {
+            background-color: #000;
+            opacity: .65;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: #FFF;
+            padding: 5em 0;
+        }
+
+        footer a {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+
+        footer section {
+            float: left;
+            width: 33.33%;
+        }
+
+        footer section:nth-child(2) {
+            text-align: center;
+        }
+
+        footer h3 {
+            font-size: 20px;
+            margin: 0;
+            padding-bottom: .5em;
+            border-bottom: 1px solid #FFF;
+            margin-bottom: .5em;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        footer ul {
+            padding-left: 1em;
+        }
+
+        footer p {
+            margin: 14px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <a href="./"><img id="logo" src="image/logo.png" alt="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="#intro">简介</a></li>
+                    <li><a href="#calendar">演讲</a></li>
+                    <li style="display:none"><a href="#resource">资源</a></li>
+                    <li><a href="#team">团队</a></li>
+                </ul>
+            </nav>
+
+            <div id="welcome">
+                <h1>知识，本该分享<br>思想，理应传播</h1>
+                <p><a href="mailto:caodongqing@baidu.com?subject=【我要分享】">我要分享</a><a href="#calendar">我要听讲</a></p>
+            </div>
+            <p></p>
+        </div>
+    </header>
+
+    <section id="intro">
+        <div class="wrapper">
+            <div id="words">
+                <p>我们是LBS-WEB技术团队，承担着地图PC版，WebApp，运营，UGC的前后端开发。
+                  我们追求极致的产品体验，执着不断的超越革新。我们不惧任何挑战，我们是技术的狂热者。</p>
+                <p>展示自我，收获成长。想分享，有建议，要吐槽...... 只要有话想说，请都毫无保留的抛给我们。你是让改变的发生的力量！</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="calendar">
+        <div class="wrapper">
+            <section id="cal">
+                <!-- Nav tabs -->
+                <ul  class="nav nav-pills nav-justified">
+                  <li class="active"><a href="#this-week" data-toggle="pill">本期分享</a></li>
+                  <!-- <li><a href="#next-week" data-toggle="pill">下周分享</a></li> -->
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="this-week">
+                        <section class="speaker">
+                            <img src="./image/1.jpg" alt="speaker">
+                            <p class="speaker-name">嘉宾：张帅</p>
+                        </section>
+
+                        <section class="speak-info">
+                            <table>
+                                <tr>
+                                    <th style="width:20%">主题：</th>
+                                    <td>机器学习方法在文本分类问题中的应用 </td>
+                                </tr>
+                                <tr>
+                                    <th>时间：</th>
+                                    <td>2014.3.20</td>
+                                </tr>
+                                <tr>
+                                    <th>简介：</th>
+                                    <td>计算机能够解决的很多问题，都可以抽象为分类问题，比如语音识别，图形识别，网页分类等。机器学习方法，则是目前解决分类问题最有效的方法。 <br>
+
+本次将由张帅带来机器学习的分享，通过不断改进“地图意见反馈自动分类的解决方案” ，简要地介绍机器学习方法在文本分类问题中的应用。
+ <br>
+我们只讲应用，不讲公式，同时会介绍公司内部以及互联网上上有哪些资源，可以帮助我们快速构建分类器程序。
+</td>
+                                </tr>
+                            </table>
+                        </section>
+
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+    </section>
+
+    <div class="relative">
+        <section id="team">
+            <img src="image/team.png" alt="team">
+        </section>
+
+        <footer>
+            <div class="wrapper">
+                <section>
+                    <h3>组内相关</h3>
+                    <ul>
+                        <li><a href="http://wiki.babel.baidu.com/twiki/bin/view/Com/Main/Lbs-web">LBS-WEB Wiki</a></li>
+                        <li><a href="http://docs.babel.baidu.com/site/lbsweb#path=%2F">LBS-WEB 文档库</a></li>
+                        <li><a href="http://lights.map.baidu.com/">LBS lights 组件平台</a></li>
+                        <li><a href="http://fe.baidu.com/doc/map/">Map 接口</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <img src="image/logo-bottom.png" alt="logo">
+                    <p>LBS WEB</p>
+                </section>
+                <section>
+                    <h3>友情外链</h3>
+                    <ul>
+                        <li><a href="http://fe.baidu.com/">FE 主页 - Web前端信息聚合</a></li>
+                        <li><a href="http://fex.baidu.com/">FEX - web前端研发部</a></li>
+                        <li><a href="http://fis.baidu.com/">FIS - 前端集成框架</a></li>
+                    </ul>
+                </section>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
