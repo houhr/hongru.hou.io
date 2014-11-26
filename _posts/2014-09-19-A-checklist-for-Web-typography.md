@@ -15,6 +15,7 @@ published: true
 ## Implement a good typography
 * Wrap all acronyms and abbreviations by using “abbr” element and give them appropriate “title” attributes.
 * Apply small caps on acronyms and abbreviations if you have the font.
+* Apply `white-space: nowrap` on last two or more words of every paragraphs to avoid “orphans”.
 * Do you need track the small caps by using letter-spacing, especially when you have white texts on black background?
 
 ## Type correct characters on Mac
