@@ -2327,6 +2327,7 @@ th {
 body {
   font-family: "Alegreya", Georgia, Times, "Times New Roman", serif;
   font-size: 18px;
+  color: #101906;
   line-height: 135%;
   position: relative;
 }
@@ -2349,7 +2350,7 @@ abbr[title] {
 
 a {
   text-decoration: none;
-  color: #b5e285;
+  color: #b4e283;
 }
 a:hover {
   text-decoration: underline;
@@ -2376,7 +2377,7 @@ a:hover {
 .logo {
   width: 24px;
   height: 24px;
-  fill: #b5e285;
+  fill: #b4e283;
   vertical-align: middle;
 }
 
@@ -2404,11 +2405,11 @@ nav ul li a {
   padding-top: 3.28em;
   padding-bottom: 3.78em;
   display: block;
-  background-color: #000;
-  border-top: 0.5em solid #000;
+  background-color: #101906;
+  border-top: 0.5em solid #101906;
 }
 nav ul li a:hover {
-  border-top: 0.5em solid #b5e285;
+  border-top: 0.5em solid #b4e283;
   text-decoration: none;
 }
 nav ul li a svg {
@@ -2420,7 +2421,7 @@ nav ul li a svg {
   position: relative;
   width: 100%;
   background-color: #fff;
-  color: #000;
+  color: #101906;
 }
 #intro:before {
   content: "";
@@ -2428,7 +2429,7 @@ nav ul li a svg {
   padding-top: 100%;
 }
 #intro h1 {
-  color: #000;
+  color: #101906;
   font-size: 1.999em;
   font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   margin-top: 0;
@@ -2458,7 +2459,7 @@ nav ul li a svg {
   font-size: 5em;
   padding-right: 0.08em;
   margin-left: -0.06em;
-  color: #b5e285;
+  color: #b4e283;
 }
 #artist-statement p:first-child {
   margin-top: 0;
@@ -2479,11 +2480,11 @@ nav ul li a svg {
 }
 #link a {
   background-color: #fff;
-  color: #000;
+  color: #101906;
 }
 #link a:hover {
-  background-color: #000;
-  color: #b5e285;
+  background-color: #101906;
+  color: #b4e283;
 }
 
 #linkedin {
@@ -2498,11 +2499,11 @@ nav ul li a svg {
 }
 #linkedin a {
   background-color: #fff;
-  color: #000;
+  color: #101906;
 }
 #linkedin a:hover {
-  background-color: #000;
-  color: #b5e285;
+  background-color: #101906;
+  color: #b4e283;
 }
 #linkedin i {
   font-size: 4em;
@@ -2546,7 +2547,7 @@ nav ul li a svg {
 footer {
   position: relative;
   width: 100%;
-  background-color: #000;
+  background-color: #101906;
   color: #fff;
 }
 footer:before {
@@ -2585,7 +2586,7 @@ footer p a {
 .blog-post-list {
   position: relative;
   width: 100%;
-  border-bottom: 1px solid #b5e285;
+  border-bottom: 1px solid #b4e283;
 }
 .blog-post-list:before {
   content: "";
@@ -2599,7 +2600,7 @@ footer p a {
   margin: 1em 0 0;
 }
 .blog-post-list .post-title .post-link {
-  color: #000;
+  color: #101906;
 }
 .blog-post-list .post-meta {
   font-size: 18px;
@@ -2608,7 +2609,7 @@ footer p a {
 #blog-post .post-header {
   position: relative;
   width: 100%;
-  background-color: #b5e285;
+  background-color: #b4e283;
 }
 #blog-post .post-header:before {
   content: "";
@@ -2622,7 +2623,7 @@ footer p a {
   margin: 1em 0 0;
 }
 #blog-post .post-link {
-  color: #000;
+  color: #101906;
 }
 #blog-post .post-meta {
   font-size: 18px;
@@ -2640,7 +2641,7 @@ footer p a {
 #blog-post .post-content blockquote {
   margin-left: 0;
   padding-left: 1em;
-  border-left: 1px solid #b5e285;
+  border-left: 1px solid #b4e283;
 }
 #blog-post .post-comments {
   padding: 1em;
@@ -2649,12 +2650,12 @@ footer p a {
 .rss-subscribe {
   margin: 0 auto;
   padding: 18px 0;
-  border-top: 1px solid #b5e285;
+  border-top: 1px solid #b4e283;
   text-align: center;
-  background-color: #b5e285;
+  background-color: #b4e283;
 }
 .rss-subscribe a {
-  color: #000;
+  color: #101906;
 }
 
 #publication {
@@ -2709,8 +2710,8 @@ footer p a {
   margin: 0 auto;
 }
 .publication-disc p a {
-  background-color: #b5e285;
-  color: #000;
+  background-color: #b4e283;
+  color: #101906;
   padding: .5em 1em;
 }
 
@@ -2798,6 +2799,19 @@ footer p a {
   content: "";
   display: block;
   padding-top: 100%;
+}
+#portfolio #presentation .head-image-wrapper {
+  background: url("/images/compressed/portfolio/presentation.jpg") no-repeat center center;
+  background-size: cover;
+}
+#portfolio #presentation .outside-sources {
+  position: relative;
+  width: 100%;
+}
+#portfolio #presentation .outside-sources:before {
+  content: "";
+  display: block;
+  padding-top: 86%;
 }
 #portfolio #model-making .head-image-wrapper {
   background: url("/images/compressed/portfolio/model-making.jpg") no-repeat center center;
@@ -2889,12 +2903,12 @@ footer p a {
     padding-top: 100%;
   }
   #resume a {
-    background-color: #b5e285;
-    color: #000;
+    background-color: #b4e283;
+    color: #101906;
   }
   #resume a:hover {
-    background-color: #000;
-    color: #b5e285;
+    background-color: #101906;
+    color: #b4e283;
   }
   #resume p {
     font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -2934,7 +2948,7 @@ footer p a {
   .blog-post-list {
     position: relative;
     width: 50%;
-    border-bottom: 1px solid #b5e285;
+    border-bottom: 1px solid #b4e283;
     float: left;
   }
   .blog-post-list:first-of-type {
@@ -2958,7 +2972,7 @@ footer p a {
     padding-top: 100%;
   }
   .blog-post-list:nth-child(even) {
-    border-right: 1px solid #b5e285;
+    border-right: 1px solid #b4e283;
   }
   .blog-post-list:nth-child(odd) {
     border-right: 1px solid #fff;
@@ -2973,7 +2987,7 @@ footer p a {
   #blog-post .post-header {
     position: relative;
     width: 100%;
-    background-color: #b5e285;
+    background-color: #b4e283;
   }
   #blog-post .post-header:before {
     content: "";
@@ -3000,7 +3014,7 @@ footer p a {
   .publication-list {
     width: 33.33%;
     float: left;
-    border-left: 1px solid #b5e285;
+    border-left: 1px solid #b4e283;
   }
   .publication-list:first-child {
     border-left: 0;
@@ -3034,26 +3048,26 @@ footer p a {
     display: block;
     padding-top: 25%;
   }
-  #portfolio #ui-ux-design .portfolio-class-content:before, #portfolio #ui-ux-design .portfolio-class-content:after, #portfolio #data-visualization .portfolio-class-content:before, #portfolio #data-visualization .portfolio-class-content:after, #portfolio #print-design .portfolio-class-content:before, #portfolio #print-design .portfolio-class-content:after, #portfolio #model-making .portfolio-class-content:before, #portfolio #model-making .portfolio-class-content:after, #portfolio #processing-and-arduino .portfolio-class-content:before, #portfolio #processing-and-arduino .portfolio-class-content:after {
+  #portfolio #ui-ux-design .portfolio-class-content:before, #portfolio #ui-ux-design .portfolio-class-content:after, #portfolio #data-visualization .portfolio-class-content:before, #portfolio #data-visualization .portfolio-class-content:after, #portfolio #print-design .portfolio-class-content:before, #portfolio #print-design .portfolio-class-content:after, #portfolio #model-making .portfolio-class-content:before, #portfolio #model-making .portfolio-class-content:after, #portfolio #processing-and-arduino .portfolio-class-content:before, #portfolio #processing-and-arduino .portfolio-class-content:after, #portfolio #presentation .portfolio-class-content:before, #portfolio #presentation .portfolio-class-content:after {
     content: " ";
     display: table;
   }
-  #portfolio #ui-ux-design .portfolio-class-content:after, #portfolio #data-visualization .portfolio-class-content:after, #portfolio #print-design .portfolio-class-content:after, #portfolio #model-making .portfolio-class-content:after, #portfolio #processing-and-arduino .portfolio-class-content:after {
+  #portfolio #ui-ux-design .portfolio-class-content:after, #portfolio #data-visualization .portfolio-class-content:after, #portfolio #print-design .portfolio-class-content:after, #portfolio #model-making .portfolio-class-content:after, #portfolio #processing-and-arduino .portfolio-class-content:after, #portfolio #presentation .portfolio-class-content:after {
     clear: both;
   }
-  #portfolio #ui-ux-design .portfolio-class-content, #portfolio #data-visualization .portfolio-class-content, #portfolio #print-design .portfolio-class-content, #portfolio #model-making .portfolio-class-content, #portfolio #processing-and-arduino .portfolio-class-content {
+  #portfolio #ui-ux-design .portfolio-class-content, #portfolio #data-visualization .portfolio-class-content, #portfolio #print-design .portfolio-class-content, #portfolio #model-making .portfolio-class-content, #portfolio #processing-and-arduino .portfolio-class-content, #portfolio #presentation .portfolio-class-content {
     *zoom: 1;
   }
-  #portfolio #ui-ux-design .portfolio-list, #portfolio #data-visualization .portfolio-list, #portfolio #print-design .portfolio-list, #portfolio #model-making .portfolio-list, #portfolio #processing-and-arduino .portfolio-list {
+  #portfolio #ui-ux-design .portfolio-list, #portfolio #data-visualization .portfolio-list, #portfolio #print-design .portfolio-list, #portfolio #model-making .portfolio-list, #portfolio #processing-and-arduino .portfolio-list, #portfolio #presentation .portfolio-list {
     width: 33.33%;
     float: left;
   }
-  #portfolio #ui-ux-design .portfolio-list .outside-sources, #portfolio #data-visualization .portfolio-list .outside-sources, #portfolio #print-design .portfolio-list .outside-sources, #portfolio #model-making .portfolio-list .outside-sources, #portfolio #processing-and-arduino .portfolio-list .outside-sources {
-    background-color: #000;
+  #portfolio #ui-ux-design .portfolio-list .outside-sources, #portfolio #data-visualization .portfolio-list .outside-sources, #portfolio #print-design .portfolio-list .outside-sources, #portfolio #model-making .portfolio-list .outside-sources, #portfolio #processing-and-arduino .portfolio-list .outside-sources, #portfolio #presentation .portfolio-list .outside-sources {
+    background-color: #101906;
     position: relative;
     width: 100%;
   }
-  #portfolio #ui-ux-design .portfolio-list .outside-sources:before, #portfolio #data-visualization .portfolio-list .outside-sources:before, #portfolio #print-design .portfolio-list .outside-sources:before, #portfolio #model-making .portfolio-list .outside-sources:before, #portfolio #processing-and-arduino .portfolio-list .outside-sources:before {
+  #portfolio #ui-ux-design .portfolio-list .outside-sources:before, #portfolio #data-visualization .portfolio-list .outside-sources:before, #portfolio #print-design .portfolio-list .outside-sources:before, #portfolio #model-making .portfolio-list .outside-sources:before, #portfolio #processing-and-arduino .portfolio-list .outside-sources:before, #portfolio #presentation .portfolio-list .outside-sources:before {
     content: "";
     display: block;
     padding-top: 100%;
@@ -3168,7 +3182,7 @@ footer p a {
   .blog-post-list {
     position: relative;
     width: 33.33%;
-    border-bottom: 1px solid #b5e285;
+    border-bottom: 1px solid #b4e283;
     float: left;
   }
   .blog-post-list:before {
@@ -3189,7 +3203,7 @@ footer p a {
     font-size: 2.827em;
   }
   .blog-post-list:nth-child(3n+2), .blog-post-list:nth-child(3n+3) {
-    border-right: 1px solid #b5e285;
+    border-right: 1px solid #b4e283;
   }
   .blog-post-list:nth-child(3n+4) {
     border-right: 1px solid #fff;
@@ -3207,7 +3221,7 @@ footer p a {
   #blog-post .post-header {
     position: relative;
     width: 100%;
-    background-color: #b5e285;
+    background-color: #b4e283;
   }
   #blog-post .post-header:before {
     content: "";
@@ -3222,37 +3236,37 @@ footer p a {
     padding-bottom: 4em;
   }
 
-  #portfolio #ui-ux-design .portfolio-head, #portfolio #data-visualization .portfolio-head, #portfolio #print-design .portfolio-head, #portfolio #model-making .portfolio-head, #portfolio #processing-and-arduino .portfolio-head {
+  #portfolio #ui-ux-design .portfolio-head, #portfolio #data-visualization .portfolio-head, #portfolio #print-design .portfolio-head, #portfolio #model-making .portfolio-head, #portfolio #processing-and-arduino .portfolio-head, #portfolio #presentation .portfolio-head {
     width: 960px !important;
     margin: 0 auto;
     position: relative;
     width: 100%;
   }
-  #portfolio #ui-ux-design .portfolio-head:before, #portfolio #data-visualization .portfolio-head:before, #portfolio #print-design .portfolio-head:before, #portfolio #model-making .portfolio-head:before, #portfolio #processing-and-arduino .portfolio-head:before {
+  #portfolio #ui-ux-design .portfolio-head:before, #portfolio #data-visualization .portfolio-head:before, #portfolio #print-design .portfolio-head:before, #portfolio #model-making .portfolio-head:before, #portfolio #processing-and-arduino .portfolio-head:before, #portfolio #presentation .portfolio-head:before {
     content: "";
     display: block;
     padding-top: 33.33%;
   }
-  #portfolio #ui-ux-design .portfolio-head .portfolio-class-title, #portfolio #data-visualization .portfolio-head .portfolio-class-title, #portfolio #print-design .portfolio-head .portfolio-class-title, #portfolio #model-making .portfolio-head .portfolio-class-title, #portfolio #processing-and-arduino .portfolio-head .portfolio-class-title {
+  #portfolio #ui-ux-design .portfolio-head .portfolio-class-title, #portfolio #data-visualization .portfolio-head .portfolio-class-title, #portfolio #print-design .portfolio-head .portfolio-class-title, #portfolio #model-making .portfolio-head .portfolio-class-title, #portfolio #processing-and-arduino .portfolio-head .portfolio-class-title, #portfolio #presentation .portfolio-head .portfolio-class-title {
     font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.999em;
   }
-  #portfolio #ui-ux-design .portfolio-head .portfolio-class-disc, #portfolio #data-visualization .portfolio-head .portfolio-class-disc, #portfolio #print-design .portfolio-head .portfolio-class-disc, #portfolio #model-making .portfolio-head .portfolio-class-disc, #portfolio #processing-and-arduino .portfolio-head .portfolio-class-disc {
+  #portfolio #ui-ux-design .portfolio-head .portfolio-class-disc, #portfolio #data-visualization .portfolio-head .portfolio-class-disc, #portfolio #print-design .portfolio-head .portfolio-class-disc, #portfolio #model-making .portfolio-head .portfolio-class-disc, #portfolio #processing-and-arduino .portfolio-head .portfolio-class-disc, #portfolio #presentation .portfolio-head .portfolio-class-disc {
     font-size: 1.414em;
   }
-  #portfolio #ui-ux-design .portfolio-class-content, #portfolio #data-visualization .portfolio-class-content, #portfolio #print-design .portfolio-class-content, #portfolio #model-making .portfolio-class-content, #portfolio #processing-and-arduino .portfolio-class-content {
+  #portfolio #ui-ux-design .portfolio-class-content, #portfolio #data-visualization .portfolio-class-content, #portfolio #print-design .portfolio-class-content, #portfolio #model-making .portfolio-class-content, #portfolio #processing-and-arduino .portfolio-class-content, #portfolio #presentation .portfolio-class-content {
     width: 960px;
     margin: 0 auto;
     padding-bottom: 160px;
   }
-  #portfolio #ui-ux-design .portfolio-class-content:before, #portfolio #ui-ux-design .portfolio-class-content:after, #portfolio #data-visualization .portfolio-class-content:before, #portfolio #data-visualization .portfolio-class-content:after, #portfolio #print-design .portfolio-class-content:before, #portfolio #print-design .portfolio-class-content:after, #portfolio #model-making .portfolio-class-content:before, #portfolio #model-making .portfolio-class-content:after, #portfolio #processing-and-arduino .portfolio-class-content:before, #portfolio #processing-and-arduino .portfolio-class-content:after {
+  #portfolio #ui-ux-design .portfolio-class-content:before, #portfolio #ui-ux-design .portfolio-class-content:after, #portfolio #data-visualization .portfolio-class-content:before, #portfolio #data-visualization .portfolio-class-content:after, #portfolio #print-design .portfolio-class-content:before, #portfolio #print-design .portfolio-class-content:after, #portfolio #model-making .portfolio-class-content:before, #portfolio #model-making .portfolio-class-content:after, #portfolio #processing-and-arduino .portfolio-class-content:before, #portfolio #processing-and-arduino .portfolio-class-content:after, #portfolio #presentation .portfolio-class-content:before, #portfolio #presentation .portfolio-class-content:after {
     content: " ";
     display: table;
   }
-  #portfolio #ui-ux-design .portfolio-class-content:after, #portfolio #data-visualization .portfolio-class-content:after, #portfolio #print-design .portfolio-class-content:after, #portfolio #model-making .portfolio-class-content:after, #portfolio #processing-and-arduino .portfolio-class-content:after {
+  #portfolio #ui-ux-design .portfolio-class-content:after, #portfolio #data-visualization .portfolio-class-content:after, #portfolio #print-design .portfolio-class-content:after, #portfolio #model-making .portfolio-class-content:after, #portfolio #processing-and-arduino .portfolio-class-content:after, #portfolio #presentation .portfolio-class-content:after {
     clear: both;
   }
-  #portfolio #ui-ux-design .portfolio-class-content, #portfolio #data-visualization .portfolio-class-content, #portfolio #print-design .portfolio-class-content, #portfolio #model-making .portfolio-class-content, #portfolio #processing-and-arduino .portfolio-class-content {
+  #portfolio #ui-ux-design .portfolio-class-content, #portfolio #data-visualization .portfolio-class-content, #portfolio #print-design .portfolio-class-content, #portfolio #model-making .portfolio-class-content, #portfolio #processing-and-arduino .portfolio-class-content, #portfolio #presentation .portfolio-class-content {
     *zoom: 1;
   }
   #portfolio #ui-ux-design .head-image-wrapper {
@@ -3264,7 +3278,7 @@ footer p a {
   #portfolio #ui-ux-design .portfolio-class-content {
     margin: 160px auto 0 auto;
   }
-  #portfolio #data-visualization .head-image-wrapper, #portfolio #print-design .head-image-wrapper, #portfolio #model-making .head-image-wrapper, #portfolio #processing-and-arduino .head-image-wrapper {
+  #portfolio #data-visualization .head-image-wrapper, #portfolio #print-design .head-image-wrapper, #portfolio #model-making .head-image-wrapper, #portfolio #processing-and-arduino .head-image-wrapper, #portfolio #presentation .head-image-wrapper {
     height: 480px;
   }
   #portfolio .head-image-wrapper {

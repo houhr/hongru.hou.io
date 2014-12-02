@@ -4,10 +4,10 @@
         'font-awesome.min';
 
 // Color
-$c-primary: #b5e285;
-$c-secondary: #e28585;
+$c-primary: hsl(89, 62%, 70%);  //#b5e285
+$c-secondary: hsl(0, 62%, 70%);  //#E28585
 $c-w: #fff;
-$c-b: #000;
+$c-b: hsl(89, 62%, 6%);  //#101906
 $c-g: #bbb;
 
 // Font-family
@@ -33,6 +33,7 @@ $fs-s-2: 0.5em;    // 9px
 body {
   font-family: $ff-body;
   font-size: $fs-base;
+  color: $c-b;
   line-height: 135%;
   position: relative;
 }
@@ -469,6 +470,19 @@ footer {
 
   }
 
+  #presentation {
+
+    .head-image-wrapper {
+      background: url("/images/compressed/portfolio/presentation.jpg") no-repeat center center;
+      background-size: cover;
+    }
+
+    .outside-sources {
+      @include ratio(100%, 86%);
+    }
+
+  }
+
   #model-making {
 
     .head-image-wrapper {
@@ -666,7 +680,7 @@ and (min-width : 640px) {
       @include ratio(100%, 25%);
     }
 
-    #ui-ux-design, #data-visualization, #print-design, #model-making, #processing-and-arduino {
+    #ui-ux-design, #data-visualization, #print-design, #model-making, #processing-and-arduino, #presentation {
 
       .portfolio-class-content {
         @import 'clearfix';
@@ -833,7 +847,7 @@ and (min-width : 960px) {
 
   #portfolio {
 
-    #ui-ux-design, #data-visualization, #print-design, #model-making, #processing-and-arduino {
+    #ui-ux-design, #data-visualization, #print-design, #model-making, #processing-and-arduino, #presentation {
 
       .portfolio-head {
         width: 960px !important;
@@ -881,7 +895,7 @@ and (min-width : 960px) {
 
     }
 
-    #data-visualization, #print-design, #model-making, #processing-and-arduino {
+    #data-visualization, #print-design, #model-making, #processing-and-arduino, #presentation {
       .head-image-wrapper {
         height: 480px;
       }
