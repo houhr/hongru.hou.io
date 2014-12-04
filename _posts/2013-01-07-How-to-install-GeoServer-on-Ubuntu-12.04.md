@@ -69,7 +69,7 @@ For some reason, Tomcat cannot find JDK automatically, so we have to set “$JAV
 
 > sudo vi /etc/default/tomcat7
 > 
-> $JAVA_HOME=/usr/lib/jvm/java-7-oracle
+> JAVA_HOME=/usr/lib/jvm/java-7-oracle
 > 
 > sudo /etc/init.d/tomcat7 restart
 
