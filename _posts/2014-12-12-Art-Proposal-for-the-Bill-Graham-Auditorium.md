@@ -8,6 +8,8 @@ As the last assignment of the Model Making class, we were asked to participate a
 ## Explore background information
 The building was a multi-purpose music hall, which named after music promoter Bill Graham. After went to the real location and familiarized its surrounding, I found the place was located at the heart of San Francisco and next to City Hall. One of its wall was mainly covered with dark shadow, cold wind and had nothing on it. The southwest corner of the building was kind of mess, and there were several homeless sleeping there.
 
+<p class="full-width"><img src="/images/compressed/blog/2014-12-12/0.jpg" title="Surrounding"></p>
+
 ## Define the problem
 According to the purpose of the project and the background information I got, I think the problem of this place or the meaning of this project is how to balance different people’s lives. For the people inside the building — no matter they are singers or audience, they are tend to be the rich and have colorful lives. However, for the people who cannot enter the building or even sleep with the building every night, their lives need more color.
 
