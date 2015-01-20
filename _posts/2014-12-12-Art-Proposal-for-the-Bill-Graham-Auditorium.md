@@ -3,7 +3,7 @@ layout: post
 title: Art Proposal for the Bill Graham Auditorium
 published: true
 ---
-As our last assignment of the Model Making class, we were asked to participate a real project — Art Proposal for the Bill Graham Auditorium. And the project description can be found [here](http://www.sfartscommission.org/pubartcollection/about-pubart/opportunities/2014/10/02/8637/).
+As the last assignment of the Model Making class, we were asked to participate a real project — Art Proposal for the Bill Graham Auditorium. And the project description can be found [here](http://www.sfartscommission.org/pubartcollection/about-pubart/opportunities/2014/10/02/8637/).
 
 ## Explore background information
 The building was a multi-purpose music hall, which named after music promoter Bill Graham. After went to the real location and familiarized its surrounding, I found the place was located at the heart of San Francisco and next to City Hall. One of its wall was mainly covered with dark shadow, cold wind and had nothing on it. The southwest corner of the building was kind of mess, and there were several homeless sleeping there.
@@ -25,11 +25,11 @@ During the preparation of presenting the idea, the challenge for me was how to c
 </p>
 
 
-At the end of brainstorm with our professor, he suggested me to show dynamic traffic by using projectors. I did some research about projecting things on real objects, and then understood what I need was named **3D projection**, which I had never done before. After spent several day’s effort on making video and mapping it on the model I made before, I finally turned my idea into reality. The effect of how I present my idea was quite intuit, people can understand my idea instantly.
+At the end of brainstorm with our professor Mark, he suggested me to show dynamic traffic by using projectors. I did some research about projecting things on real objects, and then understood what I need was named **3D projection**, which I had never done before. After spent several day’s effort on making video and mapping it on the model I made before, I finally turned my idea into reality. The effect of how I present my idea was quite intuitive, people can understand my idea instantly.
 
 <p class="full-width"><img src="/images/compressed/blog/2014-12-12/2.jpg" title="3D mapping process"></p>
 <p class="full-width"><img src="/images/compressed/blog/2014-12-12/3.jpg" title="Poster"></p>
 
 <div class="outside-sources">
-<iframe src="//player.vimeo.com/video/117243799?title=0&amp;byline=0&amp;portrait=0&amp;color=b5e285&amp;loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="//player.vimeo.com/video/117243799?title=0&amp;byline=0&amp;portrait=0&amp;color=b5e285&amp;autoplay=1&amp;loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
