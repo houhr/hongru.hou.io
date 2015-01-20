@@ -328,6 +328,18 @@ footer {
       width: 100%;
     }
 
+    .outside-sources {
+      @include ratio(100%, 56.25%);
+    }
+
+    .outside-sources iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
     p, h2, blockquote {
       width: 90%;
     }
@@ -461,19 +473,6 @@ footer {
 
   }
 
-  #data-visualization {
-
-    .head-image-wrapper {
-      background: url("/images/compressed/portfolio/data-visualization.png") no-repeat center center;
-      background-size: cover;
-    }
-
-    .outside-sources {
-      @include ratio(100%, 100%);
-    }
-
-  }
-
   #print-design {
 
     .head-image-wrapper {
@@ -483,19 +482,6 @@ footer {
 
     .outside-sources {
       @include ratio(100%, 100%);
-    }
-
-  }
-
-  #presentation {
-
-    .head-image-wrapper {
-      background: url("/images/compressed/portfolio/presentation.jpg") no-repeat center center;
-      background-size: cover;
-    }
-
-    .outside-sources {
-      @include ratio(100%, 86%);
     }
 
   }
@@ -706,7 +692,7 @@ and (min-width : 640px) {
       @include ratio(100%, 25%);
     }
 
-    #ui-ux-design, #data-visualization, #print-design, #model-making, #processing-and-arduino, #presentation {
+    #ui-ux-design, #print-design, #model-making, #processing-and-arduino {
 
       .portfolio-class-content {
         @import 'clearfix';
@@ -866,7 +852,7 @@ and (min-width : 960px) {
 
   #portfolio {
 
-    #ui-ux-design, #data-visualization, #print-design, #model-making, #processing-and-arduino, #presentation {
+    #ui-ux-design, #print-design, #model-making, #processing-and-arduino {
 
       .portfolio-head {
         width: 960px !important;
@@ -914,7 +900,7 @@ and (min-width : 960px) {
 
     }
 
-    #data-visualization, #print-design, #model-making, #processing-and-arduino, #presentation {
+    #print-design, #model-making, #processing-and-arduino {
       .head-image-wrapper {
         height: 480px;
       }

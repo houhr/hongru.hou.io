@@ -29,3 +29,7 @@ At the end of brainstorm with our professor, he suggested me to show dynamic tra
 
 <p class="full-width"><img src="/images/compressed/blog/2014-12-12/2.jpg" title="3D mapping process"></p>
 <p class="full-width"><img src="/images/compressed/blog/2014-12-12/3.jpg" title="Poster"></p>
+
+<div class="outside-sources">
+<iframe src="//player.vimeo.com/video/117243799?title=0&amp;byline=0&amp;portrait=0&amp;color=b5e285&amp;loop=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
