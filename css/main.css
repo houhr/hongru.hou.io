@@ -2630,6 +2630,9 @@ footer p a {
 #blog-post .post-meta {
   font-size: 18px;
 }
+#blog-post .post-content {
+  margin: 2em auto;
+}
 #blog-post .post-content .full-width {
   margin: 1em 0;
   padding: auto 0;
