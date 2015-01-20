@@ -281,6 +281,7 @@ footer {
     font-family: $ff-head;
     font-size: $fs-b-1;
     margin: 1em 0 0;
+    line-height: normal;
 
     .post-link {
       color: $c-b;
@@ -304,6 +305,7 @@ footer {
     font-family: $ff-head;
     font-size: $fs-b-1;
     margin: 1em 0 0;
+    line-height: normal;
   }
 
   .post-link {
@@ -317,20 +319,33 @@ footer {
 
   // Article style
   .post-content {
-    padding: 1em;
 
-    p {
-      margin-bottom: 2em;
+    .full-width {
+      margin: 1em 0;
+      padding: auto 0;
+      width: 100%;
+    }
+
+    p, h2, blockquote {
+      width: 90%;
+    }
+
+    p, blockquote {
+      margin: 1em auto;
     }
 
     h2 {
+      margin: 2em auto 1em;
       font-size: $fs-base;
       font-family: $ff-head;
     }
 
+    img {
+      display: block;
+      width: 100%;
+    }
+
     blockquote {
-      margin-left: 0;
-      padding-left: 1em;
       border-left: 1px solid $c-primary;
     }
 
@@ -638,9 +653,18 @@ and (min-width : 640px) {
     }
 
     .post-content {
-      padding: 0; //clear previous RWD
-      width: 66.66%;
-      margin: 4em auto;
+
+
+      p, h2, blockquote {
+        width: 66.66%;
+      }
+
+      blockquote {
+        p {
+          margin: 0 0 0 1em;
+        }
+      }
+
     }
 
     .post-comments {
@@ -829,13 +853,6 @@ and (min-width : 960px) {
     .post-content {
 
 
-      h2 {
-
-      }
-
-      blockquote {
-
-      }
     }
 
     .post-comments {

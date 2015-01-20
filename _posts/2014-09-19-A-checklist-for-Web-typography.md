@@ -21,5 +21,5 @@ published: true
 ## Type correct characters on Mac
 * smart quotes: <kbd><kbd>Option</kbd>+<kbd>[</kbd></kbd>, <kbd><kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>[</kbd></kbd>
 * hyphen: <kbd>-</kbd>
-* en: <kbd><kbd>Option</kbd>+<kbd>-</kbd></kbd>
-* em: <kbd><kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd></kbd>
+* en dash: <kbd><kbd>Option</kbd>+<kbd>-</kbd></kbd>
+* em dash: <kbd><kbd>Option</kbd>+<kbd>Shift</kbd>+<kbd>-</kbd></kbd>

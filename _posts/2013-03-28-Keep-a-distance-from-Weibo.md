@@ -3,7 +3,7 @@ layout: post
 title: Keep a distance from Weibo
 category: Introspection
 tags: Weibo twitter micro blog
-published: true
+published: false
 ---
 Start reading books or something useful again.
 

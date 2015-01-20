@@ -2598,6 +2598,7 @@ footer p a {
   font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.414em;
   margin: 1em 0 0;
+  line-height: normal;
 }
 .blog-post-list .post-title .post-link {
   color: #101906;
@@ -2621,6 +2622,7 @@ footer p a {
   font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.414em;
   margin: 1em 0 0;
+  line-height: normal;
 }
 #blog-post .post-link {
   color: #101906;
@@ -2628,19 +2630,27 @@ footer p a {
 #blog-post .post-meta {
   font-size: 18px;
 }
-#blog-post .post-content {
-  padding: 1em;
+#blog-post .post-content .full-width {
+  margin: 1em 0;
+  padding: auto 0;
+  width: 100%;
 }
-#blog-post .post-content p {
-  margin-bottom: 2em;
+#blog-post .post-content p, #blog-post .post-content h2, #blog-post .post-content blockquote {
+  width: 90%;
+}
+#blog-post .post-content p, #blog-post .post-content blockquote {
+  margin: 1em auto;
 }
 #blog-post .post-content h2 {
+  margin: 2em auto 1em;
   font-size: 18px;
   font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+#blog-post .post-content img {
+  display: block;
+  width: 100%;
+}
 #blog-post .post-content blockquote {
-  margin-left: 0;
-  padding-left: 1em;
   border-left: 1px solid #b4e283;
 }
 #blog-post .post-comments {
@@ -3000,10 +3010,11 @@ footer p a {
   #blog-post .post-meta {
     font-size: 1.414em;
   }
-  #blog-post .post-content {
-    padding: 0;
+  #blog-post .post-content p, #blog-post .post-content h2, #blog-post .post-content blockquote {
     width: 66.66%;
-    margin: 4em auto;
+  }
+  #blog-post .post-content blockquote p {
+    margin: 0 0 0 1em;
   }
   #blog-post .post-comments {
     padding: 0;
