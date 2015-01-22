@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Art Proposal for the Bill Graham Auditorium
+title: Art proposal for the Bill Graham auditorium
 published: true
 ---
 As the last assignment of the Model Making class, we were asked to participate a real project — Art Proposal for the Bill Graham Auditorium. And the project description can be found [here](http://www.sfartscommission.org/pubartcollection/about-pubart/opportunities/2014/10/02/8637/).

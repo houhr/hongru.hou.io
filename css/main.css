@@ -2654,16 +2654,21 @@ footer p a {
   width: 100%;
   height: 100%;
 }
-#blog-post .post-content p, #blog-post .post-content h2, #blog-post .post-content blockquote {
+#blog-post .post-content p, #blog-post .post-content h2, #blog-post .post-content h3, #blog-post .post-content ul, #blog-post .post-content ol, #blog-post .post-content blockquote {
   width: 90%;
 }
-#blog-post .post-content p, #blog-post .post-content blockquote {
+#blog-post .post-content p, #blog-post .post-content ul, #blog-post .post-content ol, #blog-post .post-content blockquote {
   margin: 1em auto;
 }
-#blog-post .post-content h2 {
+#blog-post .post-content h2, #blog-post .post-content h3 {
   margin: 2em auto 1em;
-  font-size: 18px;
   font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+#blog-post .post-content h2 {
+  font-size: 18px;
+}
+#blog-post .post-content h3 {
+  font-size: 0.707em;
 }
 #blog-post .post-content img {
   display: block;
@@ -3003,7 +3008,7 @@ footer p a {
   #blog-post .post-meta {
     font-size: 1.414em;
   }
-  #blog-post .post-content p, #blog-post .post-content h2, #blog-post .post-content blockquote {
+  #blog-post .post-content p, #blog-post .post-content h2, #blog-post .post-content h3, #blog-post .post-content ul, #blog-post .post-content ol, #blog-post .post-content blockquote {
     width: 66.66%;
   }
   #blog-post .post-content blockquote p {
