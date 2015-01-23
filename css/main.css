@@ -2854,6 +2854,33 @@ footer p a {
   width: 100%;
   height: 100%;
 }
+#portfolio .outside-sources a {
+  color: #101906;
+}
+#portfolio .outside-sources a figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+#portfolio .outside-sources a figure figcaption {
+  padding: 2em;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #b4e283;
+  opacity: 0.9;
+}
+#portfolio .outside-sources a figure figcaption h3 {
+  border-bottom: 1px solid #101906;
+  padding-bottom: 1em;
+}
+#portfolio .outside-sources a figure:hover figcaption {
+  top: 0;
+}
 #portfolio .outside-sources a img {
   display: block;
   position: relative;
