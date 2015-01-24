@@ -91,6 +91,26 @@ a {
   text-align: center;
 }
 
+.button {
+  text-decoration: none;
+  border-radius: .25em;
+  border: 1px solid $c-primary;
+  background-color: $c-primary;
+  color: $c-w;
+  padding: .25em 2em;
+  text-transform: lowercase;
+  letter-spacing: .1em;
+  word-spacing: .1em;
+  font-family: $ff-body-sc;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  text-decoration: none;
+  background-color: $c-w;
+  color: $c-primary;
+}
+
 .logo {
   width: 24px;
   height: 24px;
@@ -419,13 +439,6 @@ footer {
     &:last-child {
       margin: 0 auto;
     }
-
-    a {
-
-      background-color: $c-primary;
-      color: $c-b;
-      padding: .5em 1em;
-    }
   }
 
 }
@@ -521,18 +534,7 @@ footer {
         }
 
         .button {
-          text-decoration: none;
-          border-radius: .25em;
-          color: $c-primary;
-          border: 1px solid $c-primary;
-          padding: .25em 2em;
-          text-transform: lowercase;
-          font-family: $ff-body-sc;
-        }
 
-        .button:hover {
-          background-color: $c-primary;
-          color: $c-w;
         }
 
       }
@@ -547,9 +549,13 @@ footer {
     }
   }
 
-  .outside-sources .frame img {
+  .outside-sources .frame img, .outside-sources .frame iframe {
     display: block;
     @include ratio(100%, 100%);
+  }
+
+  .outside-sources .frame figure, .outside-sources .frame iframe {
+    height: 100%;
   }
 
   .portfolio-class-content {

@@ -2374,6 +2374,26 @@ a:hover {
   text-align: center;
 }
 
+.button {
+  text-decoration: none;
+  border-radius: .25em;
+  border: 1px solid #b4e283;
+  background-color: #b4e283;
+  color: #fff;
+  padding: .25em 2em;
+  text-transform: lowercase;
+  letter-spacing: .1em;
+  word-spacing: .1em;
+  font-family: "Alegreya SC", Georgia, Times, "Times New Roman", serif;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: #b4e283;
+}
+
 .logo {
   width: 24px;
   height: 24px;
@@ -2743,11 +2763,6 @@ footer p a {
 .publication-disc p:last-child {
   margin: 0 auto;
 }
-.publication-disc p a {
-  background-color: #b4e283;
-  color: #101906;
-  padding: .5em 1em;
-}
 
 .publication-title {
   font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -2844,34 +2859,24 @@ footer p a {
   border-bottom: 1px solid #101906;
   padding-bottom: 1em;
 }
-#portfolio .outside-sources .frame figure .fig-content .button {
-  text-decoration: none;
-  border-radius: .25em;
-  color: #b4e283;
-  border: 1px solid #b4e283;
-  padding: .25em 2em;
-  text-transform: lowercase;
-  font-family: "Alegreya SC", Georgia, Times, "Times New Roman", serif;
-}
-#portfolio .outside-sources .frame figure .fig-content .button:hover {
-  background-color: #b4e283;
-  color: #fff;
-}
 #portfolio .outside-sources .frame figure:hover figcaption {
   top: 0;
 }
 #portfolio .outside-sources .frame figure:hover .fig-content {
   top: 0;
 }
-#portfolio .outside-sources .frame img {
+#portfolio .outside-sources .frame img, #portfolio .outside-sources .frame iframe {
   display: block;
   position: relative;
   width: 100%;
 }
-#portfolio .outside-sources .frame img:before {
+#portfolio .outside-sources .frame img:before, #portfolio .outside-sources .frame iframe:before {
   content: "";
   display: block;
   padding-top: 100%;
+}
+#portfolio .outside-sources .frame figure, #portfolio .outside-sources .frame iframe {
+  height: 100%;
 }
 #portfolio .portfolio-class-content {
   list-style: none;
