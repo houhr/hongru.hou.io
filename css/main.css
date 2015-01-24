@@ -2850,6 +2850,8 @@ footer p a {
   color: #b4e283;
   border: 1px solid #b4e283;
   padding: .25em 2em;
+  text-transform: lowercase;
+  font-family: "Alegreya SC", Georgia, Times, "Times New Roman", serif;
 }
 #portfolio .outside-sources .frame figure .fig-content .button:hover {
   background-color: #b4e283;
