@@ -2808,61 +2808,22 @@ footer p a {
   display: block;
   padding-top: 100%;
 }
-#portfolio #print-design .head-image-wrapper {
-  background: url("/images/compressed/portfolio/print-design.jpg") no-repeat center center;
-  background-size: cover;
-}
-#portfolio #print-design .outside-sources {
-  position: relative;
-  width: 100%;
-}
-#portfolio #print-design .outside-sources:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-#portfolio #model-making .head-image-wrapper {
-  background: url("/images/compressed/portfolio/model-making.jpg") no-repeat center center;
-  background-size: cover;
-}
-#portfolio #model-making .outside-sources {
-  position: relative;
-  width: 100%;
-}
-#portfolio #model-making .outside-sources:before {
-  content: "";
-  display: block;
-  padding-top: 56.25%;
-}
-#portfolio #processing-and-arduino .head-image-wrapper {
-  background: url("/images/compressed/portfolio/processing-and-arduino.jpg") no-repeat center center;
-  background-size: cover;
-}
-#portfolio #processing-and-arduino .outside-sources {
-  position: relative;
-  width: 100%;
-}
-#portfolio #processing-and-arduino .outside-sources:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-#portfolio .outside-sources iframe, #portfolio .outside-sources a {
+#portfolio .outside-sources .frame {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-#portfolio .outside-sources a {
+#portfolio .outside-sources .frame {
   color: #101906;
 }
-#portfolio .outside-sources a figure {
+#portfolio .outside-sources .frame figure {
   position: relative;
   margin: 0;
   overflow: hidden;
 }
-#portfolio .outside-sources a figure figcaption {
+#portfolio .outside-sources .frame figure figcaption {
   padding: 2em;
   transition: all 0.3s ease-in-out;
   position: absolute;
@@ -2874,19 +2835,19 @@ footer p a {
   background-color: #b4e283;
   opacity: 0.9;
 }
-#portfolio .outside-sources a figure figcaption h3 {
+#portfolio .outside-sources .frame figure figcaption h3 {
   border-bottom: 1px solid #101906;
   padding-bottom: 1em;
 }
-#portfolio .outside-sources a figure:hover figcaption {
+#portfolio .outside-sources .frame figure:hover figcaption {
   top: 0;
 }
-#portfolio .outside-sources a img {
+#portfolio .outside-sources .frame img {
   display: block;
   position: relative;
   width: 100%;
 }
-#portfolio .outside-sources a img:before {
+#portfolio .outside-sources .frame img:before {
   content: "";
   display: block;
   padding-top: 100%;
@@ -3084,26 +3045,26 @@ footer p a {
     display: block;
     padding-top: 25%;
   }
-  #portfolio #ui-ux-design .portfolio-class-content:before, #portfolio #ui-ux-design .portfolio-class-content:after, #portfolio #print-design .portfolio-class-content:before, #portfolio #print-design .portfolio-class-content:after, #portfolio #model-making .portfolio-class-content:before, #portfolio #model-making .portfolio-class-content:after, #portfolio #processing-and-arduino .portfolio-class-content:before, #portfolio #processing-and-arduino .portfolio-class-content:after {
+  #portfolio #ui-ux-design .portfolio-class-content:before, #portfolio #ui-ux-design .portfolio-class-content:after {
     content: " ";
     display: table;
   }
-  #portfolio #ui-ux-design .portfolio-class-content:after, #portfolio #print-design .portfolio-class-content:after, #portfolio #model-making .portfolio-class-content:after, #portfolio #processing-and-arduino .portfolio-class-content:after {
+  #portfolio #ui-ux-design .portfolio-class-content:after {
     clear: both;
   }
-  #portfolio #ui-ux-design .portfolio-class-content, #portfolio #print-design .portfolio-class-content, #portfolio #model-making .portfolio-class-content, #portfolio #processing-and-arduino .portfolio-class-content {
+  #portfolio #ui-ux-design .portfolio-class-content {
     *zoom: 1;
   }
-  #portfolio #ui-ux-design .portfolio-list, #portfolio #print-design .portfolio-list, #portfolio #model-making .portfolio-list, #portfolio #processing-and-arduino .portfolio-list {
+  #portfolio #ui-ux-design .portfolio-list {
     width: 33.33%;
     float: left;
   }
-  #portfolio #ui-ux-design .portfolio-list .outside-sources, #portfolio #print-design .portfolio-list .outside-sources, #portfolio #model-making .portfolio-list .outside-sources, #portfolio #processing-and-arduino .portfolio-list .outside-sources {
+  #portfolio #ui-ux-design .portfolio-list .outside-sources {
     background-color: #101906;
     position: relative;
     width: 100%;
   }
-  #portfolio #ui-ux-design .portfolio-list .outside-sources:before, #portfolio #print-design .portfolio-list .outside-sources:before, #portfolio #model-making .portfolio-list .outside-sources:before, #portfolio #processing-and-arduino .portfolio-list .outside-sources:before {
+  #portfolio #ui-ux-design .portfolio-list .outside-sources:before {
     content: "";
     display: block;
     padding-top: 100%;
@@ -3272,37 +3233,37 @@ footer p a {
     padding-bottom: 4em;
   }
 
-  #portfolio #ui-ux-design .portfolio-head, #portfolio #print-design .portfolio-head, #portfolio #model-making .portfolio-head, #portfolio #processing-and-arduino .portfolio-head {
+  #portfolio #ui-ux-design .portfolio-head {
     width: 960px !important;
     margin: 0 auto;
     position: relative;
     width: 100%;
   }
-  #portfolio #ui-ux-design .portfolio-head:before, #portfolio #print-design .portfolio-head:before, #portfolio #model-making .portfolio-head:before, #portfolio #processing-and-arduino .portfolio-head:before {
+  #portfolio #ui-ux-design .portfolio-head:before {
     content: "";
     display: block;
     padding-top: 33.33%;
   }
-  #portfolio #ui-ux-design .portfolio-head .portfolio-class-title, #portfolio #print-design .portfolio-head .portfolio-class-title, #portfolio #model-making .portfolio-head .portfolio-class-title, #portfolio #processing-and-arduino .portfolio-head .portfolio-class-title {
+  #portfolio #ui-ux-design .portfolio-head .portfolio-class-title {
     font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.999em;
   }
-  #portfolio #ui-ux-design .portfolio-head .portfolio-class-disc, #portfolio #print-design .portfolio-head .portfolio-class-disc, #portfolio #model-making .portfolio-head .portfolio-class-disc, #portfolio #processing-and-arduino .portfolio-head .portfolio-class-disc {
+  #portfolio #ui-ux-design .portfolio-head .portfolio-class-disc {
     font-size: 1.414em;
   }
-  #portfolio #ui-ux-design .portfolio-class-content, #portfolio #print-design .portfolio-class-content, #portfolio #model-making .portfolio-class-content, #portfolio #processing-and-arduino .portfolio-class-content {
+  #portfolio #ui-ux-design .portfolio-class-content {
     width: 960px;
     margin: 0 auto;
     padding-bottom: 160px;
   }
-  #portfolio #ui-ux-design .portfolio-class-content:before, #portfolio #ui-ux-design .portfolio-class-content:after, #portfolio #print-design .portfolio-class-content:before, #portfolio #print-design .portfolio-class-content:after, #portfolio #model-making .portfolio-class-content:before, #portfolio #model-making .portfolio-class-content:after, #portfolio #processing-and-arduino .portfolio-class-content:before, #portfolio #processing-and-arduino .portfolio-class-content:after {
+  #portfolio #ui-ux-design .portfolio-class-content:before, #portfolio #ui-ux-design .portfolio-class-content:after {
     content: " ";
     display: table;
   }
-  #portfolio #ui-ux-design .portfolio-class-content:after, #portfolio #print-design .portfolio-class-content:after, #portfolio #model-making .portfolio-class-content:after, #portfolio #processing-and-arduino .portfolio-class-content:after {
+  #portfolio #ui-ux-design .portfolio-class-content:after {
     clear: both;
   }
-  #portfolio #ui-ux-design .portfolio-class-content, #portfolio #print-design .portfolio-class-content, #portfolio #model-making .portfolio-class-content, #portfolio #processing-and-arduino .portfolio-class-content {
+  #portfolio #ui-ux-design .portfolio-class-content {
     *zoom: 1;
   }
   #portfolio #ui-ux-design .head-image-wrapper {
@@ -3313,9 +3274,6 @@ footer p a {
   }
   #portfolio #ui-ux-design .portfolio-class-content {
     margin: 160px auto 0 auto;
-  }
-  #portfolio #print-design .head-image-wrapper, #portfolio #model-making .head-image-wrapper, #portfolio #processing-and-arduino .head-image-wrapper {
-    height: 480px;
   }
   #portfolio .head-image-wrapper {
     position: relative;

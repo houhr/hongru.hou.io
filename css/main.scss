@@ -480,46 +480,7 @@ footer {
 
   }
 
-  #print-design {
-
-    .head-image-wrapper {
-      background: url("/images/compressed/portfolio/print-design.jpg") no-repeat center center;
-      background-size: cover;
-    }
-
-    .outside-sources {
-      @include ratio(100%, 100%);
-    }
-
-  }
-
-  #model-making {
-
-    .head-image-wrapper {
-      background: url("/images/compressed/portfolio/model-making.jpg") no-repeat center center;
-      background-size: cover;
-    }
-
-    .outside-sources {
-      @include ratio(100%, 56.25%);
-    }
-
-  }
-
-  #processing-and-arduino {
-
-    .head-image-wrapper {
-      background: url("/images/compressed/portfolio/processing-and-arduino.jpg") no-repeat center center;
-      background-size: cover;
-    }
-
-    .outside-sources {
-      @include ratio(100%, 100%);
-    }
-
-  }
-
-  .outside-sources iframe, .outside-sources a, {
+  .outside-sources .frame, {
     position: absolute;
     top: 0;
     left: 0;
@@ -527,7 +488,7 @@ footer {
     height: 100%;
   }
 
-  .outside-sources a {
+  .outside-sources .frame {
 
     color: $c-b;
 
@@ -560,7 +521,7 @@ footer {
     }
   }
 
-  .outside-sources a img {
+  .outside-sources .frame img {
     display: block;
     @include ratio(100%, 100%);
   }
@@ -732,7 +693,7 @@ and (min-width : 640px) {
       @include ratio(100%, 25%);
     }
 
-    #ui-ux-design, #print-design, #model-making, #processing-and-arduino {
+    #ui-ux-design {
 
       .portfolio-class-content {
         @import 'clearfix';
@@ -892,7 +853,7 @@ and (min-width : 960px) {
 
   #portfolio {
 
-    #ui-ux-design, #print-design, #model-making, #processing-and-arduino {
+    #ui-ux-design {
 
       .portfolio-head {
         width: 960px !important;
@@ -938,12 +899,6 @@ and (min-width : 960px) {
         margin: 160px auto 0 auto;
       }
 
-    }
-
-    #print-design, #model-making, #processing-and-arduino {
-      .head-image-wrapper {
-        height: 480px;
-      }
     }
 
     .head-image-wrapper {
