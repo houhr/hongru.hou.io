@@ -2385,7 +2385,7 @@ a:hover {
   letter-spacing: .1em;
   word-spacing: .1em;
   font-family: "Alegreya SC", Georgia, Times, "Times New Roman", serif;
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .button:hover {
@@ -2839,7 +2839,6 @@ footer p a {
   overflow: hidden;
 }
 #portfolio .outside-sources .frame figure figcaption {
-  transition: all 0.3s ease-in-out;
   position: absolute;
   top: 100%;
   width: 100%;
@@ -2847,13 +2846,15 @@ footer p a {
   margin: 0 auto;
   text-align: center;
   background-image: linear-gradient(to bottom, rgba(180, 226, 131, 0.8) 0%, white 80%);
+  transition: all .2s ease-in-out;
 }
 #portfolio .outside-sources .frame figure .fig-content {
   width: 100%;
-  transition: all 0.5s ease-in-out;
+  transition: all .6s ease-in-out;
   padding: 2em;
   position: absolute;
-  top: 50%;
+  top: 5%;
+  opacity: 0;
 }
 #portfolio .outside-sources .frame figure .fig-content h3 {
   border-bottom: 1px solid #101906;
@@ -2864,6 +2865,7 @@ footer p a {
 }
 #portfolio .outside-sources .frame figure:hover .fig-content {
   top: 0;
+  opacity: 1;
 }
 #portfolio .outside-sources .frame img, #portfolio .outside-sources .frame iframe {
   display: block;
