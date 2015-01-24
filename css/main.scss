@@ -38,6 +38,10 @@ body {
   position: relative;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $ff-head;
+}
+
 abbr[title] {
   font-family: $ff-body-sc;
   text-transform: lowercase;
@@ -164,7 +168,6 @@ nav {
   h1 {
     color: $c-b;
     font-size: $fs-b-2;
-    font-family: $ff-head;
     margin-top: 0;
   }
 
@@ -298,7 +301,6 @@ footer {
 
   .post-title {
     padding: 0 1em;
-    font-family: $ff-head;
     font-size: $fs-b-1;
     margin: 1em 0 0;
     line-height: normal;
@@ -322,7 +324,6 @@ footer {
 
   .post-title {
     padding: 0 1em;
-    font-family: $ff-head;
     font-size: $fs-b-1;
     margin: 1em 0 0;
     line-height: normal;
@@ -370,7 +371,6 @@ footer {
 
     h2, h3 {
       margin: 2em auto 1em;
-      font-family: $ff-head;
     }
 
     h2 {
@@ -444,7 +444,6 @@ footer {
 }
 
 .publication-title{
-  font-family: $ff-head;
   font-size: $fs-b-1;
   margin: 0 1em 1em 1em;
 
@@ -474,8 +473,8 @@ footer {
 
   .portfolio-head {
     @include ratio(100%, 50%);
+
     .portfolio-class-title {
-      font-family: $ff-head;
       font-size: $fs-b-1;
     }
   }
@@ -532,10 +531,7 @@ footer {
         h3 {
           border-bottom: 1px solid $c-b;
           padding-bottom: 1em;
-        }
-
-        .button {
-
+          font-size: $fs-b-1;
         }
 
       }
@@ -895,7 +891,6 @@ and (min-width : 960px) {
         @include ratio(100%, 33.33%);
 
         .portfolio-class-title {
-          font-family: $ff-head;
           font-size: $fs-b-2;
         }
 

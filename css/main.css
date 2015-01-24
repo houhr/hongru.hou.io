@@ -2332,6 +2332,10 @@ body {
   position: relative;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
 abbr[title] {
   font-family: "Alegreya SC", Georgia, Times, "Times New Roman", serif;
   text-transform: lowercase;
@@ -2451,7 +2455,6 @@ nav ul li a svg {
 #intro h1 {
   color: #101906;
   font-size: 1.999em;
-  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   margin-top: 0;
 }
 #intro p {
@@ -2615,7 +2618,6 @@ footer p a {
 }
 .blog-post-list .post-title {
   padding: 0 1em;
-  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.414em;
   margin: 1em 0 0;
   line-height: normal;
@@ -2639,7 +2641,6 @@ footer p a {
 }
 #blog-post .post-title {
   padding: 0 1em;
-  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.414em;
   margin: 1em 0 0;
   line-height: normal;
@@ -2682,7 +2683,6 @@ footer p a {
 }
 #blog-post .post-content h2, #blog-post .post-content h3 {
   margin: 2em auto 1em;
-  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 #blog-post .post-content h2 {
   font-size: 18px;
@@ -2765,7 +2765,6 @@ footer p a {
 }
 
 .publication-title {
-  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.414em;
   margin: 0 1em 1em 1em;
 }
@@ -2807,7 +2806,6 @@ footer p a {
   padding-top: 50%;
 }
 #portfolio .portfolio-head .portfolio-class-title {
-  font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.414em;
 }
 #portfolio #ui-ux-design .head-image-wrapper {
@@ -2859,6 +2857,7 @@ footer p a {
 #portfolio .outside-sources .frame figure .fig-content h3 {
   border-bottom: 1px solid #101906;
   padding-bottom: 1em;
+  font-size: 1.414em;
 }
 #portfolio .outside-sources .frame figure:hover figcaption {
   top: 0;
@@ -3273,7 +3272,6 @@ footer p a {
     padding-top: 33.33%;
   }
   #portfolio #ui-ux-design .portfolio-head .portfolio-class-title {
-    font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.999em;
   }
   #portfolio #ui-ux-design .portfolio-head .portfolio-class-disc {
