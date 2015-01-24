@@ -2831,8 +2831,7 @@ footer p a {
   height: 100%;
   margin: 0 auto;
   text-align: center;
-  background-color: #b4e283;
-  opacity: 0.9;
+  background-image: linear-gradient(to bottom, rgba(180, 226, 131, 0.8) 0%, white 80%);
 }
 #portfolio .outside-sources .frame figure .fig-content {
   width: 100%;
@@ -2844,6 +2843,17 @@ footer p a {
 #portfolio .outside-sources .frame figure .fig-content h3 {
   border-bottom: 1px solid #101906;
   padding-bottom: 1em;
+}
+#portfolio .outside-sources .frame figure .fig-content .button {
+  text-decoration: none;
+  border-radius: .25em;
+  color: #b4e283;
+  border: 1px solid #b4e283;
+  padding: .25em 2em;
+}
+#portfolio .outside-sources .frame figure .fig-content .button:hover {
+  background-color: #b4e283;
+  color: #fff;
 }
 #portfolio .outside-sources .frame figure:hover figcaption {
   top: 0;
