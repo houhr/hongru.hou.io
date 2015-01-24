@@ -2824,7 +2824,6 @@ footer p a {
   overflow: hidden;
 }
 #portfolio .outside-sources .frame figure figcaption {
-  padding: 2em;
   transition: all 0.3s ease-in-out;
   position: absolute;
   top: 100%;
@@ -2835,11 +2834,21 @@ footer p a {
   background-color: #b4e283;
   opacity: 0.9;
 }
-#portfolio .outside-sources .frame figure figcaption h3 {
+#portfolio .outside-sources .frame figure .fig-content {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  padding: 2em;
+  position: absolute;
+  top: 50%;
+}
+#portfolio .outside-sources .frame figure .fig-content h3 {
   border-bottom: 1px solid #101906;
   padding-bottom: 1em;
 }
 #portfolio .outside-sources .frame figure:hover figcaption {
+  top: 0;
+}
+#portfolio .outside-sources .frame figure:hover .fig-content {
   top: 0;
 }
 #portfolio .outside-sources .frame img {

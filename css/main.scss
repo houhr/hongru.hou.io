@@ -498,7 +498,6 @@ footer {
       overflow: hidden;
 
       figcaption {
-        padding: 2em;
         transition: all 0.3s ease-in-out;
         position: absolute;
         top: 100%;
@@ -508,14 +507,27 @@ footer {
         text-align: center;
         background-color: $c-primary;
         opacity: 0.9;
+      }
+
+      .fig-content {
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+        padding: 2em;
+        position: absolute;
+        top: 50%;
 
         h3 {
           border-bottom: 1px solid $c-b;
           padding-bottom: 1em;
         }
+
       }
 
       &:hover figcaption {
+        top: 0;
+      }
+
+      &:hover .fig-content {
         top: 0;
       }
     }
