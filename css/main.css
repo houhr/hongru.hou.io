@@ -2847,6 +2847,11 @@ footer p a {
   transition: all .2s ease-in-out;
 }
 #portfolio .outside-sources .frame figure .fig-content {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  transition: all .2s ease-in-out;
+}
+#portfolio .outside-sources .frame figure .fig-description {
   width: 100%;
   transition: all .6s ease-in-out;
   padding: 2em;
@@ -2854,15 +2859,19 @@ footer p a {
   top: 5%;
   opacity: 0;
 }
-#portfolio .outside-sources .frame figure .fig-content h3 {
+#portfolio .outside-sources .frame figure .fig-description h3 {
   border-bottom: 1px solid #101906;
   padding-bottom: 1em;
   font-size: 1.414em;
 }
+#portfolio .outside-sources .frame figure:hover .fig-content {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
 #portfolio .outside-sources .frame figure:hover figcaption {
   top: 0;
 }
-#portfolio .outside-sources .frame figure:hover .fig-content {
+#portfolio .outside-sources .frame figure:hover .fig-description {
   top: 0;
   opacity: 1;
 }

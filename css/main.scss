@@ -521,6 +521,11 @@ footer {
       }
 
       .fig-content {
+        filter: blur(0);
+        transition: all .2s ease-in-out;
+      }
+
+      .fig-description {
         width: 100%;
         transition: all .6s ease-in-out;
         padding: 2em;
@@ -536,11 +541,15 @@ footer {
 
       }
 
+      &:hover .fig-content {
+        filter: blur(5px);
+      }
+
       &:hover figcaption {
         top: 0;
       }
 
-      &:hover .fig-content {
+      &:hover .fig-description {
         top: 0;
         opacity: 1;
       }
