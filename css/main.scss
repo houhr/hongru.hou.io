@@ -15,6 +15,7 @@ $c-g: #bbb;
 $ff-head: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
 $ff-body: "Alegreya", Georgia, Times, "Times New Roman", serif;
 $ff-body-sc: "Alegreya SC", Georgia, Times, "Times New Roman", serif;
+$ff-mono: "Inconsolata", Consolas, Monaco, "Courier New", Courier, monospace;
 
 // Font-size (Scale: 1.414)
 $fs-b-4: 3.998em;  // 72px
@@ -24,6 +25,9 @@ $fs-b-1: 1.414em;  // 25px
 $fs-base: 18px;    // 1em
 $fs-s-1: 0.707em;  // 13px
 $fs-s-2: 0.5em;    // 9px
+
+// Other
+$radius: .25em;
 
 // Main style
 *, *:before, *:after {
@@ -40,6 +44,18 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $ff-head;
+}
+
+code, kbd {
+  font-family: $ff-mono;
+  font-size: 90%;
+}
+
+p > code, li > code, li > kbd, p > kbd {
+  padding: .1em .2em;
+  border: 1px solid $c-g;
+  margin: 0 .2em;
+  border-radius: $radius;
 }
 
 abbr[title] {
@@ -104,7 +120,7 @@ a {
   @extend %small-caps;
   display: inline-block;
   text-decoration: none;
-  border-radius: .25em;
+  border-radius: $radius;
   border: 1px solid $c-primary;
   background-color: $c-primary;
   padding: 0 2em .1em 2em;
@@ -567,11 +583,11 @@ nav {
         height: 100%;
       }
 
-      p, h2, h3, ul, ol, blockquote {
+      p, h2, h3, ul, ol, blockquote, pre {
         width: 90%;
       }
 
-      p, ul, ol, blockquote {
+      p, ul, ol, blockquote, pre {
         margin: 1em auto;
       }
 
@@ -592,7 +608,7 @@ nav {
         width: 100%;
       }
 
-      blockquote {
+      blockquote, pre {
         border-left: 1px solid $c-primary;
       }
 
@@ -766,13 +782,16 @@ and (min-width : 640px) {
 
       .post-content {
 
-        p, h2, h3, ul, ol, blockquote {
+        p, h2, h3, ul, ol, blockquote, pre {
           width: 66.66%;
         }
 
-        blockquote {
+        blockquote, pre {
+
+          padding-left: 1em;
+
           p {
-            margin: 0 0 0 1em;
+            margin-left: 0;
           }
         }
 

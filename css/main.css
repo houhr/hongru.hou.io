@@ -2335,6 +2335,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+code, kbd {
+  font-family: "Inconsolata", Consolas, Monaco, "Courier New", Courier, monospace;
+  font-size: 90%;
+}
+
+p > code, li > code, li > kbd, p > kbd {
+  padding: .1em .2em;
+  border: 1px solid #bbb;
+  margin: 0 .2em;
+  border-radius: 0.25em;
+}
+
 abbr[title] {
   font-family: "Alegreya SC", Georgia, Times, "Times New Roman", serif;
   text-transform: lowercase;
@@ -2380,7 +2392,7 @@ a:hover {
 .button {
   display: inline-block;
   text-decoration: none;
-  border-radius: .25em;
+  border-radius: 0.25em;
   border: 1px solid #b4e283;
   background-color: #b4e283;
   padding: 0 2em .1em 2em;
@@ -2827,10 +2839,10 @@ nav ul li a svg {
   width: 100%;
   height: 100%;
 }
-#blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote {
+#blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre {
   width: 90%;
 }
-#blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote {
+#blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre {
   margin: 1em auto;
 }
 #blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3 {
@@ -2846,7 +2858,7 @@ nav ul li a svg {
   display: block;
   width: 100%;
 }
-#blog-post #blog-post-content .post-content blockquote {
+#blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre {
   border-left: 1px solid #b4e283;
 }
 #blog-post #blog-post-content .post-comments {
@@ -3000,11 +3012,14 @@ footer p a {
   #blog-post #blog-post-content .post-meta {
     font-size: 18px;
   }
-  #blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote {
+  #blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre {
     width: 66.66%;
   }
-  #blog-post #blog-post-content .post-content blockquote p {
-    margin: 0 0 0 1em;
+  #blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre {
+    padding-left: 1em;
+  }
+  #blog-post #blog-post-content .post-content blockquote p, #blog-post #blog-post-content .post-content pre p {
+    margin-left: 0;
   }
   #blog-post #blog-post-content .post-comments {
     padding: 0;
