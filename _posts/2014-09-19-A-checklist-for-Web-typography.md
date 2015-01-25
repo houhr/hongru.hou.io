@@ -3,14 +3,14 @@ layout: post
 title: A checklist for Web typography
 published: true
 ---
-## Choose a good typography (family)
+## Choose a good typeface (family)
 * What kind of feeling do you want to convery?
 * Do you need italic glyphs?
 * Do you need bold glyphs?
 * Do you need small caps?
 * Do you need lowercase numerals?
-* Does the typography has smart quotes and all the other punctuations you need, such as hyphen, en dash, and em dash?
-* Do you know the history behind the typography?
+* Does the typeface have smart quotes and all the other punctuations you need, such as hyphen, en dash, and em dash?
+* Do you know the history behind the typeface?
 
 ## Implement a good typography
 * Wrap all acronyms and abbreviations by using “abbr” element and give them appropriate “title” attributes.
