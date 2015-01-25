@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2342,10 +2341,10 @@ abbr[title] {
   border-bottom-width: 0;
 }
 
-.sc {
+.small-caps, .button, nav ul li a, #blog #blog-content .blog-post-list .post-meta, #blog-post #blog-post-content .post-meta {
   font-family: "Alegreya SC", Georgia, Times, "Times New Roman", serif;
-  letter-spacing: 0.0556em;
-  /* 0.0556em ≈ 1px */
+  letter-spacing: .1em;
+  word-spacing: .1em;
 }
 
 .nowrap {
@@ -2388,16 +2387,19 @@ a:hover {
   line-height: 2em;
   text-transform: lowercase;
   color: #fff;
-  letter-spacing: .1em;
-  word-spacing: .1em;
-  font-family: "Alegreya SC", Georgia, Times, "Times New Roman", serif;
   transition: all .2s ease-in-out;
 }
 
 .button:hover {
   text-decoration: none;
-  background-color: #fff;
+  background-color: transparent;
   color: #b4e283;
+}
+
+header {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
 }
 
 .logo {
@@ -2407,6 +2409,9 @@ a:hover {
   vertical-align: middle;
 }
 
+nav .logo {
+  fill: #fff;
+}
 nav ul {
   list-style: none;
   margin: 0;
@@ -2431,11 +2436,9 @@ nav ul li a {
   padding-top: 3.28em;
   padding-bottom: 3.78em;
   display: block;
-  background-color: #101906;
-  border-top: 0.5em solid #101906;
+  color: #fff;
 }
 nav ul li a:hover {
-  border-top: 0.5em solid #b4e283;
   text-decoration: none;
 }
 nav ul li a svg {
@@ -2443,42 +2446,126 @@ nav ul li a svg {
   margin: 0 auto;
 }
 
-#intro {
+.head .head-background {
+  position: absolute;
+  width: 100%;
+  height: 640px;
+  background-color: #b4e283;
+  z-index: -9998;
+  overflow: hidden;
+}
+.head .head-content {
   position: relative;
   width: 100%;
-  background-color: #fff;
-  color: #101906;
 }
-#intro:before {
+.head .head-content:before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-#intro h1 {
-  color: #101906;
-  font-size: 1.999em;
-  margin-top: 0;
+.head .head-content .head-content-title {
+  font-size: 1.414em;
 }
-#intro p {
-  margin-bottom: 0;
+.head .head-content .button {
+  font-size: 18px;
 }
 
-#me {
+#portfolio #portfolio-content {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources {
+  position: relative;
   width: 100%;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources:before {
+  content: "";
   display: block;
+  padding-top: 100%;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources .frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #101906;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources .frame img, #portfolio #portfolio-content .portfolio-list .outside-sources .frame iframe {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources .frame img:before, #portfolio #portfolio-content .portfolio-list .outside-sources .frame iframe:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources .frame iframe {
+  height: 100%;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources .frame figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources .frame figure figcaption {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-image: linear-gradient(to bottom, rgba(180, 226, 131, 0.2) 0%, white 80%);
+  transition: all .2s ease-in-out;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources .frame figure .fig-content {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  transition: all .2s ease-in-out;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources .frame figure .fig-description {
+  width: 100%;
+  transition: all .6s ease-in-out;
+  padding: 1em 2em;
+  position: absolute;
+  top: 5%;
+  opacity: 0;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources .frame figure .fig-description h3 {
+  font-size: 1.414em;
+  border-bottom: 1px solid #101906;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources .frame figure:hover .fig-content {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources .frame figure:hover figcaption {
+  top: 0;
+}
+#portfolio #portfolio-content .portfolio-list .outside-sources .frame figure:hover .fig-description {
+  top: 0;
+  opacity: 1;
 }
 
-#resume {
+#about .head .head-background {
+  background: url("/images/compressed/header/me.jpg") no-repeat center center;
+  background-size: cover;
+}
+#about #about-content #resume {
   display: none;
 }
-
-#artist-statement {
+#about #about-content #artist-statement {
   clear: both;
   padding: 2em;
   font-size: 18px;
   background-color: #fff;
 }
-#artist-statement p:first-child:first-letter {
+#about #about-content #artist-statement p:first-child:first-letter {
   float: left;
   line-height: 0.8em;
   font-size: 5em;
@@ -2486,87 +2573,284 @@ nav ul li a svg {
   margin-left: -0.06em;
   color: #b4e283;
 }
-#artist-statement p:first-child {
+#about #about-content #artist-statement p:first-child {
   margin-top: 0;
 }
-#artist-statement p:last-child {
+#about #about-content #artist-statement p:last-child {
   margin-bottom: 0;
 }
-
-#link:before, #link:after {
+#about #about-content #link:before, #about #about-content #link:after {
   content: " ";
   display: table;
 }
-#link:after {
+#about #about-content #link:after {
   clear: both;
 }
-#link {
+#about #about-content #link {
   *zoom: 1;
 }
-#link a {
+#about #about-content #link a {
   background-color: #fff;
   color: #101906;
 }
-#link a:hover {
+#about #about-content #link a:hover {
   background-color: #101906;
   color: #b4e283;
 }
-
-#linkedin {
+#about #about-content #linkedin {
   position: relative;
   width: 50%;
   float: left;
 }
-#linkedin:before {
+#about #about-content #linkedin:before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-#linkedin a {
+#about #about-content #linkedin a {
   background-color: #fff;
   color: #101906;
 }
-#linkedin a:hover {
+#about #about-content #linkedin a:hover {
   background-color: #101906;
   color: #b4e283;
 }
-#linkedin i {
+#about #about-content #linkedin i {
   font-size: 4em;
 }
-
-#email, #twitter, #dribbble, #github {
+#about #about-content #email, #about #about-content #twitter, #about #about-content #dribbble, #about #about-content #github {
   float: left;
 }
-#email i, #twitter i, #dribbble i, #github i {
+#about #about-content #email i, #about #about-content #twitter i, #about #about-content #dribbble i, #about #about-content #github i {
   font-size: 2em;
 }
-
-#email, #twitter, #dribbble, #github {
+#about #about-content #email, #about #about-content #twitter, #about #about-content #dribbble, #about #about-content #github {
   position: relative;
   width: 25%;
 }
-#email:before, #twitter:before, #dribbble:before, #github:before {
+#about #about-content #email:before, #about #about-content #twitter:before, #about #about-content #dribbble:before, #about #about-content #github:before {
   content: "";
   display: block;
   padding-top: 100%;
 }
+#about #about-content #map {
+      /* @include ratio(100%, 100%);
+      position: fixed;
+      bottom: 0;
+      z-index: -9999;
 
-#map {
+      iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+      } */
+}
+#about #map {
+  width: 100%;
   position: relative;
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  z-index: -9999;
+  position: absolute;
+  z-index: -9998;
+  top: 940px;
 }
-#map:before {
+#about #map:before {
+  content: "";
+  display: block;
+  padding-top: 45%;
+}
+#about #map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#publication .head .head-background {
+  background: url("/images/compressed/header/bestseller.jpg") no-repeat center center;
+  background-size: cover;
+}
+#publication #publication-content {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+}
+#publication #publication-content:before, #publication #publication-content:after {
+  content: " ";
+  display: table;
+}
+#publication #publication-content:after {
+  clear: both;
+}
+#publication #publication-content {
+  *zoom: 1;
+}
+#publication #publication-content .publication-list {
+  position: relative;
+  overflow: hidden;
+}
+#publication #publication-content .publication-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#publication #publication-content .publication-image-wrapper:before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-#map iframe {
+#publication #publication-content .publication-disc {
+  position: relative;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(to bottom, rgba(180, 226, 131, 0.2) 0%, white 80%);
+}
+#publication #publication-content .publication-disc:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+#publication #publication-content .publication-disc p {
+  margin: 0 auto 2em auto;
+  padding: 0 1em;
+}
+#publication #publication-content .publication-disc p:last-child {
+  margin: 0 auto;
+}
+#publication #publication-content .publication-title {
+  font-size: 1.414em;
+  margin: 0 1em 1em 1em;
+}
+#publication #publication-content .publication-title span {
+  font-style: italic;
+}
+#publication #publication-content .publication-image {
+  width: 100%;
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
+  position: absolute;
+  top: 0;
+}
+
+#blog #blog-content {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+#blog #blog-content:before, #blog #blog-content:after {
+  content: " ";
+  display: table;
+}
+#blog #blog-content:after {
+  clear: both;
+}
+#blog #blog-content {
+  *zoom: 1;
+}
+#blog #blog-content .blog-post-list {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #b4e283;
+  background-color: #fff;
+}
+#blog #blog-content .blog-post-list:before {
+  content: "";
+  display: block;
+  padding-top: 33.33%;
+}
+#blog #blog-content .blog-post-list:last-child {
+  border-bottom: none;
+}
+#blog #blog-content .blog-post-list .post-title {
+  padding: 0 1em;
+  font-size: 18px;
+  margin: 1em 0 0;
+  line-height: normal;
+}
+#blog #blog-content .blog-post-list .post-title .post-link {
+  color: #101906;
+}
+#blog #blog-content .blog-post-list .post-meta {
+  font-size: 0.707em;
+  color: #bbb;
+  margin-top: 0;
+}
+
+#blog-post #blog-post-content {
+  background-color: #fff;
+}
+#blog-post #blog-post-content .post-header {
+  position: relative;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(180, 226, 131, 0.2) 0%, white 80%);
+}
+#blog-post #blog-post-content .post-header:before {
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+#blog-post #blog-post-content .post-title {
+  padding: 0 1em;
+  font-size: 18px;
+  margin: 1em 0 0;
+  line-height: normal;
+}
+#blog-post #blog-post-content .post-link {
+  color: #101906;
+}
+#blog-post #blog-post-content .post-meta {
+  font-size: 0.707em;
+  color: #bbb;
+  margin-top: .2em;
+}
+#blog-post #blog-post-content .post-content {
+  margin: 2em auto;
+}
+#blog-post #blog-post-content .post-content .full-width {
+  margin: 1em 0;
+  padding: auto 0;
+  width: 100%;
+}
+#blog-post #blog-post-content .post-content .outside-sources {
+  position: relative;
+  width: 100%;
+}
+#blog-post #blog-post-content .post-content .outside-sources:before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+#blog-post #blog-post-content .post-content .outside-sources iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+}
+#blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote {
+  width: 90%;
+}
+#blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote {
+  margin: 1em auto;
+}
+#blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3 {
+  margin: 2em auto 1em;
+}
+#blog-post #blog-post-content .post-content h2 {
+  font-size: 18px;
+}
+#blog-post #blog-post-content .post-content h3 {
+  font-size: 0.707em;
+}
+#blog-post #blog-post-content .post-content img {
   display: block;
+  width: 100%;
+}
+#blog-post #blog-post-content .post-content blockquote {
+  border-left: 1px solid #b4e283;
+}
+#blog-post #blog-post-content .post-comments {
+  padding: 1em;
 }
 
 footer {
@@ -2592,377 +2876,140 @@ footer p a {
   color: #fff;
 }
 
-#blog {
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-}
-#blog:before, #blog:after {
-  content: " ";
-  display: table;
-}
-#blog:after {
-  clear: both;
-}
-#blog {
-  *zoom: 1;
-}
-
-.blog-post-list {
-  position: relative;
-  width: 100%;
-  border-bottom: 1px solid #b4e283;
-}
-.blog-post-list:before {
-  content: "";
-  display: block;
-  padding-top: 50%;
-}
-.blog-post-list .post-title {
-  padding: 0 1em;
-  font-size: 1.414em;
-  margin: 1em 0 0;
-  line-height: normal;
-}
-.blog-post-list .post-title .post-link {
-  color: #101906;
-}
-.blog-post-list .post-meta {
-  font-size: 18px;
-}
-
-#blog-post .post-header {
-  position: relative;
-  width: 100%;
-  background-color: #b4e283;
-}
-#blog-post .post-header:before {
-  content: "";
-  display: block;
-  padding-top: 50%;
-}
-#blog-post .post-title {
-  padding: 0 1em;
-  font-size: 1.414em;
-  margin: 1em 0 0;
-  line-height: normal;
-}
-#blog-post .post-link {
-  color: #101906;
-}
-#blog-post .post-meta {
-  font-size: 18px;
-}
-#blog-post .post-content {
-  margin: 2em auto;
-}
-#blog-post .post-content .full-width {
-  margin: 1em 0;
-  padding: auto 0;
-  width: 100%;
-}
-#blog-post .post-content .outside-sources {
-  position: relative;
-  width: 100%;
-}
-#blog-post .post-content .outside-sources:before {
-  content: "";
-  display: block;
-  padding-top: 56.25%;
-}
-#blog-post .post-content .outside-sources iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-#blog-post .post-content p, #blog-post .post-content h2, #blog-post .post-content h3, #blog-post .post-content ul, #blog-post .post-content ol, #blog-post .post-content blockquote {
-  width: 90%;
-}
-#blog-post .post-content p, #blog-post .post-content ul, #blog-post .post-content ol, #blog-post .post-content blockquote {
-  margin: 1em auto;
-}
-#blog-post .post-content h2, #blog-post .post-content h3 {
-  margin: 2em auto 1em;
-}
-#blog-post .post-content h2 {
-  font-size: 18px;
-}
-#blog-post .post-content h3 {
-  font-size: 0.707em;
-}
-#blog-post .post-content img {
-  display: block;
-  width: 100%;
-}
-#blog-post .post-content blockquote {
-  border-left: 1px solid #b4e283;
-}
-#blog-post .post-comments {
-  padding: 1em;
-}
-
-.rss-subscribe {
-  margin: 0 auto;
-  padding: 18px 0;
-  border-top: 1px solid #b4e283;
-  text-align: center;
-  background-color: #b4e283;
-}
-.rss-subscribe a {
-  color: #101906;
-}
-
-#publication {
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-}
-#publication:before, #publication:after {
-  content: " ";
-  display: table;
-}
-#publication:after {
-  clear: both;
-}
-#publication {
-  *zoom: 1;
-}
-
-.publication-list {
-  position: relative;
-  overflow: hidden;
-}
-
-.publication-image-wrapper {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-.publication-image-wrapper:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-
-.publication-disc {
-  position: relative;
-  width: 100%;
-  position: absolute;
-  top: 0;
-}
-.publication-disc:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-.publication-disc p {
-  margin: 0 auto 2em auto;
-  padding: 0 1em;
-}
-.publication-disc p:last-child {
-  margin: 0 auto;
-}
-
-.publication-title {
-  font-size: 1.414em;
-  margin: 0 1em 1em 1em;
-}
-.publication-title span {
-  font-style: italic;
-}
-
-.publication-image {
-  width: 100%;
-  -webkit-filter: blur(15px);
-          filter: blur(15px);
-  position: absolute;
-  top: 0;
-}
-
-#portfolio {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-#portfolio .portfolio-head {
-  position: relative;
-  width: 100%;
-}
-#portfolio .portfolio-head:before {
-  content: "";
-  display: block;
-  padding-top: 50%;
-}
-#portfolio .portfolio-head .portfolio-class-title {
-  font-size: 1.414em;
-}
-#portfolio #ui-ux-design .head-image-wrapper {
-  background: url("/images/compressed/portfolio/ui-ux-design.png") no-repeat center center;
-  background-size: cover;
-}
-#portfolio #ui-ux-design #particles-js {
-  position: absolute;
-  width: 100%;
-  height: 640px;
-  background: #b4e283;
-}
-#portfolio #ui-ux-design .outside-sources {
-  position: relative;
-  width: 100%;
-}
-#portfolio #ui-ux-design .outside-sources:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-#portfolio .outside-sources .frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-#portfolio .outside-sources .frame {
-  color: #101906;
-}
-#portfolio .outside-sources .frame figure {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-}
-#portfolio .outside-sources .frame figure figcaption {
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  text-align: center;
-  background-image: linear-gradient(to bottom, rgba(180, 226, 131, 0.2) 0%, white 80%);
-  transition: all .2s ease-in-out;
-}
-#portfolio .outside-sources .frame figure .fig-content {
-  -webkit-filter: blur(0);
-          filter: blur(0);
-  transition: all .2s ease-in-out;
-}
-#portfolio .outside-sources .frame figure .fig-description {
-  width: 100%;
-  transition: all .6s ease-in-out;
-  padding: 1em 2em;
-  position: absolute;
-  top: 5%;
-  opacity: 0;
-}
-#portfolio .outside-sources .frame figure .fig-description h3 {
-  font-size: 1.414em;
-  border-bottom: 1px solid #101906;
-  padding-bottom: 1em;
-  margin-bottom: 1em;
-}
-#portfolio .outside-sources .frame figure:hover .fig-content {
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
-}
-#portfolio .outside-sources .frame figure:hover figcaption {
-  top: 0;
-}
-#portfolio .outside-sources .frame figure:hover .fig-description {
-  top: 0;
-  opacity: 1;
-}
-#portfolio .outside-sources .frame img, #portfolio .outside-sources .frame iframe {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-#portfolio .outside-sources .frame img:before, #portfolio .outside-sources .frame iframe:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
-#portfolio .outside-sources .frame figure, #portfolio .outside-sources .frame iframe {
-  height: 100%;
-}
-#portfolio .portfolio-class-content {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 /*
- * --------------------
+ * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  *     CSS for iPad
- * --------------------
+ * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
 @media only screen and (min-width: 640px) {
-  #intro {
+  .head .head-content {
     position: relative;
     width: 100%;
+  }
+  .head .head-content:before {
+    content: "";
+    display: block;
+    padding-top: 50%;
+  }
+
+  #portfolio #portfolio-content:before, #portfolio #portfolio-content:after {
+    content: " ";
+    display: table;
+  }
+  #portfolio #portfolio-content:after {
+    clear: both;
+  }
+  #portfolio #portfolio-content {
+    *zoom: 1;
+  }
+  #portfolio #portfolio-content .portfolio-list {
+    width: 50%;
     float: left;
   }
-  #intro:before {
-    content: "";
-    display: block;
-    padding-top: 50%;
-  }
-
-  #me {
+  #portfolio #portfolio-content .portfolio-list .outside-sources {
+    background-color: #101906;
     position: relative;
     width: 100%;
-    float: right;
   }
-  #me:before {
-    content: "";
-    display: block;
-    padding-top: 50%;
-  }
-
-  #resume {
-    position: relative;
-    width: 50%;
-    display: block;
-    -webkit-transform: translate(100%, 100%);
-            transform: translate(100%, 100%);
-  }
-  #resume:before {
+  #portfolio #portfolio-content .portfolio-list .outside-sources:before {
     content: "";
     display: block;
     padding-top: 100%;
   }
-  #resume a {
+
+  #about #about-content #resume {
+    display: none;
+  }
+  #about #about-content #resume a {
     background-color: #b4e283;
     color: #101906;
   }
-  #resume a:hover {
+  #about #about-content #resume a:hover {
     background-color: #101906;
     color: #b4e283;
   }
-  #resume p {
+  #about #about-content #resume p {
     font-family: "Alegreya Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 1.414em;
     margin-top: .5em;
     margin-bottom: -.3em;
   }
-
-  #artist-statement {
+  #about #about-content #artist-statement {
     padding: 15%;
   }
-
-  #email, #twitter, #dribbble, #github {
+  #about #about-content #email, #about #about-content #twitter, #about #about-content #dribbble, #about #about-content #github {
     position: relative;
     width: 25%;
   }
-  #email:before, #twitter:before, #dribbble:before, #github:before {
+  #about #about-content #email:before, #about #about-content #twitter:before, #about #about-content #dribbble:before, #about #about-content #github:before {
     content: "";
     display: block;
     padding-top: 100%;
   }
-
-  #linkedin {
+  #about #about-content #linkedin {
     display: none;
+  }
+
+  #publication #publication-content .publication-list {
+    width: 33.33%;
+    float: left;
+    border-left: 1px solid #b4e283;
+  }
+  #publication #publication-content .publication-list:first-child {
+    border-left: 0;
+  }
+  #publication #publication-content .publication-image {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+  #publication #publication-content .publication-disc {
+    position: relative;
+    top: auto;
+    background-color: #fff;
+  }
+
+  #blog #blog-content .blog-post-list {
+    position: relative;
+    width: 100%;
+  }
+  #blog #blog-content .blog-post-list:before {
+    content: "";
+    display: block;
+    padding-top: 25%;
+  }
+  #blog #blog-content .blog-post-list .post-title {
+    font-size: 1.414em;
+  }
+  #blog #blog-content .blog-post-list .post-meta {
+    font-size: 18px;
+  }
+
+  #blog-post #blog-post-content .post-header {
+    position: relative;
+    width: 100%;
+    background-color: #b4e283;
+  }
+  #blog-post #blog-post-content .post-header:before {
+    content: "";
+    display: block;
+    padding-top: 33.33%;
+  }
+  #blog-post #blog-post-content .post-title {
+    font-size: 1.414em;
+  }
+  #blog-post #blog-post-content .post-meta {
+    font-size: 18px;
+  }
+  #blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote {
+    width: 66.66%;
+  }
+  #blog-post #blog-post-content .post-content blockquote p {
+    margin: 0 0 0 1em;
+  }
+  #blog-post #blog-post-content .post-comments {
+    padding: 0;
+    width: 66.66%;
+    margin: 0 auto 2em auto;
   }
 
   footer {
@@ -2973,135 +3020,6 @@ footer p a {
     content: "";
     display: block;
     padding-top: 25%;
-  }
-
-  .blog-post-list {
-    position: relative;
-    width: 50%;
-    border-bottom: 1px solid #b4e283;
-    float: left;
-  }
-  .blog-post-list:first-of-type {
-    position: relative;
-    width: 100%;
-  }
-  .blog-post-list:first-of-type:before {
-    content: "";
-    display: block;
-    padding-top: 50%;
-  }
-  .blog-post-list:first-of-type .post-title {
-    font-size: 1.999em;
-  }
-  .blog-post-list:first-of-type .post-title + .post-meta {
-    font-size: 1.414em;
-  }
-  .blog-post-list:before {
-    content: "";
-    display: block;
-    padding-top: 100%;
-  }
-  .blog-post-list:nth-child(even) {
-    border-right: 1px solid #b4e283;
-  }
-  .blog-post-list:nth-child(odd) {
-    border-right: 1px solid #fff;
-  }
-  .blog-post-list:nth-last-child(2) {
-    border-bottom: none;
-  }
-  .blog-post-list:nth-last-child(1) {
-    border-bottom: none;
-  }
-
-  #blog-post .post-header {
-    position: relative;
-    width: 100%;
-    background-color: #b4e283;
-  }
-  #blog-post .post-header:before {
-    content: "";
-    display: block;
-    padding-top: 50%;
-  }
-  #blog-post .post-title {
-    font-size: 1.999em;
-  }
-  #blog-post .post-meta {
-    font-size: 1.414em;
-  }
-  #blog-post .post-content p, #blog-post .post-content h2, #blog-post .post-content h3, #blog-post .post-content ul, #blog-post .post-content ol, #blog-post .post-content blockquote {
-    width: 66.66%;
-  }
-  #blog-post .post-content blockquote p {
-    margin: 0 0 0 1em;
-  }
-  #blog-post .post-comments {
-    padding: 0;
-    width: 66.66%;
-    margin: 0 auto 2em auto;
-  }
-
-  .publication-list {
-    width: 33.33%;
-    float: left;
-    border-left: 1px solid #b4e283;
-  }
-  .publication-list:first-child {
-    border-left: 0;
-  }
-
-  .publication-image {
-    -webkit-filter: blur(0);
-            filter: blur(0);
-  }
-
-  .publication-disc {
-    position: relative;
-    top: auto;
-  }
-
-  #portfolio .head-image-wrapper {
-    position: relative;
-    width: 100%;
-  }
-  #portfolio .head-image-wrapper:before {
-    content: "";
-    display: block;
-    padding-top: 25%;
-  }
-  #portfolio .portfolio-head {
-    position: relative;
-    width: 100%;
-  }
-  #portfolio .portfolio-head:before {
-    content: "";
-    display: block;
-    padding-top: 25%;
-  }
-  #portfolio #ui-ux-design .portfolio-class-content:before, #portfolio #ui-ux-design .portfolio-class-content:after {
-    content: " ";
-    display: table;
-  }
-  #portfolio #ui-ux-design .portfolio-class-content:after {
-    clear: both;
-  }
-  #portfolio #ui-ux-design .portfolio-class-content {
-    *zoom: 1;
-  }
-  #portfolio #ui-ux-design .portfolio-list {
-    width: 33.33%;
-    float: left;
-  }
-  #portfolio #ui-ux-design .portfolio-list .outside-sources {
-    background-color: #101906;
-    position: relative;
-    width: 100%;
-  }
-  #portfolio #ui-ux-design .portfolio-list .outside-sources:before {
-    content: "";
-    display: block;
-    padding-top: 100%;
   }
 }
 @media only screen and (max-width: 959px) {
@@ -3110,212 +3028,170 @@ footer p a {
   }
 }
 /*
- * --------------------
+ * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  *     CSS for Mac
- * --------------------
+ * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
 @media only screen and (min-width: 960px) {
   header {
-    position: absolute;
+    width: 960px;
     left: 50%;
     margin-left: -480px;
-    z-index: 9999;
   }
 
-  #about, #publication, #blog, #blog-post {
+  .head .head-content {
+    width: 960px !important;
+    margin: 0 auto;
     padding-top: 160px;
+    position: relative;
+    width: 100%;
+  }
+  .head .head-content:before {
+    content: "";
+    display: block;
+    padding-top: 33.33%;
+  }
+  .head .head-content .ratio-inner {
+    top: 160px;
+  }
+  .head .head-content .head-content-title {
+    font-size: 1.999em;
+  }
+  .head .head-content .head-content-disc {
+    font-size: 1.414em;
   }
 
-  nav, #about, #publication, #blog, #blog-post, .rss-subscribe, footer {
+  #portfolio #portfolio-content {
+    width: 960px;
+    margin: 0 auto;
+    padding-bottom: 160px;
+  }
+  #portfolio #portfolio-content:before, #portfolio #portfolio-content:after {
+    content: " ";
+    display: table;
+  }
+  #portfolio #portfolio-content:after {
+    clear: both;
+  }
+  #portfolio #portfolio-content {
+    *zoom: 1;
+  }
+  #portfolio #portfolio-content .portfolio-list {
+    width: 33.33%;
+  }
+
+  #about {
+    /* #map {
+      width: 100%;
+      @include ratio(100%, 45%);
+      position: absolute;
+      z-index: -9998;
+      top: 940px;
+
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    } */
+  }
+  #about .head .head-content .head-content-title, #about .head .head-content .head-content-disc {
+    text-align: left;
+    padding-left: 7.5%;
+  }
+  #about #about-content {
     width: 960px;
     margin: 0 auto;
   }
-
-  #intro {
-    position: relative;
-    width: 320px;
-    float: left;
+  #about #about-content:before, #about #about-content:after {
+    content: " ";
+    display: table;
   }
-  #intro:before {
-    content: "";
-    display: block;
-    padding-top: 100%;
+  #about #about-content:after {
+    clear: both;
   }
-
-  #me {
-    position: relative;
-    width: 640px;
-    float: left;
+  #about #about-content {
+    *zoom: 1;
   }
-  #me:before {
-    content: "";
-    display: block;
-    padding-top: 50%;
-  }
-
-  #resume {
-    position: relative;
-    width: 320px;
-    -webkit-transform: translate(200%, 100%);
-            transform: translate(200%, 100%);
-  }
-  #resume:before {
-    content: "";
-    display: block;
-    padding-top: 100%;
-  }
-
-  #artist-statement {
+  #about #about-content #artist-statement {
     width: 640px;
     float: left;
     padding: 77px;
   }
-
-  #social {
+  #about #about-content #social {
     margin-top: 320px;
     width: 320px;
     float: right;
   }
-
-  #email, #twitter, #dribbble, #github {
+  #about #about-content #email, #about #about-content #twitter, #about #about-content #dribbble, #about #about-content #github {
     position: relative;
     width: 320px;
   }
-  #email:before, #twitter:before, #dribbble:before, #github:before {
+  #about #about-content #email:before, #about #about-content #twitter:before, #about #about-content #dribbble:before, #about #about-content #github:before {
     content: "";
     display: block;
     padding-top: 50%;
   }
 
-  #map {
-    position: relative;
-    width: 640px;
-    z-index: auto;
-    position: absolute;
-    bottom: 320px;
+  #publication #publication-content {
+    width: 960px;
+    margin: 0 auto;
+    padding-bottom: 160px;
   }
-  #map:before {
+  #publication #publication-content:before, #publication #publication-content:after {
+    content: " ";
+    display: table;
+  }
+  #publication #publication-content:after {
+    clear: both;
+  }
+  #publication #publication-content {
+    *zoom: 1;
+  }
+
+  #blog #blog-content {
+    width: 960px;
+    margin: 0 auto;
+  }
+  #blog #blog-content .blog-post-list .post-title {
+    font-size: 1.999em;
+  }
+
+  #blog-post #blog-post-content {
+    width: 960px;
+    margin: 0 auto;
+  }
+  #blog-post #blog-post-content .post-header {
+    position: relative;
+    width: 100%;
+  }
+  #blog-post #blog-post-content .post-header:before {
     content: "";
     display: block;
-    padding-top: 50%;
+    padding-top: 33.33%;
+  }
+  #blog-post #blog-post-content .post-title {
+    font-size: 1.999em;
+  }
+  #blog-post #blog-post-content .post-comments {
+    margin: 0 auto;
+    padding-bottom: 4em;
+  }
+
+  nav, footer {
+    width: 960px;
+    margin: 0 auto;
   }
 
   footer {
     position: relative;
     width: 960px;
+    z-index: -9999;
   }
   footer:before {
     content: "";
     display: block;
     padding-top: 320px;
-  }
-
-  .blog-post-list {
-    position: relative;
-    width: 33.33%;
-    border-bottom: 1px solid #b4e283;
-    float: left;
-  }
-  .blog-post-list:before {
-    content: "";
-    display: block;
-    padding-top: 100%;
-  }
-  .blog-post-list:first-of-type {
-    position: relative;
-    width: 100%;
-  }
-  .blog-post-list:first-of-type:before {
-    content: "";
-    display: block;
-    padding-top: 33.33%;
-  }
-  .blog-post-list:first-of-type .post-title {
-    font-size: 2.827em;
-  }
-  .blog-post-list:nth-child(3n+2), .blog-post-list:nth-child(3n+3) {
-    border-right: 1px solid #b4e283;
-  }
-  .blog-post-list:nth-child(3n+4) {
-    border-right: 1px solid #fff;
-  }
-  .blog-post-list:last-of-type {
-    border-bottom: none;
-  }
-  .blog-post-list:nth-last-child(2) {
-    border-bottom: none;
-  }
-  .blog-post-list:nth-last-child(3) {
-    border-bottom: none;
-  }
-
-  #blog-post .post-header {
-    position: relative;
-    width: 100%;
-    background-color: #b4e283;
-  }
-  #blog-post .post-header:before {
-    content: "";
-    display: block;
-    padding-top: 33.33%;
-  }
-  #blog-post .post-title {
-    font-size: 2.827em;
-  }
-  #blog-post .post-comments {
-    margin: 0 auto;
-    padding-bottom: 4em;
-  }
-
-  #portfolio #ui-ux-design .portfolio-head {
-    width: 960px !important;
-    margin: 0 auto;
-    position: relative;
-    width: 100%;
-  }
-  #portfolio #ui-ux-design .portfolio-head:before {
-    content: "";
-    display: block;
-    padding-top: 33.33%;
-  }
-  #portfolio #ui-ux-design .portfolio-head .portfolio-class-title {
-    font-size: 1.999em;
-  }
-  #portfolio #ui-ux-design .portfolio-head .portfolio-class-disc {
-    font-size: 1.414em;
-  }
-  #portfolio #ui-ux-design .portfolio-class-content {
-    width: 960px;
-    margin: 0 auto;
-    padding-bottom: 160px;
-  }
-  #portfolio #ui-ux-design .portfolio-class-content:before, #portfolio #ui-ux-design .portfolio-class-content:after {
-    content: " ";
-    display: table;
-  }
-  #portfolio #ui-ux-design .portfolio-class-content:after {
-    clear: both;
-  }
-  #portfolio #ui-ux-design .portfolio-class-content {
-    *zoom: 1;
-  }
-  #portfolio #ui-ux-design .head-image-wrapper {
-    height: 640px;
-  }
-  #portfolio #ui-ux-design .portfolio-head .ratio-inner {
-    margin-top: 320px;
-  }
-  #portfolio #ui-ux-design .portfolio-class-content {
-    margin: 160px auto 0 auto;
-  }
-  #portfolio .head-image-wrapper {
-    position: relative;
-    width: 100%;
-  }
-  #portfolio .head-image-wrapper:before {
-    content: "";
-    display: block;
-    padding-top: 75%;
   }
 }
 nav .fa-bars {

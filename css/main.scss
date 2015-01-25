@@ -48,9 +48,14 @@ abbr[title] {
   border-bottom-width: 0;
 }
 
-.sc {
+%small-caps {
   font-family: $ff-body-sc;
-  letter-spacing: 0.0556em; /* 0.0556em ≈ 1px */
+  letter-spacing: .1em;
+  word-spacing: .1em;
+}
+
+.small-caps {
+  @extend %small-caps;
 }
 
 .nowrap {
@@ -96,6 +101,7 @@ a {
 }
 
 .button {
+  @extend %small-caps;
   display: inline-block;
   text-decoration: none;
   border-radius: .25em;
@@ -105,16 +111,19 @@ a {
   line-height: 2em;
   text-transform: lowercase;
   color: $c-w;
-  letter-spacing: .1em;
-  word-spacing: .1em;
-  font-family: $ff-body-sc;
   transition: all .2s ease-in-out;
 }
 
 .button:hover {
   text-decoration: none;
-  background-color: $c-w;
+  background-color: transparent;
   color: $c-primary;
+}
+
+header {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
 }
 
 .logo {
@@ -125,6 +134,10 @@ a {
 }
 
 nav {
+
+  .logo {
+    fill: $c-w;
+  }
 
   ul {
     @import 'clearfix';
@@ -138,14 +151,13 @@ nav {
       text-align: center;
 
       a {
+        @extend %small-caps;
         padding-top: 3.28em;
         padding-bottom: 3.78em;
         display: block;
-        background-color: $c-b;
-        border-top: .5em solid $c-b;
+        color: $c-w;
 
         &:hover {
-          border-top: .5em solid $c-primary;
           text-decoration: none;
         }
 
@@ -162,113 +174,438 @@ nav {
 
 }
 
-#intro {
-  @include ratio(100%, 100%);
-  background-color: $c-w;
-  color: $c-b;
+.head {
 
-  h1 {
-    color: $c-b;
-    font-size: $fs-b-2;
-    margin-top: 0;
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-
-}
-
-#me {
-  width: 100%;
-  display: block;
-}
-
-#resume {
-  display: none;
-}
-
-#artist-statement {
-  clear: both;
-  padding: 2em;
-  font-size: $fs-base;
-  background-color: $c-w;
-
-  p:first-child:first-letter {
-    float: left;
-    line-height: 0.8em;
-    font-size: 5em;
-    padding-right: 0.08em;
-    margin-left: -0.06em;
-    color: $c-primary;
-  }
-
-  p:first-child {
-    margin-top: 0;
-  }
-
-  p:last-child {
-    margin-bottom: 0;
-  }
-}
-
-#link {
-  @import 'clearfix';
-
-  a {
-    background-color: $c-w;
-    color: $c-b;
-
-    &:hover {
-      background-color: $c-b;
-      color: $c-primary;
-    }
-  }
-}
-
-#linkedin {
-  @include ratio(50%, 100%);
-  float: left;
-
-  a {
-    background-color: $c-w;
-    color: $c-b;
-
-    &:hover {
-      background-color: $c-b;
-      color: $c-primary;
-    }
-  }
-
-  i {
-    font-size: 4em;
-  }
-}
-
-#email, #twitter, #dribbble, #github {
-  float: left;
-
-  i {
-    font-size: 2em;
-  }
-}
-
-#email, #twitter, #dribbble, #github {
-  @include ratio(25%, 100%);
-}
-
-#map {
-  @include ratio(100%, 100%);
-  position: fixed;
-  bottom: 0;
-  z-index: -9999;
-
-  iframe {
+  .head-background {
+    position: absolute;
     width: 100%;
-    height: 100%;
-    display: block;
+    height: 640px;
+    background-color: $c-primary;
+    z-index: -9998;
+    overflow: hidden;
   }
+
+  .head-content {
+    @include ratio(100%, 100%);
+
+    .head-content-title {
+      font-size: $fs-b-1;
+    }
+
+    .button {
+      font-size: $fs-base;
+    }
+
+  }
+
 }
+
+
+#portfolio {
+
+  #portfolio-content {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .portfolio-list {
+
+      .outside-sources {
+        @include ratio(100%, 100%);
+
+        .frame {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          color: $c-b;
+
+          img, iframe {
+            display: block;
+            @include ratio(100%, 100%);
+          }
+
+          iframe {
+            height: 100%;
+          }
+
+          figure {
+            position: relative;
+            margin: 0;
+            overflow: hidden;
+            height: 100%;
+
+            figcaption {
+              position: absolute;
+              top: 100%;
+              width: 100%;
+              height: 100%;
+              margin: 0 auto;
+              text-align: center;
+              background-image: linear-gradient(to bottom, rgba($c-primary, 0.2) 0%, rgba($c-w,1) 80%);
+              transition: all .2s ease-in-out;
+            }
+
+            .fig-content {
+              filter: blur(0);
+              transition: all .2s ease-in-out;
+            }
+
+            .fig-description {
+              width: 100%;
+              transition: all .6s ease-in-out;
+              padding: 1em 2em;
+              position: absolute;
+              top: 5%;
+              opacity: 0;
+
+              h3 {
+                font-size: $fs-b-1;
+                border-bottom: 1px solid $c-b;
+                padding-bottom: 1em;
+                margin-bottom: 1em;
+              }
+
+            }
+
+            &:hover .fig-content {
+              filter: blur(10px);
+            }
+
+            &:hover figcaption {
+              top: 0;
+            }
+
+            &:hover .fig-description {
+              top: 0;
+              opacity: 1;
+            }
+          }
+        }
+
+      }
+
+
+    }
+
+  }
+
+}
+
+#about {
+
+  .head {
+    .head-background {
+      background: url("/images/compressed/header/me.jpg") no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  #about-content {
+    #resume {
+      display: none;
+    }
+
+    #artist-statement {
+      clear: both;
+      padding: 2em;
+      font-size: $fs-base;
+      background-color: $c-w;
+
+      p:first-child:first-letter {
+        float: left;
+        line-height: 0.8em;
+        font-size: 5em;
+        padding-right: 0.08em;
+        margin-left: -0.06em;
+        color: $c-primary;
+      }
+
+      p:first-child {
+        margin-top: 0;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    #link {
+      @import 'clearfix';
+
+      a {
+        background-color: $c-w;
+        color: $c-b;
+
+        &:hover {
+          background-color: $c-b;
+          color: $c-primary;
+        }
+      }
+    }
+
+    #linkedin {
+      @include ratio(50%, 100%);
+      float: left;
+
+      a {
+        background-color: $c-w;
+        color: $c-b;
+
+        &:hover {
+          background-color: $c-b;
+          color: $c-primary;
+        }
+      }
+
+      i {
+        font-size: 4em;
+      }
+    }
+
+    #email, #twitter, #dribbble, #github {
+      float: left;
+
+      i {
+        font-size: 2em;
+      }
+    }
+
+    #email, #twitter, #dribbble, #github {
+      @include ratio(25%, 100%);
+    }
+
+    #map {
+      /* @include ratio(100%, 100%);
+      position: fixed;
+      bottom: 0;
+      z-index: -9999;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+      } */
+    }
+
+  }
+
+  #map {
+    width: 100%;
+    @include ratio(100%, 45%);
+    position: absolute;
+    z-index: -9998;
+    top: 940px;
+
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+}
+
+
+#publication {
+
+  .head {
+    .head-background {
+      background: url("/images/compressed/header/bestseller.jpg") no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  #publication-content {
+    @import 'clearfix';
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    background-color: $c-w;
+
+    .publication-list {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .publication-image-wrapper {
+      @include ratio(100%, 100%);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .publication-disc {
+      @include ratio(100%, 100%);
+      position: absolute;
+      top: 0;
+      background-image: linear-gradient(to bottom, rgba($c-primary, 0.2) 0%, rgba($c-w,1) 80%);
+
+      p {
+        margin: 0 auto 2em auto;
+        padding: 0 1em;
+
+        &:last-child {
+          margin: 0 auto;
+        }
+      }
+
+    }
+
+    .publication-title{
+      font-size: $fs-b-1;
+      margin: 0 1em 1em 1em;
+
+      span {
+        font-style: italic;
+      }
+    }
+
+    .publication-image {
+      width: 100%;
+      filter: blur(15px);
+      position: absolute;
+      top: 0;
+    }
+
+  }
+
+}
+
+
+#blog {
+
+  #blog-content{
+    @import 'clearfix';
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+
+    .blog-post-list {
+      @include ratio(100%, 33.33%);
+      border-bottom: 1px solid $c-primary;
+      background-color: $c-w;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .post-title {
+        padding: 0 1em;
+        font-size: $fs-base;
+        margin: 1em 0 0;
+        line-height: normal;
+
+        .post-link {
+          color: $c-b;
+        }
+      }
+
+      .post-meta {
+        @extend %small-caps;
+        font-size: $fs-s-1;
+        color: $c-g;
+        margin-top: 0;
+      }
+    }
+
+  }
+
+}
+
+
+#blog-post {
+
+  #blog-post-content {
+    background-color: $c-w;
+
+
+    .post-header {
+      @include ratio(100%, 50%);
+      background-image: linear-gradient(to bottom, rgba($c-primary, 0.2) 0%, rgba($c-w,1) 80%);;
+    }
+
+    .post-title {
+      padding: 0 1em;
+      font-size: $fs-base;
+      margin: 1em 0 0;
+      line-height: normal;
+    }
+
+    .post-link {
+      color: $c-b;
+    }
+
+    .post-meta {
+      @extend %small-caps;
+      font-size: $fs-s-1;
+      color: $c-g;
+      margin-top: .2em;
+    }
+
+
+    // Article style
+    .post-content {
+
+      margin: 2em auto;
+
+      .full-width {
+        margin: 1em 0;
+        padding: auto 0;
+        width: 100%;
+      }
+
+      .outside-sources {
+        @include ratio(100%, 56.25%);
+      }
+
+      .outside-sources iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      p, h2, h3, ul, ol, blockquote {
+        width: 90%;
+      }
+
+      p, ul, ol, blockquote {
+        margin: 1em auto;
+      }
+
+      h2, h3 {
+        margin: 2em auto 1em;
+      }
+
+      h2 {
+        font-size: $fs-base;
+      }
+
+      h3 {
+        font-size: $fs-s-1;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+
+      blockquote {
+        border-left: 1px solid $c-primary;
+      }
+
+    }
+
+    .post-comments {
+      padding: 1em;
+    }
+
+  }
+
+}
+
 
 footer {
   @include ratio(100%, 50%);
@@ -290,460 +627,28 @@ footer {
   }
 }
 
-#blog{
-  @import 'clearfix';
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-}
-
-.blog-post-list {
-  @include ratio(100%, 50%);
-  border-bottom: 1px solid $c-primary;
-
-  .post-title {
-    padding: 0 1em;
-    font-size: $fs-b-1;
-    margin: 1em 0 0;
-    line-height: normal;
-
-    .post-link {
-      color: $c-b;
-    }
-  }
-
-  .post-meta {
-    font-size: $fs-base;
-  }
-}
-
-#blog-post {
-
-  .post-header {
-    @include ratio(100%, 50%);
-    background-color: $c-primary;
-  }
-
-  .post-title {
-    padding: 0 1em;
-    font-size: $fs-b-1;
-    margin: 1em 0 0;
-    line-height: normal;
-  }
-
-  .post-link {
-    color: $c-b;
-  }
-
-  .post-meta {
-    font-size: $fs-base;
-  }
-
-
-  // Article style
-  .post-content {
-
-    margin: 2em auto;
-
-    .full-width {
-      margin: 1em 0;
-      padding: auto 0;
-      width: 100%;
-    }
-
-    .outside-sources {
-      @include ratio(100%, 56.25%);
-    }
-
-    .outside-sources iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    p, h2, h3, ul, ol, blockquote {
-      width: 90%;
-    }
-
-    p, ul, ol, blockquote {
-      margin: 1em auto;
-    }
-
-    h2, h3 {
-      margin: 2em auto 1em;
-    }
-
-    h2 {
-      font-size: $fs-base;
-    }
-
-    h3 {
-      font-size: $fs-s-1;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-    }
-
-    blockquote {
-      border-left: 1px solid $c-primary;
-    }
-
-  }
-
-  .post-comments {
-    padding: 1em;
-  }
-}
-
-.rss-subscribe {
-  margin: 0 auto;
-  padding: 18px 0;
-  border-top: 1px solid $c-primary;
-  text-align: center;
-  background-color: $c-primary;
-  a {
-    color: $c-b;
-  }
-}
-
-#publication {
-  @import 'clearfix';
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-}
-
-.publication-list {
-  position: relative;
-  overflow: hidden;
-}
-
-.publication-image-wrapper {
-  @include ratio(100%, 100%);
-  overflow: hidden;
-  position: relative;
-}
-
-.publication-disc {
-  @include ratio(100%, 100%);
-
-  position: absolute;
-  top: 0;
-
-  p {
-    margin: 0 auto 2em auto;
-    padding: 0 1em;
-
-    &:last-child {
-      margin: 0 auto;
-    }
-  }
-
-}
-
-.publication-title{
-  font-size: $fs-b-1;
-  margin: 0 1em 1em 1em;
-
-  span {
-    font-style: italic;
-  }
-}
-
-.publication-image {
-  width: 100%;
-  filter: blur(15px);
-  position: absolute;
-  top: 0;
-}
-
-#portfolio {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  .portfolio-head {
-    @include ratio(100%, 50%);
-
-    .portfolio-class-title {
-      font-size: $fs-b-1;
-    }
-  }
-
-  #ui-ux-design {
-
-    .head-image-wrapper {
-      background: url("/images/compressed/portfolio/ui-ux-design.png") no-repeat center center;
-      background-size: cover;
-    }
-
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 640px;
-      background: $c-primary;
-    }
-
-    .outside-sources {
-      @include ratio(100%, 100%);
-    }
-
-  }
-
-  .outside-sources .frame, {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .outside-sources .frame {
-
-    color: $c-b;
-
-    figure {
-      position: relative;
-      margin: 0;
-      overflow: hidden;
-
-      figcaption {
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        height: 100%;
-        margin: 0 auto;
-        text-align: center;
-        background-image: linear-gradient(to bottom, rgba($c-primary, 0.2) 0%, rgba($c-w,1) 80%);
-        transition: all .2s ease-in-out;
-      }
-
-      .fig-content {
-        filter: blur(0);
-        transition: all .2s ease-in-out;
-      }
-
-      .fig-description {
-        width: 100%;
-        transition: all .6s ease-in-out;
-        padding: 1em 2em;
-        position: absolute;
-        top: 5%;
-        opacity: 0;
-
-        h3 {
-          font-size: $fs-b-1;
-          border-bottom: 1px solid $c-b;
-          padding-bottom: 1em;
-          margin-bottom: 1em;
-        }
-
-      }
-
-      &:hover .fig-content {
-        filter: blur(10px);
-      }
-
-      &:hover figcaption {
-        top: 0;
-      }
-
-      &:hover .fig-description {
-        top: 0;
-        opacity: 1;
-      }
-    }
-  }
-
-  .outside-sources .frame img, .outside-sources .frame iframe {
-    display: block;
-    @include ratio(100%, 100%);
-  }
-
-  .outside-sources .frame figure, .outside-sources .frame iframe {
-    height: 100%;
-  }
-
-  .portfolio-class-content {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-}
-
 /*
- * --------------------
+ * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  *     CSS for iPad
- * --------------------
+ * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
 
 @media only screen
 and (min-width : 640px) {
 
-  #intro {
-    @include ratio(100%, 50%);
-    float: left;
-  }
-
-  #me {
-    @include ratio(100%, 50%);
-    float: right;
-  }
-
-  #resume {
-    @include ratio(50%, 100%);
-    display: block;
-    transform: translate(100%, 100%);
-
-    a {
-      background-color: $c-primary;
-      color: $c-b;
-
-      &:hover {
-        background-color: $c-b;
-        color: $c-primary;
-      }
-    }
-
-    p {
-      font-family: $ff-head;
-      font-size: $fs-b-1;
-      margin-top: .5em;
-      margin-bottom: -.3em;
-    }
-  }
-
-  #artist-statement {
-    padding: 15%;
-  }
-
-  #email, #twitter, #dribbble, #github {
-    @include ratio(25%, 100%);
-  }
-
-  #linkedin {
-    display: none;
-  }
-
-  footer {
-    @include ratio(100%, 25%);
-  }
-
-  .blog-post-list {
-
-    &:first-of-type {
+  .head {
+    .head-content {
       @include ratio(100%, 50%);
-
-      .post-title {
-        font-size: $fs-b-2;
-
-        & + .post-meta {
-          font-size: $fs-b-1;
-        }
-
-      }
     }
-
-    @include ratio(50%, 100%);
-    border-bottom: 1px solid $c-primary;
-    float: left;
-
-    &:nth-child(even) {
-      border-right: 1px solid $c-primary;
-    }
-
-    &:nth-child(odd) {
-      border-right: 1px solid $c-w;
-    }
-
-    &:nth-last-child(2) {
-      border-bottom: none;
-    }
-    &:nth-last-child(1) {
-      border-bottom: none;
-    }
-  }
-
-  #blog-post {
-
-    .post-header {
-      @include ratio(100%, 50%);
-      background-color: $c-primary;
-    }
-    .post-title {
-      font-size: $fs-b-2;
-    }
-
-    .post-meta {
-      font-size: $fs-b-1;
-    }
-
-    .post-content {
-
-
-      p, h2, h3, ul, ol, blockquote {
-        width: 66.66%;
-      }
-
-      blockquote {
-        p {
-          margin: 0 0 0 1em;
-        }
-      }
-
-    }
-
-    .post-comments {
-      padding: 0; //clear previous RWD
-      width: 66.66%;
-      margin: 0 auto 2em auto;
-    }
-
-  }
-
-  .publication-list {
-    width: 33.33%;
-    float: left;
-    border-left: 1px solid $c-primary;
-
-    &:first-child {
-      border-left: 0;
-    }
-  }
-
-  .publication-image {
-    filter: blur(0);
-  }
-
-  .publication-disc {
-    position: relative;
-    top: auto;
   }
 
   #portfolio {
 
-    .head-image-wrapper {
-      @include ratio(100%, 25%);
-    }
-
-    .portfolio-head {
-      @include ratio(100%, 25%);
-    }
-
-    #ui-ux-design {
-
-      .portfolio-class-content {
-        @import 'clearfix';
-      }
+    #portfolio-content {
+      @import 'clearfix';
 
       .portfolio-list {
-
-        width: 33.33%;
+        width: 50%;
         float: left;
 
         .outside-sources {
@@ -757,7 +662,140 @@ and (min-width : 640px) {
 
   }
 
+  #about {
+    #about-content {
+
+      #resume {
+
+        display: none;
+
+        a {
+          background-color: $c-primary;
+          color: $c-b;
+
+          &:hover {
+            background-color: $c-b;
+            color: $c-primary;
+          }
+        }
+
+        p {
+          font-family: $ff-head;
+          font-size: $fs-b-1;
+          margin-top: .5em;
+          margin-bottom: -.3em;
+        }
+      }
+
+      #artist-statement {
+        padding: 15%;
+      }
+
+      #email, #twitter, #dribbble, #github {
+        @include ratio(25%, 100%);
+      }
+
+      #linkedin {
+        display: none;
+      }
+    }
+  }
+
+
+  #publication {
+    #publication-content {
+      .publication-list {
+        width: 33.33%;
+        float: left;
+        border-left: 1px solid $c-primary;
+
+        &:first-child {
+          border-left: 0;
+        }
+      }
+
+      .publication-image {
+        filter: blur(0);
+      }
+
+      .publication-disc {
+        position: relative;
+        top: auto;
+        background-color: $c-w;
+      }
+    }
+  }
+
+
+  #blog {
+
+    #blog-content {
+
+      .blog-post-list {
+        @include ratio(100%, 25%);
+
+        .post-title {
+          font-size: $fs-b-1;
+        }
+
+        .post-meta {
+          font-size: $fs-base;
+        }
+      }
+
+    }
+
+  }
+
+
+  #blog-post {
+
+    #blog-post-content {
+
+      .post-header {
+        @include ratio(100%, 33.33%);
+        background-color: $c-primary;
+      }
+      .post-title {
+        font-size: $fs-b-1;
+      }
+
+      .post-meta {
+        font-size: $fs-base;
+      }
+
+      .post-content {
+
+        p, h2, h3, ul, ol, blockquote {
+          width: 66.66%;
+        }
+
+        blockquote {
+          p {
+            margin: 0 0 0 1em;
+          }
+        }
+
+      }
+
+      .post-comments {
+        padding: 0; //clear previous RWD
+        width: 66.66%;
+        margin: 0 auto 2em auto;
+      }
+
+    }
+
+  }
+
+
+  footer {
+    @include ratio(100%, 25%);
+  }
+
 }
+
+
 
 @media only screen
 and (max-width : 959px) {
@@ -769,183 +807,179 @@ and (max-width : 959px) {
 }
 
 /*
- * --------------------
+ * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  *     CSS for Mac
- * --------------------
+ * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
  */
 
 @media only screen
 and (min-width : 960px) {
 
   header {
-    position: absolute;
+    width: 960px;
     left: 50%;
     margin-left: -480px;
-    z-index: 9999;
   }
 
-  #about, #publication, #blog, #blog-post {
-    padding-top: 160px;
-  }
+  .head {
 
-  nav, #about, #publication, #blog, #blog-post, .rss-subscribe, footer {
-    width: 960px;
-    margin: 0 auto;
-  }
-
-  #intro {
-    @include ratio(320px, 100%);
-    float: left;
-  }
-
-  #me {
-    @include ratio(640px, 50%);
-    float: left;
-  }
-
-  #resume {
-    @include ratio(320px, 100%);
-    transform: translate(200%, 100%);
-  }
-
-  #artist-statement {
-    width: 640px;
-    float: left;
-    padding: 77px;
-  }
-
-  #social {
-    margin-top: 320px;
-    width: 320px;
-    float: right;
-  }
-
-  #email, #twitter, #dribbble, #github {
-    @include ratio(320px, 50%);
-  }
-
-  #map {
-    @include ratio(640px, 50%);
-    z-index: auto;
-    position: absolute;
-    bottom: 320px;
-  }
-
-  footer {
-    @include ratio(960px, 320px);
-  }
-
-  .blog-post-list {
-
-    @include ratio(33.33%, 100%);
-    border-bottom: 1px solid $c-primary;
-    float: left;
-
-    &:first-of-type {
-      @include ratio(100%, 33.33%);
-
-      .post-title {
-        font-size: $fs-b-3;
-      }
-    }
-
-    &:nth-child(3n+2), &:nth-child(3n+3) {
-      border-right: 1px solid $c-primary;
-    }
-
-    &:nth-child(3n+4) {
-      border-right: 1px solid $c-w;
-    }
-
-    &:last-of-type {
-      border-bottom: none;
-    }
-
-    &:nth-last-child(2) {
-      border-bottom: none;
-    }
-
-    &:nth-last-child(3) {
-      border-bottom: none;
-    }
-
-  }
-
-  #blog-post {
-
-    .post-header {
-      @include ratio(100%, 33.33%);
-      background-color: $c-primary;
-    }
-    .post-title {
-      font-size: $fs-b-3;
-    }
-
-    .post-content {
-
-
-    }
-
-    .post-comments {
+    .head-content {
+      width: 960px !important;
       margin: 0 auto;
-      padding-bottom: 4em;
+      padding-top: 160px;
+      @include ratio(100%, 33.33%);
+
+      .ratio-inner {
+        top: 160px;
+      }
+
+      .head-content-title {
+        font-size: $fs-b-2;
+      }
+
+      .head-content-disc {
+        font-size: $fs-b-1;
+      }
+
     }
 
   }
 
   #portfolio {
 
-    #ui-ux-design {
+    #portfolio-content {
+      width: 960px;
+      margin: 0 auto;
+      @import 'clearfix';
+      padding-bottom: 160px;
 
-      .portfolio-head {
-        width: 960px !important;
-        margin: 0 auto;
-        @include ratio(100%, 33.33%);
+      .portfolio-list {
+        width: 33.33%;
+      }
 
-        .portfolio-class-title {
+    }
+
+  }
+
+  #about {
+
+    .head {
+      .head-content {
+        .head-content-title, .head-content-disc {
+          text-align: left;
+          padding-left: 7.5%;
+        }
+      }
+    }
+
+    #about-content {
+      width: 960px;
+      margin: 0 auto;
+      @import 'clearfix';
+
+      #resume {
+
+      }
+
+      #artist-statement {
+        width: 640px;
+        float: left;
+        padding: 77px;
+      }
+
+      #social {
+        margin-top: 320px;
+        width: 320px;
+        float: right;
+      }
+
+      #email, #twitter, #dribbble, #github {
+        @include ratio(320px, 50%);
+      }
+
+    }
+
+    /* #map {
+      width: 100%;
+      @include ratio(100%, 45%);
+      position: absolute;
+      z-index: -9998;
+      top: 940px;
+
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    } */
+
+  }
+
+  #publication {
+    #publication-content {
+      width: 960px;
+      margin: 0 auto;
+      @import 'clearfix';
+      padding-bottom: 160px;
+
+    }
+  }
+
+
+  #blog {
+
+    #blog-content {
+      width: 960px;
+      margin: 0 auto;
+
+      .blog-post-list {
+
+        .post-title {
           font-size: $fs-b-2;
         }
 
-        .portfolio-class-disc {
-          font-size: $fs-b-1;
-        }
-
       }
 
-      .portfolio-class-content {
-        width: 960px;
+    }
+
+  }
+
+
+
+  #blog-post {
+
+    #blog-post-content {
+      width: 960px;
+      margin: 0 auto;
+
+      .post-header {
+        @include ratio(100%, 33.33%);
+      }
+
+
+
+      .post-title {
+        font-size: $fs-b-2;
+      }
+
+      .post-comments {
         margin: 0 auto;
-        @import 'clearfix';
-        padding-bottom: 160px;
-
+        padding-bottom: 4em;
       }
 
     }
 
-    #ui-ux-design {
+  }
 
-      .head-image-wrapper {
-        height: 640px;
-      }
 
-      .portfolio-head {
+  nav, footer {
+    width: 960px;
+    margin: 0 auto;
+  }
 
-        .ratio-inner {
-          margin-top: 320px;
-        }
-
-      }
-
-      .portfolio-class-content {
-        margin: 160px auto 0 auto;
-      }
-
-    }
-
-    .head-image-wrapper {
-      @include ratio(100%, 75%);
-    }
-
+  footer {
+    @include ratio(960px, 320px);
+    z-index: -9999;
   }
 
 }
@@ -953,6 +987,7 @@ and (min-width : 960px) {
 nav .fa-bars {
   display: none;
 }
+
 
 // Animation CSS
 .typed-cursor{
