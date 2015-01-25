@@ -2812,7 +2812,7 @@ nav ul li a svg {
 #blog-post #blog-post-content .post-header:before {
   content: "";
   display: block;
-  padding-top: 50%;
+  padding-top: 33.33%;
 }
 #blog-post #blog-post-content .post-title {
   padding: 0 1em;
@@ -2829,7 +2829,10 @@ nav ul li a svg {
   margin-top: .2em;
 }
 #blog-post #blog-post-content .post-content {
-  margin: 2em auto;
+  margin: 0 auto 2em;
+}
+#blog-post #blog-post-content .post-content > p:first-child {
+  margin-top: 0;
 }
 #blog-post #blog-post-content .post-content .full-width {
   margin: 1em 0;
