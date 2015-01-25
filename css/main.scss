@@ -522,7 +522,7 @@ nav {
 
     .post-header {
       @include ratio(100%, 50%);
-      background-image: linear-gradient(to bottom, rgba($c-primary, 0.2) 0%, rgba($c-w,1) 80%);;
+      background-image: linear-gradient(to bottom, rgba($c-primary, 0.2) 0%, rgba($c-w,1) 80%);
     }
 
     .post-title {
@@ -754,7 +754,7 @@ and (min-width : 640px) {
 
       .post-header {
         @include ratio(100%, 33.33%);
-        background-color: $c-primary;
+        background-image: linear-gradient(to bottom, rgba($c-primary, 0.2) 0%, rgba($c-w,1) 80%);
       }
       .post-title {
         font-size: $fs-b-1;
