@@ -2865,10 +2865,10 @@ nav ul li a svg {
   margin: 2em auto 1em;
 }
 #blog-post #blog-post-content .post-content h2 {
-  font-size: 18px;
+  font-size: 1.414em;
 }
 #blog-post #blog-post-content .post-content h3 {
-  font-size: 0.707em;
+  font-size: 18px;
 }
 #blog-post #blog-post-content .post-content img {
   display: block;
@@ -3034,7 +3034,7 @@ footer p a {
   #blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre, #blog-post #blog-post-content .post-content table {
     padding-left: 1em;
   }
-  #blog-post #blog-post-content .post-content blockquote p, #blog-post #blog-post-content .post-content pre p, #blog-post #blog-post-content .post-content table p {
+  #blog-post #blog-post-content .post-content blockquote p, #blog-post #blog-post-content .post-content blockquote ul, #blog-post #blog-post-content .post-content blockquote ol, #blog-post #blog-post-content .post-content pre p, #blog-post #blog-post-content .post-content pre ul, #blog-post #blog-post-content .post-content pre ol, #blog-post #blog-post-content .post-content table p, #blog-post #blog-post-content .post-content table ul, #blog-post #blog-post-content .post-content table ol {
     margin-left: 0;
   }
   #blog-post #blog-post-content .post-comments {

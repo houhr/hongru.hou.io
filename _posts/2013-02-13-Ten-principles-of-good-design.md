@@ -10,6 +10,7 @@ OBJECTIFIED is a documentary about the relationship between manufactured objects
 In this famous design film, German industrial designer Dieter Rams told us 10 principles of good design. These principles are quite valuable, not only when we doing industrial design, but also when it comes to other design realms, including Web design.
 
 Dieter Rams said:
+
 > 1. Good design should be innovative.
 > 2. Good design should make a product useful.
 > 3. Good design is aesthetic design.
@@ -21,4 +22,6 @@ Dieter Rams said:
 > 9. Good design is envirnomentally friendly.
 > 10. Last but not least, good design is as little design as possible.
 
-<object width="100%"><param name="movie" value="http://www.youtube.com/v/HGPIqGi7MWY?hl=en_US&amp;version=3&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/HGPIqGi7MWY?hl=en_US&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+<div class="outside-sources">
+  <iframe src="https://www.youtube.com/embed/HGPIqGi7MWY" frameborder="0" allowfullscreen></iframe>
+</div>
