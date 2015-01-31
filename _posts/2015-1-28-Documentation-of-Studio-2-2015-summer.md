@@ -23,7 +23,9 @@ Here're the five kinds of technology I explored from **outside** to **inside** o
 
 Warning: The following video is kind of sort of NSFW.
 
-<iframe class="embedded-video" width="100%" src="https://www.youtube.com/embed/J3tPZb6i7q8" frameborder="0" allowfullscreen></iframe>
+<div class="outside-sources">
+  <iframe src="https://www.youtube.com/embed/J3tPZb6i7q8" frameborder="0" allowfullscreen></iframe>
+</div>
 
 > Fundawear is the world’s first wearable technology which allows personal touch to be transferred from a smartphone app to a partner anywhere in the world.<sup>[1]</sup>
 
@@ -63,8 +65,6 @@ By means of “Process Flow Diagrams”, “Concept Maps”, “Contextualizing 
 
 ### Step 3. Illustrate the connections
 
-to analyze the strength of the relationship
-
 ### Step 4. Identify core concepts
 
 ### Step 5. Create concept map
@@ -79,16 +79,3 @@ to analyze the strength of the relationship
 4. [Digital Health Feedback System](http://www.proteus.com/technology/digital-health-feedback-system/)
 5. [Chew On This: Edible Silk Sensors To Monitor Your Food](http://www.fastcoexist.com/1679384/chew-on-this-edible-silk-sensors-to-monitor-your-food)
 6. [Information Architecture: Synthesis Techniques for the Muddy Middle of the Design Process](http://www.jonkolko.com/writingInfoArchAsSynthesis.php)
-
-
-
-
-
-
-
-
-
-
-
-
-
