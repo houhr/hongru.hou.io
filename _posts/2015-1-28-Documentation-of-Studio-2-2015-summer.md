@@ -3,7 +3,7 @@ layout: post
 title: Documentation of Studio 2 (2015 summer)
 published: true
 ---
-Since a new semester has started, our Studio class got a new start and a new topic: Health and Well-being, which is a big topic that involves a huge range of things. And numerous opportunities are out there waiting for designers to explor. The following is the documentation of how we approached this topic from the very beginning.
+<p class="intro">Since a new semester has started, our Studio class got a new start and a new topic: Health and Well-being, which is a big topic that involves a huge range of things. And numerous opportunities are out there waiting for designers to explor. The following is the documentation of how we approached this topic from the very beginning.</p>
 
 ## Jan 23: Mapping the Territory of Health and Well-being
 

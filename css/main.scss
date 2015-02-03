@@ -38,7 +38,7 @@ body {
   font-family: $ff-body;
   font-size: $fs-base;
   color: $c-b;
-  line-height: 135%;
+  line-height: 1.35em;
   position: relative;
 }
 
@@ -157,6 +157,7 @@ header {
   position: absolute;
   z-index: 9999;
   width: 100%;
+  background-image: linear-gradient(to bottom, rgba($c-b, 0.15) 0%, rgba($c-w, 0) 100%);
 }
 
 .logo {
@@ -164,6 +165,13 @@ header {
   height: 24px;
   fill: $c-primary;
   vertical-align: middle;
+}
+
+.post-meta {
+  @extend %small-caps;
+  font-size: $fs-s-1;
+  margin-top: .2em;
+  color: $c-g;
 }
 
 nav {
@@ -220,8 +228,12 @@ nav {
 
   .head-content {
     @include ratio(100%, 100%);
+    color: $c-b;
 
     .head-content-title {
+      width: 80%;
+      line-height: 1.3em;
+      margin: 0 auto;
       font-size: $fs-b-1;
     }
 
@@ -232,7 +244,6 @@ nav {
   }
 
 }
-
 
 #portfolio {
 
@@ -534,12 +545,6 @@ nav {
         }
       }
 
-      .post-meta {
-        @extend %small-caps;
-        font-size: $fs-s-1;
-        color: $c-g;
-        margin-top: 0;
-      }
     }
 
   }
@@ -549,41 +554,19 @@ nav {
 
 #blog-post {
 
+  .head {
+    .head-background {
+      background: url("/images/compressed/header/brickwall_@2X.png") repeat center center / 110px 69px;;
+    }
+  }
+
   #blog-post-content {
     background-color: $c-w;
-
-
-    .post-header {
-      @include ratio(100%, 33.33%);
-      background-image: linear-gradient(to bottom, rgba($c-primary, 0.2) 0%, rgba($c-w,1) 80%);
-    }
-
-    .post-title {
-      padding: 0 1em;
-      font-size: $fs-base;
-      margin: 1em 0 0;
-      line-height: normal;
-    }
-
-    .post-link {
-      color: $c-b;
-    }
-
-    .post-meta {
-      @extend %small-caps;
-      font-size: $fs-s-1;
-      color: $c-g;
-      margin-top: .2em;
-    }
-
 
     // Article style
     .post-content {
 
-      margin: 0 auto 2em;
-      > p:first-child {
-        margin-top: 0;
-      }
+      padding: 1em 0;
 
       .full-width {
         margin: 1em 0;
@@ -635,7 +618,7 @@ nav {
     }
 
     .post-comments {
-      padding: 1em;
+      padding: 0em 1em 2em 1em;
     }
 
   }
@@ -675,6 +658,14 @@ and (min-width : 640px) {
   .head {
     .head-content {
       @include ratio(100%, 50%);
+
+      .head-content-title {
+        font-size: $fs-b-2;
+      }
+
+      .post-meta {
+        font-size: $fs-base;
+      }
     }
   }
 
@@ -788,18 +779,6 @@ and (min-width : 640px) {
 
     #blog-post-content {
 
-      .post-header {
-        @include ratio(100%, 33.33%);
-        background-image: linear-gradient(to bottom, rgba($c-primary, 0.2) 0%, rgba($c-w,1) 80%);
-      }
-      .post-title {
-        font-size: $fs-b-1;
-      }
-
-      .post-meta {
-        font-size: $fs-base;
-      }
-
       .post-content {
 
         h2, h3, p, ul, ol, blockquote, pre, table {
@@ -854,12 +833,6 @@ and (max-width : 959px) {
 @media only screen
 and (min-width : 960px) {
 
-  header {
-    width: 960px;
-    left: 50%;
-    margin-left: -480px;
-  }
-
   .head {
 
     .head-content {
@@ -873,7 +846,7 @@ and (min-width : 960px) {
       }
 
       .head-content-title {
-        font-size: $fs-b-2;
+        font-size: $fs-b-3;
       }
 
       .head-content-disc {
@@ -907,6 +880,7 @@ and (min-width : 960px) {
         .head-content-title, .head-content-disc {
           text-align: left;
           padding-left: 7.5%;
+          margin-left: 0;
         }
       }
     }
@@ -991,19 +965,19 @@ and (min-width : 960px) {
       width: 960px;
       margin: 0 auto;
 
-      .post-header {
-        @include ratio(100%, 33.33%);
-      }
+      .post-content {
+        padding-top: 5em;
 
+        .intro {
+          font-size: $fs-b-1;
+          line-height: 1.5em;
+        }
 
+        .post-comments {
+          margin: 0 auto;
+          padding-bottom: 4em;
+        }
 
-      .post-title {
-        font-size: $fs-b-2;
-      }
-
-      .post-comments {
-        margin: 0 auto;
-        padding-bottom: 4em;
       }
 
     }

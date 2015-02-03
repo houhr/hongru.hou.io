@@ -5,7 +5,7 @@ category: Development(other)
 tags: Apache GeoServer sftp ssh Tomcat Ubuntu
 published: true
 ---
-As an open source GIS program, GeoServer has became one of the most popular GIS server all over the world. However, there's no related instructions about how to install it on Ubuntu, the most popular open source operating system nowadays, in the official user guide before I writing this article down. So I tried this today and here how I did.
+<p class="intro">As an open source GIS program, GeoServer has became one of the most popular GIS server all over the world. However, there's no related instructions about how to install it on Ubuntu, the most popular open source operating system nowadays, in the official user guide before I writing this article down. So I tried this today and here how I did.</p>
 
 ## Step 1: Login Ubuntu via SSH
 
