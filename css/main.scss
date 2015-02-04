@@ -95,6 +95,12 @@ abbr[title] {
   white-space: nowrap;
 }
 
+.shadow {
+  -webkit-box-shadow: 0px 0px 5px $c-g;
+  box-shadow: 0px 0px 5px $c-g;
+}
+
+
 a {
   text-decoration: none;
   color: $c-primary;
@@ -991,7 +997,7 @@ and (min-width : 960px) {
   }
 
   footer {
-    @include ratio(960px, 320px);
+    @include ratio(960px, 16.665%);
     z-index: -9999;
   }
 
