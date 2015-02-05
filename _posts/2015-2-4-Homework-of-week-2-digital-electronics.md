@@ -19,8 +19,8 @@ published: true
       delay(1);
     }
 
-* Smallest number:
-* Biggest number:
+* Smallest number: 250
+* Biggest number: 800
 
 <p><img src="/images/compressed/blog/2015-2-4/3.jpg" title=""></p>
 
