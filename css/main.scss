@@ -58,21 +58,17 @@ p > code, li > code, li > kbd, p > kbd {
   border-radius: $radius;
 }
 
-table {
-
+thead {
+  border-bottom: 1px solid $c-g;
 }
 
-table, td, th {
-  border: 1px solid $c-g;
+td, th {
+  padding: .5em;
 }
 
 thead, th {
   font-family: $ff-body-sc;
   text-align: left;
-}
-
-td, th {
-  padding: .5em;
 }
 
 abbr[title] {
@@ -99,7 +95,6 @@ abbr[title] {
   -webkit-box-shadow: 0px 0px 5px $c-g;
   box-shadow: 0px 0px 5px $c-g;
 }
-
 
 a {
   text-decoration: none;
@@ -181,6 +176,8 @@ header {
 }
 
 nav {
+
+  overflow: hidden;
 
   .logo {
     fill: $c-w;
@@ -592,11 +589,11 @@ nav {
         height: 100%;
       }
 
-      h2, h3, p, ul, ol, blockquote, pre, table {
+      h2, h3, p, ul, ol, blockquote, pre, table, .gist {
         width: 90%;
       }
 
-      p, ul, ol, blockquote, pre, table {
+      p, ul, ol, blockquote, pre, table, .gist {
         margin: 1em auto;
       }
 
@@ -787,11 +784,11 @@ and (min-width : 640px) {
 
       .post-content {
 
-        h2, h3, p, ul, ol, blockquote, pre, table {
+        h2, h3, p, ul, ol, blockquote, pre, table, .gist {
           width: 66.66%;
         }
 
-        blockquote, pre, table {
+        blockquote, pre, table, {
 
           padding-left: 1em;
 
@@ -1018,4 +1015,17 @@ nav .fa-bars {
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+
+.gist {
+  .gist-file {
+    table {
+      margin: 0 !important;
+      width: 100% !important;
+
+      pre {
+        width: 100% !important;
+      }
+    }
+  }
 }

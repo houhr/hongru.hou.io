@@ -2347,17 +2347,17 @@ p > code, li > code, li > kbd, p > kbd {
   border-radius: 0.25em;
 }
 
-table, td, th {
-  border: 1px solid #bbb;
+thead {
+  border-bottom: 1px solid #bbb;
+}
+
+td, th {
+  padding: .5em;
 }
 
 thead, th {
   font-family: "Alegreya SC", Georgia, Times, "Times New Roman", serif;
   text-align: left;
-}
-
-td, th {
-  padding: .5em;
 }
 
 abbr[title] {
@@ -2445,6 +2445,9 @@ header {
   color: #bbb;
 }
 
+nav {
+  overflow: hidden;
+}
 nav .logo {
   fill: #fff;
 }
@@ -2841,10 +2844,10 @@ nav ul li a svg {
   width: 100%;
   height: 100%;
 }
-#blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3, #blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre, #blog-post #blog-post-content .post-content table {
+#blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3, #blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre, #blog-post #blog-post-content .post-content table, #blog-post #blog-post-content .post-content .gist {
   width: 90%;
 }
-#blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre, #blog-post #blog-post-content .post-content table {
+#blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre, #blog-post #blog-post-content .post-content table, #blog-post #blog-post-content .post-content .gist {
   margin: 1em auto;
 }
 #blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3 {
@@ -3004,7 +3007,7 @@ footer p a {
     font-size: 18px;
   }
 
-  #blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3, #blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre, #blog-post #blog-post-content .post-content table {
+  #blog-post #blog-post-content .post-content h2, #blog-post #blog-post-content .post-content h3, #blog-post #blog-post-content .post-content p, #blog-post #blog-post-content .post-content ul, #blog-post #blog-post-content .post-content ol, #blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre, #blog-post #blog-post-content .post-content table, #blog-post #blog-post-content .post-content .gist {
     width: 66.66%;
   }
   #blog-post #blog-post-content .post-content blockquote, #blog-post #blog-post-content .post-content pre, #blog-post #blog-post-content .post-content table {
@@ -3223,4 +3226,11 @@ nav .fa-bars {
   100% {
     opacity: 1;
   }
+}
+.gist .gist-file table {
+  margin: 0 !important;
+  width: 100% !important;
+}
+.gist .gist-file table pre {
+  width: 100% !important;
 }
