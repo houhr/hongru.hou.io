@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Homework of week 2 (digital electronics)
+title: Homework of Digital Electronics
 published: true
 ---
 <p class="intro">Insert a photoresistor and a 10k&#8486; resistor into breadboard. Then connect resistor and GND by using a black wire and connect photoresistor with 5V by using a red wire.</p>

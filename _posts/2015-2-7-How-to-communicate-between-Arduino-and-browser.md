@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to communicate between Arduino and Chrome
+title: How to communicate between Arduino and browser
 published: true
 ---
 ## Step 1: set up Arduino
