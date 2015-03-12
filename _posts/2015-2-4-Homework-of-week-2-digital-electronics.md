@@ -13,11 +13,10 @@ published: true
 
 ## Week 7: Complete circuit schematic and PCB layout
 
-
-### Circuit schematic:
+### PCB layout:
 <p><img src="/images/compressed/blog/2015-2-4/8.png" title=""></p>
 
-### PCB layout:
+### Circuit schematic:
 <p><img src="/images/compressed/blog/2015-2-4/9.png" title=""></p>
 
 
