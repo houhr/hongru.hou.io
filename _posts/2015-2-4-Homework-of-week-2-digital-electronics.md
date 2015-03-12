@@ -8,7 +8,7 @@ published: true
 
 * [Week 7: Complete circuit schematic and PCB layout](#week-7-complete-circuit-schematic-and-pcb-layout)
 * [Week 5&amp;6: Motor and motion control](#week-5amp6-motor-and-motion-control)
-* [Week 3: Arduino and browser](#week-3-arduino-and-browser)
+* [Week 3&amp;4: Arduino and browser](#week-3amp4-arduino-and-browser)
 * [Week 2: Fade with switch](#week-2-fade-with-switch)
 
 ## Week 7: Complete circuit schematic and PCB layout
@@ -31,7 +31,7 @@ published: true
 <iframe src="//player.vimeo.com/video/121959902?title=0&amp;byline=0&amp;portrait=0&amp;color=b5e285&amp;autoplay=0&amp;loop=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
-## Week 3: Arduino and browser
+## Week 3&amp;4: Arduino and browser
 
 This part has been moved to [here](/blog/2015/02/07/How-to-communicate-between-Arduino-and-browser/).
 
