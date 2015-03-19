@@ -18,7 +18,7 @@ The challenge of turing the Caltrainyear poster into an interactive version was 
 
 The disadvantage of Apple watch is the screen size is very limited, but its advantage is the digital crown is very useful to browse a list. So, the main idea of the interactive version is to show necessary concept and formula of *Caltrainyear* first, then let users browse a place list which contain all three parts of the places in the poster.
 
-Besides of changing the information structure for Apple watch, another thing I added was to give users a option to use their own speed to calculate Caltrainyear if they were on a running Caltrain, which I think can increase the interesting of the app. After all, a watch app has more context we can utilize than a poster's.
+Besides of changing the information structure for Apple watch, another thing I added was to give users a option to use their own speed to calculate Caltrainyear if they on a running Caltrain, which I think can increase the interesting of the app. After all, a watch app has more context we can utilize than a poster's.
 
 <p class="full-width"><img class="shadow" src="/images/compressed/portfolio/Caltrainyear/Interaction-design-v1.png" title="Interaction design version 1"></p>
 
