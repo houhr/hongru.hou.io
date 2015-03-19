@@ -20,8 +20,8 @@ Components used:
 
 * 1 LED
 * 1 pushbutton
-* 3 resistor
 * 1 resistive sensor
+* 3 resistor
 * 1 vector image
 * 1 line of text
 
