@@ -23,7 +23,7 @@ Components used:
 * 1 resistor
 * 1 resistive sensor
 * 1 vector image
-* 1 text
+* 1 line of text
 
 <p><img src="/images/compressed/blog/2015-2-4/10.png" title=""></p>
 
