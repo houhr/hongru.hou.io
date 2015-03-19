@@ -6,10 +6,27 @@ published: true
 
 ## Contents
 
+* [Week 8&amp;9: Design a printed circuit board](#week-8amp9-design-a-printed-circuit-board)
 * [Week 7: Complete circuit schematic and PCB layout](#week-7-complete-circuit-schematic-and-pcb-layout)
 * [Week 5&amp;6: Motor and motion control](#week-5amp6-motor-and-motion-control)
 * [Week 3&amp;4: Arduino and browser](#week-3amp4-arduino-and-browser)
 * [Week 2: Fade with switch](#week-2-fade-with-switch)
+
+## Week 8&amp;9: Design a printed circuit board
+
+### PCB layout:
+
+Components used:
+
+* 1 LED
+* 1 pushbutton
+* 1 resistor
+* 1 resistive sensor
+* 1 vector image
+* 1 text
+
+<p><img src="/images/compressed/blog/2015-2-4/10.png" title=""></p>
+
 
 ## Week 7: Complete circuit schematic and PCB layout
 
