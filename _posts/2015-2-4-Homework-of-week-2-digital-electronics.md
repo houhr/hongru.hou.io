@@ -6,11 +6,24 @@ published: true
 
 ## Contents
 
+* [Week 11: Final project concept](#week-11-final-project-concept)
 * [Week 8&amp;9: Design a printed circuit board](#week-8amp9-design-a-printed-circuit-board)
 * [Week 7: Complete circuit schematic and PCB layout](#week-7-complete-circuit-schematic-and-pcb-layout)
 * [Week 5&amp;6: Motor and motion control](#week-5amp6-motor-and-motion-control)
 * [Week 3&amp;4: Arduino and browser](#week-3amp4-arduino-and-browser)
 * [Week 2: Fade with switch](#week-2-fade-with-switch)
+
+## Week 11: Final project concept
+
+### 3 topics that I would like to learn about
+
+1. How to connect Arduino with iPhone.
+2. How to get real time on Arduino.
+3. Physical data visualization
+
+### Final project concept
+
+I would like to make a infinity clock by using a circular LED light and mirrors. The clock will show real time in normal mode. Once it detect someone stand in front of it, it will show some colorful effect based on the distance between the people and clock. The clock will also detect the light from outside — if there's no outside light source, it will turn off all the LEDs slowly. So, people can sleep well at night without light pollution in the room. If I have extra time, I would like to try to conncet the clock with iPhone, so people can select colors for the LEDs.
 
 ## Week 8&amp;9: Design a printed circuit board
 
