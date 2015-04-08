@@ -13,9 +13,13 @@ published: true
 * [Week 3&amp;4: Arduino and browser](#week-3amp4-arduino-and-browser)
 * [Week 2: Fade with switch](#week-2-fade-with-switch)
 
+## Week 12: Final project update
+
+
+
 ## Week 11: Final project concept
 
-### 3 topics that I would like to learn about
+### 3 topics that I would like to learn about:
 
 1. How to connect Arduino with iPhone.
 2. How to get real time on Arduino.
@@ -23,7 +27,7 @@ published: true
 
 ### Final project concept
 
-I would like to make a infinity clock by using a circular LED light and mirrors. The clock will show real time in normal mode. Once it detect someone stand in front of it, it will show some colorful effect based on the distance between the people and clock. The clock will also detect the light from outside — if there's no outside light source, it will turn off all the LEDs slowly. So, people can sleep well at night without light pollution in the room. If I have extra time, I would like to try to conncet the clock with iPhone, so people can select colors for the LEDs.
+I would like to make an infinity clock by using a circular LED light and mirrors. The clock will show real time in normal mode. Once it detects someone stands in front of it, it will show some colorful effect based on the distance between the people and clock. The clock will also detect the light from outside — if there's no outside light source, it will turn off all the LEDs slowly. So, people can sleep well at night without light pollution in the room. If I have extra time, I would like to try to connect the clock with iPhone, so people can select colors for the LEDs.
 
 ## Week 8&amp;9: Design a printed circuit board
 
