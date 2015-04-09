@@ -54,10 +54,13 @@ The target user of this kind of apps is person who has a relatively fixed daily 
 
 <p><img src="/images/compressed/portfolio/NextMuni/color-palette.png" title="color palette"></p>
 
+I also [customized a map style](https://snazzymaps.com/style/18464/clean) based on this color palette.
+
 ### Icons
 
 <p><img src="/images/compressed/portfolio/NextMuni/icons.png" title="icons"></p>
 
 ## Prototype
 
-<iframe class="horizontal-centering" width="456" height="940" src="//invis.io/CR2NMK29T" frameborder="0" allowfullscreen></iframe>
+* [Low fidelity prototype by using InVision](https://projects.invisionapp.com/share/UG2NMV752#/screens)
+* [High fidelity prototype by using Framer](http://share.framerjs.com/dhwptunzo4un/)
