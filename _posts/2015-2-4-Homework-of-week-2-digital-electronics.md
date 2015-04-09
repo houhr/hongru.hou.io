@@ -6,6 +6,7 @@ published: true
 
 ## Contents
 
+* [Week 12: Final project update](#week-12-final-project-update)
 * [Week 11: Final project concept](#week-11-final-project-concept)
 * [Week 8&amp;9: Design a printed circuit board](#week-8amp9-design-a-printed-circuit-board)
 * [Week 7: Complete circuit schematic and PCB layout](#week-7-complete-circuit-schematic-and-pcb-layout)
@@ -15,6 +16,12 @@ published: true
 
 ## Week 12: Final project update
 
+### Concept
+You can find project concept [here](#final-project-concept).
+
+### Major hardware and software components
+
+<p><img src="/images/compressed/blog/2015-2-4/11.jpg" title=""></p>
 
 
 ## Week 11: Final project concept
