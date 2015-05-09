@@ -6,6 +6,7 @@ published: true
 
 ## Contents
 
+* [Week 14: Final project update](#week-14-final-project-update)
 * [Week 13: Final project update](#week-13-final-project-update)
 * [Week 12: Final project update](#week-12-final-project-update)
 * [Week 11: Final project concept](#week-11-final-project-concept)
@@ -14,6 +15,20 @@ published: true
 * [Week 5&amp;6: Motor and motion control](#week-5amp6-motor-and-motion-control)
 * [Week 3&amp;4: Arduino and browser](#week-3amp4-arduino-and-browser)
 * [Week 2: Fade with switch](#week-2-fade-with-switch)
+
+## Week 14: Final project update
+
+### Schematic
+
+<p><img src="/images/compressed/blog/2015-2-4/14.png" title=""></p>
+
+### Arduino code
+
+{% gist be5e88d058d1df1e2ea2 %}
+
+### HTML code
+
+{% gist 5bf4777c08280305c9f1 %}
 
 ## Week 13: Final project update
 
