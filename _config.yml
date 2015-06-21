@@ -1,7 +1,7 @@
 # Site settings
 title: Hongru Hou
 description: > # this means to ignore newlines until "baseurl:"
-  Hongru Hou — A Product Designer & Prototyper.
+  Hongru Hou — Product Designer & Prototyper
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://hongru.hou.io" # the base hostname & protocol for your site
 
