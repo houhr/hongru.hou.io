@@ -1,0 +1,348 @@
+---
+layout: default
+title: Smart Staffing Board
+---
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="/#work">Work</a></li>
+      <li><a class="logo" href="/">{% include logo.html %}</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<ul class="work">
+  <li>
+    <div class="work__project work--SSB work--detail">
+      <div class="ratio-inner">
+        <div class="center-middle">
+          <h1 class="work__title">Smart Staffing Board</h1>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<main>
+
+  <div class="project__intro">
+    <p>As an intern within Human-Centered Design team, I worked on a Smart Staffing Board project for Amazon fulfillment centers to help associates refine their workflow and improve their efficiency. I was tasked with user research, UI/UX design, prototyping (software and hardware) and user testing.</p>
+    <!-- <p>Smart Staffing Board was a project for Amazon fulfillment centers to help associates refine their workflow and improve their efficiency of using the staffing boards.</p> -->
+  </div>
+
+  <div class="project__overview">
+    <ul class="overview__lists">
+      <li>
+        <h3>Time &amp; Location</h3>
+        <p>May 2015 – August 2015 @ Amazon</p>
+      </li>
+      <li>
+        <h3>Team members</h3>
+        <p>Hongru Hou</p>
+      </li>
+      <li>
+        <h3>Responsibilities</h3>
+        <ul>
+          <li><p>User research</p></li>
+          <li><p>UI/UX design</p></li>
+          <li><p>Prototyping</p></li>
+          <li><p>User testing</p></li>
+        </ul>
+      </li>
+      <li>
+        <h3>Skills &amp; Tools</h3>
+        <ul>
+          <li><p>Interaction design</p></li>
+          <li><p>Visual design</p></li>
+          <li><p>Sketch</p></li>
+          <li><p>Framer Studio (CoffeeScript)</p></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <section class="project__content">
+
+    <div class="project__content--with-padding">
+
+      <span class="fonticon flaticon-group16"></span>
+      <h2>Stage 1: User Research</h2>
+
+      <p class="content__methods">
+        <span class="content__method">Contextual Inquiry</span>
+        <span class="content__method">Interview</span>
+        <span class="content__method">Questionnaire</span>
+      </p>
+
+      <p>Fulfillment centers (FCs) are complex facilities where many different kinds of management and collaboration occur. During an on-site visit at fulfillment center BFI1, an operations manager mentioned that they would like to upgrade their physical staffing board to a digital one because it’s time-consuming for people to use it.</p>
+      <p>In order to understand how people use the existing staffing board, identify main problems and underlying needs, I spent tons of time with real targeted users. By using the methods listed above, I collected invaluable first hand data and did observations of managers and associates in their work context.</p>
+
+    </div>
+
+    <div class="swiper-container content__slide">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide" id="SSB__slide--1-1">
+            <p><span class="swiper-slide-number"><sup>1</sup>&frasl;<sub>7</sub></span> The existing staffing board.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--1-2">
+            <p><span class="swiper-slide-number"><sup>2</sup>&frasl;<sub>7</sub></span> The average time associates spend on the board is 18.46s.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--1-3">
+            <p><span class="swiper-slide-number"><sup>3</sup>&frasl;<sub>7</sub></span> Part of field notes.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--1-4">
+            <p><span class="swiper-slide-number"><sup>4</sup>&frasl;<sub>7</sub></span> User research feedback from 5 associates.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--1-5">
+            <p><span class="swiper-slide-number"><sup>5</sup>&frasl;<sub>7</sub></span> User research feedback from 4 managers and 1 trainer.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--1-6">
+            <p><span class="swiper-slide-number"><sup>6</sup>&frasl;<sub>7</sub></span> User research results (part 1).</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--1-7">
+            <p><span class="swiper-slide-number"><sup>7</sup>&frasl;<sub>7</sub></span> User research results (part 2).</p>
+          </div>
+      </div>
+      <!-- If we need pagination -->
+      <!-- <div class="swiper-pagination"></div> -->
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
+
+    </div>
+
+  </section>
+
+  <section class="project__content">
+
+    <div class="project__content--with-padding">
+
+      <span class="fonticon flaticon-shootingtarget1"></span>
+      <h2>Stage 2: Identification</h2>
+
+      <p class="content__methods">
+        <span class="content__method">Affinity Diagram</span>
+      </p>
+
+      <p>After went through all the data that gathered from previous phase, similar response begin to emerge naturally. This helped me identify patterns of how people interacted with the staffing boards. And it also helped me discover problems, find design opportunities and understand design constrains.</p>
+    </div>
+
+    <div class="content__quote" id="quote__SSB-1">
+      <q>The board is always crowded with people standing there taking forever to look at it, so it takes me a long time to get in and flipping badge over.</q>
+      <p class="content__quote--teller">— An associate at BFI1</p>
+    </div>
+
+    <div class="project__content--with-padding">
+      <p>In order to deliver something in a limited internship time, I chose the following problems as high priority problems to solve:</p>
+
+      <ol>
+        <li>
+          <p>Associates have difficulties finding their tiny name magnets on a big and chaotic board in the crowds.</p>
+        </li>
+        <li>
+          <p>Associates are supposed to check the staffing board 4 times a shift but more than 80% (9 out of 11) of them only check it 2 times.</p>
+        </li>
+        <li>
+          <p>Managers have to go to find associates before they can change their assignments.</p>
+        </li>
+      </ol>
+
+    </div>
+
+  </section>
+
+  <section class="project__content">
+
+    <div class="project__content--with-padding">
+
+      <span class="fonticon flaticon-connection88"></span>
+      <h2>Stage 3: Divergent Design</h2>
+
+      <p class="content__methods">
+        <span class="content__method">Persona</span>
+        <span class="content__method">Storyboard</span>
+        <span class="content__method">Information Architecture</span>
+        <span class="content__method">Brainstorm</span>
+      </p>
+
+      <p>Based on what I found in the previous steps, I created personas and storyboards to envision how associates interact with the Smart Staffing Board. Besides that, a chart with all the information involved in the system was really helpful to understand what information was available and what their relationships were.</p>
+      <p>After several rounds of interaction design and got some feedback from users, I finally decided to push forward with a new direction that combined different advantages of different ideas.</p>
+
+    </div>
+
+    <div class="swiper-container content__slide">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide" id="SSB__slide--3-1">
+            <p><span class="swiper-slide-number"><sup>1</sup>&frasl;<sub>6</sub></span>Persona.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--3-2">
+            <p><span class="swiper-slide-number"><sup>2</sup>&frasl;<sub>6</sub></span>Storyboard.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--3-3">
+            <p><span class="swiper-slide-number"><sup>3</sup>&frasl;<sub>6</sub></span>Information architecture.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--3-4">
+            <p><span class="swiper-slide-number"><sup>4</sup>&frasl;<sub>6</sub></span>Direction 1.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--3-5">
+            <p><span class="swiper-slide-number"><sup>5</sup>&frasl;<sub>6</sub></span>Direction 2.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--3-6">
+            <p><span class="swiper-slide-number"><sup>6</sup>&frasl;<sub>6</sub></span>Final direction.</p>
+          </div>
+      </div>
+      <!-- If we need pagination -->
+      <!-- <div class="swiper-pagination"></div> -->
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
+
+    </div>
+
+  </section>
+
+  <section class="project__content">
+
+    <div class="project__content--with-padding">
+
+      <span class="fonticon flaticon-alcohol54"></span>
+      <h2>Stage 4: Iterative Design</h2>
+
+      <p class="content__methods">
+        <span class="content__method">Design with Real Data</span>
+      </p>
+
+      <p>The visual design was iterated with real users' data because real data can help me find visual design problem as early as possible.</p>
+
+      <p>One of the design decisions I made here was to put the check-in status bar on top of personal information. Initially, I thought it may help users to identify themselve quickly if they saw their personal information first. However, since one of the design goals was to urge associates to check the staffing board four times a shift, it makes more sence to let people know their check-in status everytime after they login the system.</p>
+
+    </div>
+
+    <img class="content__img--no-padding" src="/images/original/portfolio/Smart-Staffing-Board/stage-4/1.jpg" alt="">
+
+    <div class="swiper-container content__slide">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide" id="SSB__slide--4-2">
+          </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="project__content">
+
+    <div class="project__content--with-padding">
+
+      <span class="fonticon flaticon-computing22"></span>
+      <h2>Stage 5: Hardware + Software Prototyping</h2>
+
+      <p class="content__methods">
+        <span class="content__method">High-fidelity Prototype</span>
+        <span class="content__method">Code Refactoring</span>
+        <span class="content__method">Object-oriented Programming</span>
+      </p>
+
+      <p>The iteration process not only appeared in digital design phases, but also could be found during hardware and software prototyping phases. Insist on the highest standards is always one of my tenets. Although there was a version of fully functional code, I did another round of code refactoring by using Object-oriented Programming, which reduced 23.2% of the code to finish the same job.</p>
+
+    </div>
+
+    <img class="content__img--no-padding" src="/images/original/portfolio/Smart-Staffing-Board/stage-5/1.jpg" alt="">
+
+    <div class="swiper-container content__slide">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide" id="SSB__slide--5-2">
+          </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="project__content">
+
+    <div class="project__content--with-padding">
+
+      <span class="fonticon flaticon-profile43"></span>
+      <h2>Stage 6: User Testing</h2>
+
+      <p class="content__methods">
+        <span class="content__method">A/B Test</span>
+        <span class="content__method">Questionnaire</span>
+      </p>
+
+      <p>After finished a fully functional prototype for associates and a rough prototype for managers, we were ready to test our Smart Staffing Board. The primary goal of this test was to verify the hypotheses that a digital staffing board can accelerate the checking process for associates and improve their user experience.</p>
+      <p>I applied an A/B test to compare associates’ performance of using the Smart Staffing Board against the existing one. The simulation also answered the question of how useful and effective the design of the Smart Staffing Board was based on short qualitative surveys.</p>
+      <p>In order to get more accurate test results, we generated the UI based on associates’ real assignments of the test day. Associates could check out their personal assignments by scanning their Amazon badges.</p>
+
+    </div>
+
+    <div class="swiper-container content__slide">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide" id="SSB__slide--6-1">
+            <p><span class="swiper-slide-number"><sup>1</sup>&frasl;<sub>4</sub></span>User testing UI with real assignment data.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--6-2">
+            <p><span class="swiper-slide-number"><sup>2</sup>&frasl;<sub>4</sub></span>A/B test.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--6-3">
+            <p><span class="swiper-slide-number"><sup>3</sup>&frasl;<sub>4</sub></span>User testing feedback from 11 associate participants.</p>
+          </div>
+          <div class="swiper-slide" id="SSB__slide--6-4">
+            <p><span class="swiper-slide-number"><sup>4</sup>&frasl;<sub>4</sub></span>Feedback of one of associate participants.</p>
+          </div>
+      </div>
+      <!-- If we need pagination -->
+      <!-- <div class="swiper-pagination"></div> -->
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
+
+    </div>
+
+  </section>
+
+  <section class="project__content">
+
+    <div class="project__content--with-padding">
+
+      <span class="fonticon flaticon-stats91"></span>
+      <h2>Test Results</h2>
+      <p class="content__methods">
+        <span class="content__method"></span>
+      </p>
+
+      <p>The average time spent of 11 associate participants under a controlled condition (check the board one by one) was reduced from 5.15s (on the existing board) to 2.74s (on the Smart Staffing Board), which decreased by 46.80%.</p>
+      <p>11 out of 11 associates reported that the work information on the Smart Staffing Board was "clear and easily findable".</p>
+      <p>9 out of 11 (~82%) associates gave positive feedback on the user experience. These associates said they felt the Smart Staffing Board was faster; simpler; easier to read; more efficient, organized and private that the existing board.</p>
+
+    </div>
+
+    <div class="content__quote" id="quote__SSB-2">
+      <q>It was very clear, I liked how the screen image huge and words were big. I also enjoyed that it clearly showed our station.</q>
+      <p class="content__quote--teller">— An associate at BFI1</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <ul class="footer__nav">
+    <li class="footer__nav--left">
+      <a href="/work/Design-related-Publication/"><h2>&lt; Design-related Publication</h2></a>
+    </li>
+    <li class="footer__nav--right">
+      <a href="/work/Next-Muni/"><h2>Next Muni &gt;</h2></a>
+    </li>
+  </ul>
+</footer>

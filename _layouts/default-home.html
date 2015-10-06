@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {{ content }}
+
+  </body>
+  <script src="/js/jquery-2.1.4.min.js"></script>
+  <script src="/js/jquery.mousewheel.min.js"></script>
+  <script src="/js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="/js/swiper.jquery.min.js"></script>
+  <script>
+
+    var viewportHeight = $(window).height();
+    var work = [
+      'intro',
+      'work--SSB',
+      'work--NM',
+      'work--CY',
+      'work--FSG',
+      'work--PHO',
+      'work--PUB',
+      'contact'
+    ]
+    var index = 0;
+
+    $(document).ready(function() {
+
+      $('.intro h1').addClass('faded');
+      $('.intro .intro__title').addClass('faded');
+      $('.intro .intro__resume').addClass('faded');
+      $('#mouse').addClass('faded');
+    });
+
+    $(window).on('mousewheel', $.debounce(800, function(event) {
+
+      var scrollBarPosition = $(window).scrollTop();
+      index = Math.floor((scrollBarPosition + viewportHeight / 2) / viewportHeight);
+
+      $('body').animate({
+        scrollTop: $('.' + work[index]).offset().top,
+        duration: 200,
+        easing: 'easeinout'
+      });
+
+    }));
+
+    $(window).on('scroll', function(e) {
+      if ($(window).scrollTop() > 1) {
+        $('header').addClass('scrolled');
+        //$('#mouse.faded').css('opacity', '0');
+      } else {
+        $('header').removeClass('scrolled');
+        //$('#mouse.faded').css('opacity', '1');
+      }
+    })
+
+  </script>
+
+</html>

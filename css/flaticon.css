@@ -1,0 +1,61 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("flaticon.eot");
+	src: url("flaticon.eot#iefix") format("embedded-opentype"),
+	url("flaticon.woff") format("woff"),
+	url("flaticon.ttf") format("truetype"),
+	url("flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}.flaticon-alcohol54:before {
+	content: "\e000";
+}
+.flaticon-cellphone117:before {
+	content: "\e001";
+}
+.flaticon-computing22:before {
+	content: "\e002";
+}
+.flaticon-connection88:before {
+	content: "\e003";
+}
+.flaticon-dartboard13:before {
+	content: "\e004";
+}
+.flaticon-group16:before {
+	content: "\e005";
+}
+.flaticon-play126:before {
+	content: "\e006";
+}
+.flaticon-profile43:before {
+	content: "\e007";
+}
+.flaticon-programminglanguage6:before {
+	content: "\e008";
+}
+.flaticon-send5:before {
+	content: "\e009";
+}
+.flaticon-shootingtarget1:before {
+	content: "\e00a";
+}
+.flaticon-speechbubble78:before {
+	content: "\e00b";
+}
+.flaticon-stars76:before {
+	content: "\e00c";
+}
+.flaticon-stats91:before {
+	content: "\e00d";
+}
+.flaticon-winner22:before {
+	content: "\e00e";
+}
