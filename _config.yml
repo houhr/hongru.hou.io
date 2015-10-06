@@ -1,9 +1,12 @@
 # Site settings
 title: Hongru Hou
+email: hongru@hou.io
 description: > # this means to ignore newlines until "baseurl:"
-  Hongru Hou — Product Designer & Prototyper
+  Hongru Hou — Product Designer / Prototyper
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://hongru.hou.io" # the base hostname & protocol for your site
+twitter_username: houhr
+github_username:  houhr
 
 # Build settings
 markdown: kramdown

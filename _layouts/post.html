@@ -1,46 +1,15 @@
 ---
 layout: default
 ---
-<div id="blog-post">
+<div class="post">
 
-  <div class="head">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
 
-    <div class="head-background">
-      
-    </div>
+  <article class="post-content">
+    {{ content }}
+  </article>
 
-    <div class="head-content">
-      <div class="ratio-inner">
-        <div class="center-middle">
-          <h2 class="head-content-title">{{ page.title }}</h2>
-          <p class="head-content-disc post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div id="blog-post-content">
-
-    <article class="post-content">
-      {{ content }}
-    </article>
-    <aside class="post-comments">
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-          var disqus_shortname = 'houhongru'; // required: replace example with your forum shortname
-
-          /* * * DON'T EDIT BELOW THIS LINE * * */
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </aside>
-
-  </div>
 </div>

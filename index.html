@@ -1,104 +1,121 @@
 ---
-layout: default
+layout: default-home
 ---
-<div id="about">
 
-  <div class="head">
+<header>
+  <nav>
+    <ul>
+      <li><a href="/#work">Work</a></li>
+      <li><a class="logo" href="/">{% include logo.html %}</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <div class="head-background">
+<section class="intro">
+  <div class="ratio-inner">
+    <div class="center-middle">
+
+      <h1>Hongru Hou</h1>
+
+      <div class="intro__title">
+        <p>Product Designer / Prototyper</p>
+        <p>Interaction Design MFA Candidate @ <a href="https://www.cca.edu/academics/graduate/design"><abbr title="California College of the Arts">CCA</abbr></a></p>
+        <p><del>Design Technologist Intern @ Amazon</del></p>
+        <p><del>Front-end R&amp;D Engineer @ Baidu</del></p>
+      </div>
+
+      <p class="intro__resume" id="fadein-resume"><a href="/Hongru-Hou-Resume.pdf" class="button">View resume</a></p>
+
     </div>
+  </div>
+</section>
 
-    <div class="head-content">
+<ul class="work" id="work">
+  <li>
+    <div class="work__project work--SSB">
       <div class="ratio-inner">
         <div class="center-middle">
-          <h2 class="head-content-title">Hongru Hou<!-- <span id="typing"></span> --></h2>
-          <p class="head-content-disc">Product Designer &amp; Prototyper </p>
-          <p class="head-content-disc"><a class="button" href="Hongru-Hou-resume.pdf">View résumé</a></p>
+          <a class="work__title--link" href="/work/Smart-Staffing-Board/">
+            <h2 class="work__title">Smart Staffing Board</h2>
+            <p class="work__title--secondary">for Amazon fulfillment centers</p>
+          </a>
         </div>
       </div>
     </div>
-
-  </div>
-
-  <div id="about-content">
-
-    <section id="artist-statement">
-      <p>
-        I <span class="small-caps">am a unicorn living on <abbr title="World Wide Web">WWW</abbr> planet.</span> I make websites, translate books and write columns in the Web realm, because I enjoy the process of making things that <span class="nowrap">don't exist.</span>
-      </p>
-      <p>
-        The intersection of design, development and writing is the place where I am standing now. Because of internal principles are underpinnings for external feelings, I value implementation as much as aesthetics. By melting the knowledge of <abbr title="User Experience">UX</abbr> and front-end together, I can bridge the gap between development team and design team, and helping them work more effectively. Besides that, as a Mandarin native speaker and a San Francisco based grad student, I can smooth the cooperation between eastern team and western team <span class="nowrap">as well.</span>
-      </p>
-      <p>
-        When I am not in design or build modes, I enjoy sharing my unique experience and perspective with others to help and encourage them overcoming difficulties, such as conquer the fear of dipping toes in <span class="nowrap">the water.</span>
-      </p>
-      <p>
-        Dog lover.
-      </p>
-    </section>
-
-    <!-- <section id="resume">
-      <a class="ratio-inner" href="files/Hongru-Hou-Resume.pdf">
+  </li>
+  <li>
+    <div class="work__project work--NM">
+      <div class="ratio-inner">
         <div class="center-middle">
-          <i class="fa fa-file-pdf-o fa-5x"></i>
-          <p>
-            Resume
-          </p>
+          <a class="work__title--link" href="/work/Next-Muni/">
+            <h2 class="work__title">Next Muni</h2>
+            <p class="work__title--secondary">for people who commute by Muni in SF</p>
+          </a>
         </div>
-      </a>
-    </section>
-
-    <div id="link">
-      <section id="linkedin">
-        <a class="ratio-inner" href="https://www.linkedin.com/in/houhr">
-          <div class="center-middle">
-            <i class="fa fa-linkedin-square"></i>
-          </div>
-        </a>
-      </section>
-
-      <div id="social">
-        <section id="email">
-          <a class="ratio-inner" href="mailto:hongru@hou.io">
-            <div class="center-middle">
-              <i class="fa fa-envelope-square"></i>
-            </div>
-          </a>
-        </section>
-
-        <section id="twitter">
-          <a class="ratio-inner" href="https://twitter.com/houhr">
-            <div class="center-middle">
-              <i class="fa fa-twitter-square"></i>
-            </div>
-          </a>
-        </section>
-
-        <section id="dribbble">
-          <a class="ratio-inner" href="https://dribbble.com/houhr">
-            <div class="center-middle">
-              <i class="fa fa-dribbble"></i>
-            </div>
-          </a>
-        </section>
-
-        <section id="github">
-          <a class="ratio-inner" href="https://github.com/houhr">
-            <div class="center-middle">
-              <i class="fa fa-github"></i>
-            </div>
-          </a>
-        </section>
       </div>
-
-    </div> -->
-
-  </div>
-
-  <section id="map">
-    <div class="ratio-inner">
-      <iframe frameborder="0" src="https://a.tiles.mapbox.com/v4/houhr.j9h26mld/attribution.html?access_token=pk.eyJ1IjoiaG91aHIiLCJhIjoiYXFMdUhyVSJ9.QwZdTpnZ8oxLYKQEPf6KwQ"></iframe>
     </div>
-  </section>
+  </li>
+  <li>
+    <div class="work__project work--CY">
+      <div class="ratio-inner">
+        <div class="center-middle">
+          <a class="work__title--link" href="/work/Caltrainyear/">
+            <h2 class="work__title">Caltrainyear</h2>
+            <p class="work__title--secondary">for fun</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="work__project work--FSG">
+      <div class="ratio-inner">
+        <div class="center-middle">
+          <a class="work__title--link" href="/work/Front-end-Style-Guide/">
+            <h2 class="work__title">Front-end Style Guide</h2>
+            <p class="work__title--secondary">for Baidu Maps mobile Web app</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="work__project work--PHO">
+      <div class="ratio-inner">
+        <div class="center-middle">
+          <a class="work__title--link" href="/work/Photography/">
+            <h2 class="work__title">Photography</h2>
+            <p class="work__title--secondary">Shot on iPhone 6 / Fujifilm X-E1</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="work__project work--PUB">
+      <div class="ratio-inner">
+        <div class="center-middle">
+          <a class="work__title--link" href="/work/Design-related-Publication/">
+            <h2 class="work__title">Design-related Publication</h2>
+            <p class="work__title--secondary">Columns / Translations</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
 
-</div>
+<section class="contact" id="contact">
+  <div class="ratio-inner">
+    <div class="center-middle">
+      <h1>Hello</h1>
+      <p><a href="mailto:hongru@hou.io">hongru@hou.io</a></p>
+      <p><a href="tel:4155428580">(415) 542-8580</a></p>
+      <p><a href="https://www.google.com/maps/place/South+of+Market,+San+Francisco,+CA/@37.7808157,-122.4024182,14z/data=!3m1!4b1!4m2!3m1!1s0x80858083a662307b:0xfd99010c2dc1f950"><abbr title="South of Market">SoMa</abbr>, San Francisco</a></p>
+      <p class="contact__link"><a href="https://www.linkedin.com/in/houhr" class="button">LinkedIn</a></p>
+    </div>
+  </div>
+</section>
+
+<div id="mouse"></div>

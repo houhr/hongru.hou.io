@@ -1,93 +1,41 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
   {% include head.html %}
 
   <body>
-    <div id="wrapper">
 
-      {% include header.html %}
-
-      <main>
-        {{ content }}
-      </main>
-
-      {% include footer.html %}
-
-    </div>
-
-    <script src={{ "/js/jquery-2.1.1.min.js" | prepend: site.baseurl }} type="text/javascript"></script>
-    <script src={{ "/js/typed.js" | prepend: site.baseurl }} type="text/javascript"></script>
-    <script src={{ "/js/particles.min.js" | prepend: site.baseurl }} type="text/javascript"></script>
-    <script>
-      $(function(){
-        $("#typing").typed({
-          strings: ["Hongru Hou"],
-          typeSpeed: 100,
-          backDelay: 1000
-        });
-
-        particlesJS('particles-js', {
-          particles: {
-            color: '#fff',
-            shape: 'circle', // "circle", "edge" or "triangle"
-            opacity: 0.8,
-            size: 2,
-            size_random: true,
-            nb: 100,
-            line_linked: {
-              enable_auto: true,
-              distance: 150,
-              color: '#fff',
-              opacity: 0.8,
-              width: 1,
-              condensed_mode: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 600
-              }
-            },
-            anim: {
-              enable: true,
-              speed: 0.25
-            }
-          },
-          interactivity: {
-            enable: false,
-            mouse: {
-              distance: 300
-            },
-            detect_on: 'canvas', // "canvas" or "window"
-            mode: 'grab',
-            line_linked: {
-              opacity: .5
-            },
-            events: {
-              onclick: {
-                enable: true,
-                mode: 'push', // "push" or "remove"
-                nb: 4
-              }
-            }
-          },
-          /* Retina Display Support */
-          retina_detect: true
-        });
-
-      });
-    </script>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-37477911-2', 'auto');
-      ga('send', 'pageview');
-
-    </script>
+    {{ content }}
 
   </body>
+  <script src="/js/jquery-2.1.4.min.js"></script>
+  <script src="/js/jquery.mousewheel.min.js"></script>
+  <script src="/js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="/js/swiper.jquery.min.js"></script>
+  <script>
+
+    $(window).on('scroll', function(e) {
+      if ($(window).scrollTop() > 1) {
+        $('header').addClass('scrolled');
+      } else {
+        $('header').removeClass('scrolled');
+      }
+    })
+
+    $(document).ready(function () {
+      //initialize swiper when document ready
+      var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 0,
+        loop: true
+      })
+    });
+
+  </script>
 
 </html>
