@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {{ content }}
+
+  </body>
+  <script src="/js/jquery-2.1.4.min.js"></script>
+  <script src="/js/jquery.mousewheel.min.js"></script>
+  <script src="/js/jquery.ba-throttle-debounce.min.js"></script>
+  <script src="/js/swiper.jquery.min.js"></script>
+  <script>
+
+    $(window).on('scroll', function(e) {
+      if ($(window).scrollTop() > 1) {
+        $('header').addClass('scrolled');
+      } else {
+        $('header').removeClass('scrolled');
+      }
+    })
+
+    $(document).ready(function () {
+      //initialize swiper when document ready
+      var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 0,
+        loop: true
+      })
+    });
+
+  </script>
+
+</html>
