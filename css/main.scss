@@ -476,6 +476,12 @@ and (max-width: 959px) {
     }
 
     @for $i from 1 through 1 {
+      #SSB__slide--7-#{$i} {
+        background: url(/images/original/portfolio/Smart-Staffing-Board/stage-7/#{$i}.jpg) no-repeat center center;
+      }
+    }
+
+    @for $i from 1 through 1 {
       #NM__slide--1-#{$i} {
         background: url(/images/original/portfolio/Smart-Staffing-Board/stage-1/#{$i}.jpg) no-repeat center center;
       }
