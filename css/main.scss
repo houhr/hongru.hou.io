@@ -445,7 +445,7 @@ and (max-width: 959px) {
       bottom: 2.5em;
     }
 
-    @for $i from 1 through 8 {
+    @for $i from 1 through 10 {
       #SSB__slide--1-#{$i} {
         background: url(/images/original/portfolio/Smart-Staffing-Board/stage-1/#{$i}.jpg) no-repeat center center;
       }
