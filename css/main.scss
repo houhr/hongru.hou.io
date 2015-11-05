@@ -88,6 +88,10 @@ body {
   line-height: 150%;
 }
 
+abbr[title] {
+  border-bottom-width: 0;
+}
+
 header {
   width: 100%;
   height: 3em;
@@ -170,10 +174,6 @@ and (max-width: 959px) {
     }
   }
 
-  abbr {
-    border-bottom-width: 0;
-  }
-
   .icon__logo {
     width: 1.5em;
     height: 1.5em;
@@ -243,10 +243,6 @@ and (max-width: 959px) {
     }
   }
 
-  abbr {
-    border-bottom-width: 0;
-  }
-
   .contact__link {
     margin-top: 3em;
   }
@@ -276,6 +272,11 @@ and (max-width: 959px) {
 
   @at-root #{&}--FSG {
     background: $darker, url(/images/original/portfolio/Front-end-Style-Guide/cover.jpg) no-repeat center center;
+    background-size: cover;
+  }
+
+  @at-root #{&}--IMC {
+    background: $darker, url(/images/original/portfolio/Infinity-Mirror-Clock/cover.jpg) no-repeat center center;
     background-size: cover;
   }
 
@@ -518,6 +519,12 @@ and (max-width: 959px) {
       }
     }
 
+    @for $i from 1 through 4 {
+      #IMC__slide--4-#{$i} {
+        background: url(/images/original/portfolio/Infinity-Mirror-Clock/stage-4/#{$i}.jpg) no-repeat center center;
+      }
+    }
+
   }
 
   .content__quote {
@@ -552,6 +559,10 @@ and (max-width: 959px) {
 
   #quote__PUB {
     background: $darker, url(/images/original/portfolio/Publication/cover.jpg) no-repeat center center;
+  }
+
+  #quote__IMC {
+    background: $darker, url(/images/original/portfolio/Infinity-Mirror-Clock/q1.jpg) no-repeat center center;
   }
 
   .content__photograph {
