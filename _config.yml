@@ -11,3 +11,9 @@ github_username:  houhr
 # Build settings
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+
+gems:
+  - jekyll-paginate
+  - redcarpet
+  - jekyll-gist
+  - pygments.rb
