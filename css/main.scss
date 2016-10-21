@@ -255,6 +255,11 @@ and (max-width: 959px) {
   margin: 0;
   padding: 0;
 
+  @at-root #{&}--IOE {
+    background: $darker, url(/images/original/portfolio/Ideal-OOBE-Exploration/cover.jpg) no-repeat center center;
+    background-size: cover;
+  }
+
   @at-root #{&}--SSB {
     background: $darker, url(/images/original/portfolio/Smart-Staffing-Board/cover.jpg) no-repeat center center;
     background-size: cover;
