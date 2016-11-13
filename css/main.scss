@@ -987,7 +987,17 @@ and (min-width: 960px) {
 .vocalizer {
 
   &::after {
-    background-color: $c-g !important;
+    font-size: 25% !important;
+    width: 2em !important;
+    height: 2em !important;
+    line-height: 2em !important;
+    border-radius: 1em !important;
+    opacity: 0;
+    right: -3em !important;
+    top: 50% !important;
+    transform: translateY(-0.8em);
+    color: $c-b !important;
+    background-color: $c-light-gray !important;
   }
 
   &:hover::after {
