@@ -204,6 +204,10 @@ and (max-width: 959px) {
     transition: opacity 2s .2s cubic-bezier(0.4, 0, 0.2, 1), transform 2s .2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  .history {
+    margin: 0.2rem auto;
+  }
+
   .intro__resume.faded {
     transform: translate3d(0, 0, 0);
     opacity: 1;
@@ -691,6 +695,10 @@ and (min-width: 640px) {
       font-size: 2.5em;
     }
 
+    .history {
+      margin: 1rem auto;
+    }
+
     p {
       font-size: 1.2em;
     }
@@ -845,6 +853,10 @@ and (min-width: 960px) {
     h1 {
       font-size: 4em;
       font-weight: 400;
+    }
+
+    .history {
+      margin: 1.2rem auto;
     }
 
     p {
