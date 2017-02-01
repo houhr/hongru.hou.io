@@ -251,6 +251,11 @@ and (max-width: 959px) {
     margin-top: 3em;
   }
 
+  small {
+    color: $c-light-gray;
+    text-decoration:none;
+  }
+
 }
 
 .work {
