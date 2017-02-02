@@ -10,7 +10,8 @@
 // Color
 $c-w: #fff;
 $c-light-gray: rgb(234,234,234);
-$c-g: rgba(50,50,50,0.95);
+$c-g: rgb(180, 180, 180);
+$c-d-g: rgba(50,50,50,0.95);
 $c-b: hsl(89, 62%, 6%);  //#101906
 $c-y: rgb(246, 255, 98);
 $darker: linear-gradient( to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.5));
@@ -44,14 +45,14 @@ $darker: linear-gradient( to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.5));
 a.button {
   @extend .small-cap;
   display: inline-block;
-  background: $c-w;
-  border: 1px solid $c-g;
-  padding: .5em 1em;
-  width: 12em;
+  line-height: 3em;
+  background-color: $c-g;
+  color:$c-w;
+  width: 10em;
   margin: 0 auto;
   text-decoration: none;
-  color: $c-g;
   transition: all .2s linear;
+  border-radius: .4em;
 
   &:hover {
     background: $c-y;
@@ -82,14 +83,33 @@ a.button {
 
 body {
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Palanquin', sans-serif;
   font-weight: 300;
   color: $c-b;
   line-height: 150%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Palanquin Dark', sans-serif;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+q:before {
+    content: open-quote;
+}
+q:after {
+    content: close-quote;
+}
+
 abbr[title] {
   border-bottom-width: 0;
+}
+
+small {
+  color: $c-g;
+  text-decoration:none;
 }
 
 header {
@@ -101,7 +121,7 @@ header {
   z-index: 9999;
 
   &.scrolled {
-    background: $c-g;
+    background: $c-d-g;
   }
 
   nav {
@@ -164,11 +184,10 @@ and (max-width: 959px) {
 
   a {
     text-decoration: none;
-    color: $c-b;
-    background-color: $c-w;
     transition: all .2s linear;
 
     &:hover {
+      color: $c-b;
       background-color: $c-y;
     }
   }
@@ -176,7 +195,7 @@ and (max-width: 959px) {
   .icon__logo {
     width: 1.5em;
     height: 1.5em;
-    fill: $c-g;
+    fill: $c-d-g;
     margin-bottom: 1.5em;
   }
 
@@ -209,20 +228,34 @@ and (max-width: 959px) {
     margin: 0.2rem auto;
   }
 
+  .intro__companies.faded {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  .intro__companies {
+    width: 10.5em; // 21em for desktop
+    margin: 0 auto;
+    margin-top: 4em; // 5em for desktop
+    opacity: 0;
+    transform: translate3d(0, 10rem, 0);
+    transition: opacity 2s .4s cubic-bezier(0.4, 0, 0.2, 1), transform 2s .4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   .intro__resume.faded {
     transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 
   .intro__resume {
-    margin-top: 3em;
+    margin-top: 1.5em; // 2em for desktop
     transform: translate3d(0, 10rem, 0);
     opacity: 0;
     transition: opacity 2s .4s cubic-bezier(0.4, 0, 0.2, 1), transform 2s .4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   del {
-    color: $c-light-gray;
+    color: $c-g;
     text-decoration:none;
   }
 
@@ -242,18 +275,19 @@ and (max-width: 959px) {
     background-color: $c-w;
     transition: all .2s linear;
 
+    &.button {
+      color: $c-w;
+      background: $c-g;
+    }
+
     &:hover {
+      color: $c-b;
       background-color: $c-y;
     }
   }
 
   .contact__link {
     margin-top: 3em;
-  }
-
-  small {
-    color: $c-light-gray;
-    text-decoration:none;
   }
 
 }
@@ -291,6 +325,11 @@ and (max-width: 959px) {
 
   @at-root #{&}--IMC {
     background: $darker, url(/images/original/portfolio/Infinity-Mirror-Clock/cover.jpg) no-repeat center center;
+    background-size: cover;
+  }
+
+  @at-root #{&}--WRI {
+    background: $darker, url(/images/original/portfolio/Writing/cover.jpg) no-repeat center center;
     background-size: cover;
   }
 
@@ -374,7 +413,7 @@ and (max-width: 959px) {
 
     &::before {
       font-size: 3em;
-      color: $c-g;
+      color: $c-d-g;
       margin: 0;
       position: relative;
       top: 2.4em;
@@ -394,7 +433,7 @@ and (max-width: 959px) {
     transition: all .2s linear;
 
     &:visited {
-      color: $c-g;
+      color: $c-d-g;
     }
 
     &:hover {
@@ -433,7 +472,7 @@ and (max-width: 959px) {
     background-color: $c-light-gray !important;
 
     p {
-      background: $c-g;
+      background: $c-d-g;
       color: $c-w;
       margin: 0;
       padding: .5em 1em;
@@ -641,7 +680,7 @@ and (max-width: 959px) {
         &:hover {
 
           h2 {
-            background: $c-g;
+            background: $c-d-g;
             color: $c-y;
           }
 
@@ -703,6 +742,10 @@ and (min-width: 640px) {
 
     .history {
       margin: 1rem auto;
+    }
+
+    .intro__companies {
+      width: 13.5em; // 21em for desktop
     }
 
     p {
@@ -865,17 +908,17 @@ and (min-width: 960px) {
       margin: 1.2rem auto;
     }
 
+    .intro__companies {
+      width: 21em;
+      margin-top: 5em;
+    }
+
     p {
       font-size: 1.5em;
     }
 
     .intro__resume, .contact__link {
       font-size: 1.2em;
-
-      .button {
-        border: 2px solid $c-g;
-      }
-
     }
 
   }
@@ -970,7 +1013,7 @@ and (min-width: 960px) {
     width: 32px;
     height: 52px;
     margin: 0 auto;
-    border: 2px solid $c-g;
+    background-color: $c-g;
     border-radius: 20px;
 
     &::before {
@@ -978,7 +1021,7 @@ and (min-width: 960px) {
       content: '';
       width: 6px;
       border-radius: 3px;
-      background: $c-g;
+      background: $c-w;
       margin: 0 auto;
       position: relative;
       animation: mouse-wheel .7s infinite alternate;
