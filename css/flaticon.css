@@ -1,61 +1,51 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 06/02/2017 04:54
+  	*/
+
 @font-face {
-	font-family: "Flaticon";
-	src: url("flaticon.eot");
-	src: url("flaticon.eot#iefix") format("embedded-opentype"),
-	url("flaticon.woff") format("woff"),
-	url("flaticon.ttf") format("truetype"),
-	url("flaticon.svg") format("svg");
-	font-weight: normal;
-	font-style: normal;
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-	font-family: Flaticon;
+  font-family: Flaticon;
         font-size: 20px;
 font-style: normal;
 margin-left: 20px;
-}.flaticon-alcohol54:before {
-	content: "\e000";
 }
-.flaticon-cellphone117:before {
-	content: "\e001";
-}
-.flaticon-computing22:before {
-	content: "\e002";
-}
-.flaticon-connection88:before {
-	content: "\e003";
-}
-.flaticon-dartboard13:before {
-	content: "\e004";
-}
-.flaticon-group16:before {
-	content: "\e005";
-}
-.flaticon-play126:before {
-	content: "\e006";
-}
-.flaticon-profile43:before {
-	content: "\e007";
-}
-.flaticon-programminglanguage6:before {
-	content: "\e008";
-}
-.flaticon-send5:before {
-	content: "\e009";
-}
-.flaticon-shootingtarget1:before {
-	content: "\e00a";
-}
-.flaticon-speechbubble78:before {
-	content: "\e00b";
-}
-.flaticon-stars76:before {
-	content: "\e00c";
-}
-.flaticon-stats91:before {
-	content: "\e00d";
-}
-.flaticon-winner22:before {
-	content: "\e00e";
-}
+
+.flaticon-alcohol54:before { content: "\f100"; }
+.flaticon-arrow:before { content: "\f101"; }
+.flaticon-cellphone117:before { content: "\f102"; }
+.flaticon-computing22:before { content: "\f103"; }
+.flaticon-connection88:before { content: "\f104"; }
+.flaticon-dart-board13:before { content: "\f105"; }
+.flaticon-eye:before { content: "\f106"; }
+.flaticon-group16:before { content: "\f107"; }
+.flaticon-play126:before { content: "\f108"; }
+.flaticon-power:before { content: "\f109"; }
+.flaticon-profile43:before { content: "\f10a"; }
+.flaticon-programming-language6:before { content: "\f10b"; }
+.flaticon-send5:before { content: "\f10c"; }
+.flaticon-shooting-target1:before { content: "\f10d"; }
+.flaticon-speech-bubble78:before { content: "\f10e"; }
+.flaticon-stars76:before { content: "\f10f"; }
+.flaticon-stats91:before { content: "\f110"; }
+.flaticon-technology:before { content: "\f111"; }
+.flaticon-tool:before { content: "\f112"; }
+.flaticon-winner22:before { content: "\f113"; }
