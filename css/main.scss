@@ -271,14 +271,19 @@ and (max-width: 959px) {
     background-color: $c-w;
     transition: all .2s linear;
 
+    &:hover {
+      text-decoration: underline;
+    }
+
     &.button {
       color: $c-b;
       background: $c-y;
     }
 
-    &:hover {
+    &.button:hover {
       color: $c-y;
       background-color: $c-g;
+      text-decoration: none;
     }
   }
 
