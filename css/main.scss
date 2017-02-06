@@ -46,8 +46,8 @@ a.button {
   @extend .small-cap;
   display: inline-block;
   line-height: 3em;
-  background-color: $c-g;
-  color:$c-w;
+  color:$c-b;
+  background-color: $c-y;
   width: 10em;
   margin: 0 auto;
   text-decoration: none;
@@ -55,7 +55,8 @@ a.button {
   border-radius: .4em;
 
   &:hover {
-    background: $c-y;
+    color: $c-y;
+    background: $c-b;
   }
 
 }
@@ -185,11 +186,6 @@ and (max-width: 959px) {
   a {
     text-decoration: none;
     transition: all .2s linear;
-
-    &:hover {
-      color: $c-b;
-      background-color: $c-y;
-    }
   }
 
   .icon__logo {
@@ -276,13 +272,13 @@ and (max-width: 959px) {
     transition: all .2s linear;
 
     &.button {
-      color: $c-w;
-      background: $c-g;
+      color: $c-b;
+      background: $c-y;
     }
 
     &:hover {
-      color: $c-b;
-      background-color: $c-y;
+      color: $c-y;
+      background-color: $c-b;
     }
   }
 
