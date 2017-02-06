@@ -52,7 +52,7 @@ a.button {
   margin: 0 auto;
   text-decoration: none;
   transition: all .2s linear;
-  border-radius: .2em;
+  border-radius: 4px;
 
   &:hover {
     color: $c-y;
@@ -611,13 +611,12 @@ and (max-width: 959px) {
   }
 
   #quote__GP-1 {
-    background: $darker, url(/images/original/portfolio/Google-Pets/stage-2/2.png) no-repeat center -120px;
-    background-size: 100% auto;
+    background: $darker, url(/images/original/portfolio/Google-Pets/stage-2/2.png) no-repeat center center;
+    // background-size: 100% auto;
   }
 
   #quote__GP-2 {
     background: $darker, url(/images/original/portfolio/Google-Pets/stage-2/3.jpg) no-repeat center center;
-    background-size: 100% auto;
   }
 
   #quote__PHO {
@@ -1034,7 +1033,7 @@ and (min-width: 960px) {
     height: 52px;
     margin: 0 auto;
     background-color: $c-g;
-    border-radius: 20px;
+    border-radius: 6px 6px 20px 20px;
 
     &::before {
       display: block;
@@ -1060,30 +1059,6 @@ and (min-width: 960px) {
       height: 6px;
       top: 18px;
     }
-
-  }
-
-}
-
-.vocalizer {
-
-  &::after {
-    font-size: 25% !important;
-    width: 2em !important;
-    height: 2em !important;
-    line-height: 2em !important;
-    border-radius: 1em !important;
-    opacity: 0;
-    right: -3em !important;
-    top: 50% !important;
-    transform: translateY(-0.8em);
-    color: $c-b !important;
-    background-color: $c-light-gray !important;
-  }
-
-  &:hover::after {
-    color: $c-b;
-    background-color: $c-y !important;
 
   }
 
