@@ -641,7 +641,7 @@ and (max-width: 959px) {
   }
 
   .content__framer {
-    @include ratio(100%, 60%);
+    @include ratio(100%, 63%);
 
     .frame {
       position: absolute;
