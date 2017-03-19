@@ -14,6 +14,7 @@ $c-g: rgb(180, 180, 180);
 $c-d-g: rgba(50,50,50,0.95);
 $c-b: hsl(89, 62%, 6%);  //#101906
 $c-y: rgb(246, 255, 98);
+$c-o: rgba(255,128,0,0.5);
 $darker: linear-gradient( to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.5));
 
 @mixin ratio($width, $percent) {
@@ -76,6 +77,11 @@ a.button {
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
+}
+
+::selection {
+  color: $c-d-g;
+  background: $c-o;
 }
 
 * {
