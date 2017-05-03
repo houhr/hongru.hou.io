@@ -409,6 +409,10 @@ and (max-width: 959px) {
     margin: 0;
     padding: 0;
 
+    a {
+      color: $c-b;
+    }
+
     li {
 
       ul {
