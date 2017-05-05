@@ -13,7 +13,7 @@ $c-g: rgb(180, 180, 180);
 $c-d-g: rgba(50, 50, 50, 0.95);
 $c-b: hsl(89, 62%, 6%);  //#101906
 $c-o: rgb(255, 179, 0);
-$c-l-o: rgba(255, 179, 0, 0.8);
+$c-l-o: rgba(255, 179, 0, 0.6);
 $darker: linear-gradient( to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.5));
 
 @mixin ratio($width, $percent) {
@@ -51,7 +51,7 @@ $darker: linear-gradient( to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.5));
 }
 
 .highlight {
-  background-color: $c-o;
+  background-color: $c-l-o;
   padding: 2px 4px;
   margin: 1px;
   white-space: nowrap
@@ -129,9 +129,11 @@ h1, h2, h3, h4, h5, h6 {
 q {
   quotes: "“" "”" "‘" "’";
 }
+
 q:before {
     content: open-quote;
 }
+
 q:after {
     content: close-quote;
 }
@@ -387,7 +389,7 @@ and (max-width: 959px) {
     padding: 0;
 
     a {
-      color: $c-b;
+      @extend .links;
     }
 
     li {
@@ -444,15 +446,7 @@ and (max-width: 959px) {
 
   a {
 
-    transition: all .2s linear;
-
-    &:visited {
-      color: $c-d-g;
-    }
-
-    &:hover {
-      background-color: $c-o;
-    }
+    @extend .links;
 
   }
 
@@ -467,7 +461,7 @@ and (max-width: 959px) {
 
     .content__method {
       font-size: .8em;
-      background-color: $c-o;
+      background-color: $c-l-o;
       padding: 2px 4px;
       margin: 1px;
       white-space: nowrap
@@ -711,7 +705,7 @@ and (max-width: 959px) {
 
       a {
         text-decoration: none;
-        color: $c-b;
+        color: $c-o;
 
         &:hover {
 
@@ -1014,26 +1008,6 @@ and (min-width: 960px) {
 
       q, .content__quote--teller {
         width: 30em;
-      }
-
-    }
-
-  }
-
-  .footer {
-
-    .footer__nav {
-
-      .footer__nav--left, .footer__nav--right {
-
-        a {
-
-          h2 {
-
-          }
-
-        }
-
       }
 
     }
