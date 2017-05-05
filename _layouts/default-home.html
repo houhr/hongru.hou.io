@@ -37,22 +37,22 @@
       $('.intro h1').addClass('faded');
       $('.intro .intro__title').addClass('faded');
       $('.intro .intro__companies').addClass('faded');
-      $('.intro .intro__resume').addClass('faded');
+      // $('.intro .intro__resume').addClass('faded');
       $('#mouse').addClass('faded');
     });
 
-    $(window).on('mousewheel', $.debounce(800, function(event) {
-
-      var scrollBarPosition = $(window).scrollTop();
-      index = Math.floor((scrollBarPosition + viewportHeight / 2) / viewportHeight);
-
-      $('body').animate({
-        scrollTop: $('.' + work[index]).offset().top,
-        duration: 200,
-        easing: 'easeinout'
-      });
-
-    }));
+    // $(window).on('mousewheel', $.debounce(800, function(event) {
+    //
+    //   var scrollBarPosition = $(window).scrollTop();
+    //   index = Math.floor((scrollBarPosition + viewportHeight / 2) / viewportHeight);
+    //
+    //   $('body').animate({
+    //     scrollTop: $('.' + work[index]).offset().top,
+    //     duration: 200,
+    //     easing: 'easeinout'
+    //   });
+    //
+    // }));
 
     $(window).on('scroll', function(e) {
       if ($(window).scrollTop() > 1) {
