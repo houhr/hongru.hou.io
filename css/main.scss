@@ -273,7 +273,7 @@ and (max-width: 959px) {
     transition: opacity 2s .2s cubic-bezier(0.4, 0, 0.2, 1), transform 2s .2s cubic-bezier(0.4, 0, 0.2, 1);
 
     p {
-      max-width: 55%;
+      max-width: 19em;
       margin: 0 auto;
       text-align: center;
       line-height: 1.6em;
@@ -964,7 +964,7 @@ and (min-width: 960px) {
 
     .intro__title {
       p {
-        max-width: 40%;
+        max-width: 25em;
       }
     }
 
