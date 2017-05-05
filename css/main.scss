@@ -3,21 +3,21 @@
 ---
 @charset "utf-8";
 
-
 @import '_normalize';
 @import '_swiper';
 
 // Color
-$c-w: #fff;
-$c-light-gray: rgb(242,242,242);
+$c-w: rgb(255, 255, 255);
+$c-l-g: rgb(242, 242, 242);
 $c-g: rgb(180, 180, 180);
-$c-d-g: rgba(50,50,50,0.95);
+$c-d-g: rgba(50, 50, 50, 0.95);
 $c-b: hsl(89, 62%, 6%);  //#101906
-$c-y: rgb(246, 255, 98);
-$c-o: rgba(255,128,0,0.5);
+$c-o: rgb(255, 179, 0);
+$c-l-o: rgba(255, 179, 0, 0.8);
 $darker: linear-gradient( to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.5));
 
 @mixin ratio($width, $percent) {
+
   position: relative;
   width: $width;
 
@@ -30,6 +30,7 @@ $darker: linear-gradient( to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.5));
 }
 
 .customizedListStyle {
+
   list-style-type: none;
   position: relative;
 
@@ -50,27 +51,39 @@ $darker: linear-gradient( to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.5));
 }
 
 .highlight {
-  background-color: $c-y;
+  background-color: $c-o;
   padding: 2px 4px;
   margin: 1px;
   white-space: nowrap
 }
 
-a.button {
+.links {
+
+  text-decoration: none;
+  color: $c-o;
+  transition: all .2s linear;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
+.button {
+
   @extend .small-cap;
   display: inline-block;
-  line-height: 3em;
-  color:$c-b;
-  background-color: $c-y;
-  width: 10em;
+  font-size: .6em;
+  color:$c-w;
+  background-color: $c-o;
+  padding: 1em 2em;
   margin: 0 auto;
   text-decoration: none;
   transition: all .2s linear;
   border-radius: 4px;
 
   &:hover {
-    color: $c-y;
-    background: $c-g;
+    background-color: $c-l-o;
   }
 
 }
@@ -94,7 +107,7 @@ a.button {
 
 ::selection {
   color: $c-d-g;
-  background: $c-o;
+  background: $c-l-o;
 }
 
 * {
@@ -165,7 +178,7 @@ header {
           transition: all .2s linear;
 
           &:hover {
-            color: $c-y;
+            color: $c-o;
           }
 
           .icon__logo {
@@ -200,16 +213,13 @@ and (max-width: 959px) {
 }
 
 .intro {
+
   @include ratio(100%, 120%);
 
   a {
-    text-decoration: none;
-    color: $c-o;
-    transition: all .2s linear;
 
-    &:hover {
-      text-decoration: underline;
-    }
+    @extend .links;
+
   }
 
   .icon__logo {
@@ -241,11 +251,14 @@ and (max-width: 959px) {
     transform: translate3d(0, 10rem, 0);
     opacity: 0;
     transition: opacity 2s .2s cubic-bezier(0.4, 0, 0.2, 1), transform 2s .2s cubic-bezier(0.4, 0, 0.2, 1);
-  }
 
+    p {
+      max-width: 55%;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.6em;
+    }
 
-  .history {
-    margin: 0.2rem auto;
   }
 
   .intro__companies.faded {
@@ -262,23 +275,6 @@ and (max-width: 959px) {
     transition: opacity 2s .4s cubic-bezier(0.4, 0, 0.2, 1), transform 2s .4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .intro__resume.faded {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-
-  .intro__resume {
-    margin-top: 1.5em; // 2em for desktop
-    transform: translate3d(0, 10rem, 0);
-    opacity: 0;
-    transition: opacity 2s .4s cubic-bezier(0.4, 0, 0.2, 1), transform 2s .4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  del {
-    color: $c-g;
-    text-decoration:none;
-  }
-
 }
 
 .contact {
@@ -289,31 +285,7 @@ and (max-width: 959px) {
     margin-bottom: 1em;
   }
 
-  a {
-    text-decoration: none;
-    color: $c-b;
-    background-color: $c-w;
-    transition: all .2s linear;
 
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &.button {
-      color: $c-b;
-      background: $c-y;
-    }
-
-    &.button:hover {
-      color: $c-y;
-      background-color: $c-g;
-      text-decoration: none;
-    }
-  }
-
-  .contact__link {
-    margin-top: 3em;
-  }
 
 }
 
@@ -406,7 +378,7 @@ and (max-width: 959px) {
 }
 
 .project__overview {
-  background: $c-light-gray;
+  background: $c-l-g;
   padding: 2em 2em 3em;
 
   .overview__lists {
@@ -479,7 +451,7 @@ and (max-width: 959px) {
     }
 
     &:hover {
-      background-color: $c-y;
+      background-color: $c-o;
     }
 
   }
@@ -495,7 +467,7 @@ and (max-width: 959px) {
 
     .content__method {
       font-size: .8em;
-      background-color: $c-y;
+      background-color: $c-o;
       padding: 2px 4px;
       margin: 1px;
       white-space: nowrap
@@ -515,7 +487,7 @@ and (max-width: 959px) {
     @include ratio(100%, 60%);
     background-size: 100% !important;
     position: relative;
-    background-color: $c-light-gray !important;
+    background-color: $c-l-g !important;
 
     p {
       background: $c-d-g;
@@ -529,7 +501,7 @@ and (max-width: 959px) {
       text-align: center;
 
       .swiper-slide-number {
-        color: $c-y;
+        color: $c-o;
       }
 
       sub {
@@ -745,7 +717,7 @@ and (max-width: 959px) {
 
           h2 {
             background: $c-d-g;
-            color: $c-y;
+            color: $c-o;
           }
 
         }
@@ -763,7 +735,7 @@ and (max-width: 959px) {
     }
 
     .footer__nav--right h2 {
-      background: $c-light-gray;
+      background: $c-l-g;
     }
 
   }
@@ -802,10 +774,6 @@ and (min-width: 640px) {
 
     h1 {
       font-size: 2.5em;
-    }
-
-    .history {
-      margin: 1rem auto;
     }
 
     .intro__companies {
@@ -969,10 +937,6 @@ and (min-width: 960px) {
       font-weight: 400;
     }
 
-    .history {
-      margin: 1.2rem auto;
-    }
-
     .intro__companies {
       width: 21em;
       margin-top: 5em;
@@ -984,6 +948,12 @@ and (min-width: 960px) {
 
     .intro__resume, .contact__link {
       font-size: 1.2em;
+    }
+
+    .intro__title {
+      p {
+        max-width: 40%;
+      }
     }
 
   }
