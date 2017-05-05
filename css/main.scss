@@ -204,7 +204,12 @@ and (max-width: 959px) {
 
   a {
     text-decoration: none;
+    color: $c-o;
     transition: all .2s linear;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .icon__logo {
