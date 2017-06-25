@@ -15,6 +15,8 @@ $c-b: hsl(89, 62%, 6%);  //#101906
 $c-o: rgb(255, 179, 0);
 $c-l-o: rgba(255, 179, 0, 0.6);
 $darker: linear-gradient( to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.5));
+$c-airbnb: rgb(255, 126, 130);
+$c-l-airbnb: rgba(255, 126, 130, 0.6);
 
 @mixin ratio($width, $percent) {
 
@@ -61,10 +63,10 @@ $darker: linear-gradient( to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.5));
 
   text-decoration: none;
   position: relative;
-  color: $c-o;
+  color: $c-airbnb; //$c-o;
 
   &:hover {
-    color: $c-o;
+    color: $c-airbnb; //$c-o;
   }
 
   &::before {
@@ -74,7 +76,7 @@ $darker: linear-gradient( to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.5));
     height: 2px;
     bottom: 0.2em;
     left: 0;
-    background-color: $c-o;
+    background-color: $c-airbnb; //$c-o;
     visibility: hidden;
     transform: scaleX(0);
     transition: all .2s linear;
@@ -125,7 +127,7 @@ $darker: linear-gradient( to bottom, rgba(50,50,50,0.5), rgba(50,50,50,0.5));
 
 ::selection {
   color: $c-d-g;
-  background: $c-l-o;
+  background: $c-l-airbnb; //$c-l-o;
 }
 
 * {
@@ -275,7 +277,8 @@ and (max-width: 959px) {
     p {
       max-width: 19em;
       margin: 0 auto;
-      text-align: center;
+      margin-top: 1em;
+      text-align: left;
       line-height: 1.6em;
     }
 
