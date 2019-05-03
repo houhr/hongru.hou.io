@@ -28,3 +28,4 @@ Temporary Items
 .sass-cache
 node_modules
 _site
+.vscode
