@@ -129,6 +129,7 @@ hr {
         grid-template-rows: auto 24px auto;
 
         img {
+            border-radius: 4px;
             width: 100%;
             grid-column: 6 / span 7;
             grid-row: 1 / 2;
