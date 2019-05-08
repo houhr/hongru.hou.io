@@ -102,7 +102,7 @@ hr {
         content: attr(data-content);
         font-size: $font-size-regular;
         line-height: 150%;
-        color: $color-veilance;
+        color: $color-canyon;
         background-color: $color-muji;
         grid-column-start: 3;
         align-self: center;
@@ -111,7 +111,7 @@ hr {
 
 .works {
     display: grid;
-    grid-template-rows: 64px 96px auto 48px auto 48px auto 120px;
+    grid-template-rows: 64px 96px auto 48px auto 48px auto 96px;
 
     &::before {
         content: "";
@@ -197,47 +197,55 @@ hr {
 
 }
 
-.contacts {
-    background-color: $color-dyson;
+.compliment {
+    background-color: $color-canyon;
     display: grid;
-    grid-template-rows: 120px 60px 32px 120px;
-    grid-template-columns: $grid-column-mobile-no-gap;
+    grid-template-rows: 96px 32px 48px 38px 24px 35px 96px;
 
-    .stamp {
-        width: 158px;
-        height: 80px;
-        grid-column: 3 / span 10;
-        position: relative;
-        top: -40px;
-    }
+}
+
+.contacts {
+    background-color: $color-heytea;
+    display: grid;
+    grid-template-rows: 96px auto 96px 96px;
+    grid-template-columns: $grid-column-mobile-no-gap;
 
     ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
-        grid-row: 2 / 4;
+        grid-row: 2 / 3;
         grid-column: 3 / span 6;
             
         p {
             margin: 0 0 8px;
 
             a {
-                color: $color-muji;
+                color: $color-canyon;
             }
         }
     }
 
-    div {
-        grid-row: 3 / 4;
-        grid-column: 11 / span 2;
-        justify-self: right;
-        
-        .logo path {
-            fill: $color-muji;
-        }
-        
+    .stamp {
+        width: 158px;
+        height: 80px;
+        grid-row: 3;
+        grid-column: 3 / span 10;
+        justify-self: end;
+        align-self: end;
+        position: relative;
+        top: 40px;
     }
-    
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 96px;
+        grid-row: 4 / 5;
+        grid-column: 1 / span 14;
+        background-color: $color-muji;
+    }
+
 }
 
 
@@ -256,7 +264,7 @@ and (min-width: 640px) {
     .works {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 64px 120px auto 96px auto 48px auto 160px;
+        grid-template-rows: 64px 120px auto 96px auto 48px auto 120px;
 
         .work:nth-child(1) {
             grid-column: 1;
@@ -306,16 +314,14 @@ and (min-width: 640px) {
 
     }
 
+    .compliment {
+        grid-template-rows: 120px 32px 48px 38px 24px 35px 120px;
+
+    }
+
     .contacts {
         grid-template-columns: $grid-column-tablet-no-gap;
-        grid-template-rows: 160px 60px 32px 160px;
-        
-        .stamp {
-            width: 237px;
-            height: 120px;
-            grid-column: 3 / span 10;
-            top: -60px;
-        }
+        grid-template-rows: 96px auto 96px 96px;
 
         ul {
             grid-template-columns: $grid-column-tablet-no-gap;
@@ -323,6 +329,12 @@ and (min-width: 640px) {
             li {
                 grid-column: 6 / span 4;
             }
+        }
+
+        .stamp {
+            width: 237px;
+            height: 120px;
+            top: 60px;
         }
         
     }
@@ -361,20 +373,15 @@ and (min-width: 960px) {
         grid-template-columns: $grid-column-desktop-gap;
         
         &:after {
-            content: attr(data-content);
             font-size: $font-size-large;
-            line-height: 150%;
-            color: $color-veilance;
-            background-color: $color-muji;
             grid-column-start: 6;
-            align-self: center;
         }
     }
 
     .works {
         display: grid;
         grid-template-columns: $grid-column-desktop-gap;
-        grid-template-rows: 96px 120px auto 48px auto auto 160px;
+        grid-template-rows: 96px 120px auto 48px auto auto 120px;
         
         &::before {
             grid-column: 1 / span 25;
@@ -432,16 +439,14 @@ and (min-width: 960px) {
 
     }
 
+    .compliment {
+        grid-template-rows: 120px 32px 48px 54px 24px 48px 120px;
+
+    }
+
     .contacts {
         grid-template-columns: $grid-column-desktop-gap;
-        grid-template-rows: 160px 89px 32px 160px;
-        
-        .stamp {
-            width: 316px;
-            height: 160px;
-            grid-column: 6 / span 10;
-            top: -80px;
-        }
+        grid-template-rows: 120px auto 120px 120px;
 
         ul {
             grid-template-columns: $grid-column-desktop-gap;
@@ -455,8 +460,16 @@ and (min-width: 960px) {
             }
         }
 
-        div {
-            grid-column: 19 / span 2;
+        .stamp {
+            width: 316px;
+            height: 160px;
+            top: 80px;
+            grid-column: 6 / span 15;
+        }
+
+        &::after {
+            height: 120px;
+            grid-column: 1 / span 25;
         }
         
     }
