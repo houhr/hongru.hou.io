@@ -266,17 +266,31 @@ hr {
     .profile {
         grid-row: 6 / 7;
         color: $color-muji;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
         
-        .profileName {
-            text-align: center;
-            color: $color-muji;
-            font-size: $font-size-small;
-            margin: 0;
+        .profileAvatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            margin-right: 12px;
             margin-top: 24px;
         }
 
+        .profileNameAndTitle {
+            margin-top: 24px;
+        }
+
+        .profileName {
+            color: $color-muji;
+            font-size: $font-size-small;
+            margin: 0;
+        }
+
         .profileTitle {
-            text-align: center;
             color: $color-muji;
             font-size: $font-size-mini;
             margin: 0;
