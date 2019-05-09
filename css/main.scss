@@ -532,6 +532,10 @@ and (min-width: 960px) {
     .compliment {
         grid-template-rows: 120px 32px 48px 54px 24px 48px 120px;
 
+        .tab button {
+            margin: 0 24px;
+        }
+
         blockquote {
             font-size: $font-size-title-3;
         }
