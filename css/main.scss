@@ -202,14 +202,12 @@ hr {
     display: grid;
     grid-template-rows: 96px 32px 48px 38px 24px 35px 96px;
 
-    /* Style the tab */
     .tab {
-    overflow: hidden;
-    grid-row: 2 / 3;
-    justify-self: center;
+        overflow: hidden;
+        grid-row: 2 / 3;
+        justify-self: center;
     }
 
-    /* Style the buttons that are used to open the tab content */
     .tab button {
         width: 32px;
         height: 32px;
@@ -227,24 +225,21 @@ hr {
         }
     }
 
-    /* Change background color of buttons on hover */
     .tab button:hover {
         svg path {
             fill: $color-snowpeak;
         }
     }
 
-    /* Create an active/current tablink class */
     .tab button.active {
         svg path {
             fill: $color-muji;
         }
     }
 
-    /* Style the tab content */
     .tabcontent {
-    display: none;
-    grid-row: 4 / 7;
+        display: none;
+        grid-row: 4 / 7;
     }
 
     blockquote {
@@ -537,6 +532,28 @@ and (min-width: 960px) {
     .compliment {
         grid-template-rows: 120px 32px 48px 54px 24px 48px 120px;
 
+        blockquote {
+            font-size: $font-size-title-3;
+        }
+
+        .profile {
+            .profileAvatar {
+                width: 48px;
+                height: 48px;
+                border-radius: 24px;
+                margin-right: 16px;
+            }
+
+            .profileName {
+                font-size: $font-size-regular;
+            }
+
+            .profileTitle {
+                color: $color-muji;
+                font-size: $font-size-small;
+                margin: 0;
+            }
+        }
     }
 
     .contacts {
