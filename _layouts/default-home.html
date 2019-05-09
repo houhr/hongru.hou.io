@@ -14,54 +14,65 @@
   <script src="/js/swiper.jquery.min.js"></script>
   <script>
 
-    var viewportHeight = $(window).height();
-    var work = [
-      'intro',
-      // 'work--IOE',
-      'work--NM',
-      'work--AR',
-      // 'work--SSB',
-      // 'work--CY',
-      // 'work--IMC',
-      'work--GP',
-      'work--FSG',
-      // 'work--PHO',
-      'work--WRI',
-      'work--PUB',
-      'contact'
-    ]
-    var index = 0;
 
-    $(document).ready(function() {
+  function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
 
-      $('.intro h1').addClass('faded');
-      $('.intro .intro__title').addClass('faded');
-      $('.intro .intro__companies').addClass('faded');
-      $('#mouse').addClass('faded');
-    });
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
 
-    // $(window).on('mousewheel', $.debounce(800, function(event) {
-    //
-    //   var scrollBarPosition = $(window).scrollTop();
-    //   index = Math.floor((scrollBarPosition + viewportHeight / 2) / viewportHeight);
-    //
-    //   $('body').animate({
-    //     scrollTop: $('.' + work[index]).offset().top,
-    //     duration: 200,
-    //     easing: 'easeinout'
-    //   });
-    //
-    // }));
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
 
-    $(window).on('scroll', function(e) {
-      if ($(window).scrollTop() > 1) {
-        $('header').addClass('scrolled');
-        //$('#mouse.faded').css('opacity', '0');
-      } else {
-        $('header').removeClass('scrolled');
-        //$('#mouse.faded').css('opacity', '1');
-      }
-    })
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  document.getElementById("defaultOpen").click();
+
+    // var viewportHeight = $(window).height();
+    // var work = [
+    //   'intro',
+    //   // 'work--IOE',
+    //   'work--NM',
+    //   'work--AR',
+    //   // 'work--SSB',
+    //   // 'work--CY',
+    //   // 'work--IMC',
+    //   'work--GP',
+    //   'work--FSG',
+    //   // 'work--PHO',
+    //   'work--WRI',
+    //   'work--PUB',
+    //   'contact'
+    // ]
+    // var index = 0;
+
+    // $(document).ready(function() {
+
+    //   $('.intro h1').addClass('faded');
+    //   $('.intro .intro__title').addClass('faded');
+    //   $('.intro .intro__companies').addClass('faded');
+    //   $('#mouse').addClass('faded');
+    // });
+
+    // $(window).on('scroll', function(e) {
+    //   if ($(window).scrollTop() > 1) {
+    //     $('header').addClass('scrolled');
+    //     //$('#mouse.faded').css('opacity', '0');
+    //   } else {
+    //     $('header').removeClass('scrolled');
+    //     //$('#mouse.faded').css('opacity', '1');
+    //   }
+    // })
 
   </script>
 
