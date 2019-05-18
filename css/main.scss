@@ -129,7 +129,6 @@ hr {
         grid-template-rows: auto 24px auto;
 
         img {
-            border-radius: 4px;
             width: 100%;
             grid-column: 6 / span 7;
             grid-row: 1 / 2;
@@ -142,8 +141,9 @@ hr {
             span {
                 font-size: $font-size-small;
                 font-weight: bold;
-                color: $color-phenix;
+                color: $color-canyon;
                 text-transform: uppercase;
+                letter-spacing: 1px;
             }
 
             a {
