@@ -140,10 +140,13 @@ hr {
         grid-template-columns: $grid-column-mobile-no-gap;
         grid-template-rows: auto 24px auto;
 
-        img {
-            width: 100%;
+        .work-cover {
             grid-column: 6 / span 7;
             grid-row: 1 / 2;
+
+            img {
+                width: 100%;
+            }
         }
 
         .work-description {
@@ -178,7 +181,7 @@ hr {
 
             grid-row: 5 / 6;
             
-            img {
+            .work-cover {
                 grid-column: 1 / span 13;
             }
 
@@ -192,7 +195,7 @@ hr {
 
             grid-row: 7 / 8;
             
-            img {
+            .work-cover {
                 grid-column: 3 / span 10;
             }
 
@@ -371,7 +374,7 @@ and (min-width: 640px) {
             grid-template-columns: $grid-column-tablet-no-gap;
             grid-template-rows: auto;
 
-            img {
+            .work-cover {
                 grid-column: 3 / span 5;
             }
 
@@ -388,7 +391,7 @@ and (min-width: 640px) {
             grid-row: 4 / 6;
             grid-template-columns: $grid-column-tablet-no-gap;
 
-            img {
+            .work-cover {
                 grid-column: 7 / span 8;
             }
 
@@ -402,7 +405,7 @@ and (min-width: 640px) {
             grid-row: 7;
             grid-template-columns: $grid-column-tablet-no-gap;
 
-            img {
+            .work-cover {
                 grid-column: 4 / span 8;
             }
 
@@ -492,7 +495,7 @@ and (min-width: 960px) {
             grid-template-columns: repeat(3, 1fr 48px) 1fr;
             grid-template-rows: auto 16px auto;
 
-            img {
+            .work-cover {
                 grid-column: 1 / span 7;
             }
 
@@ -510,7 +513,7 @@ and (min-width: 960px) {
             grid-template-columns: repeat(6, 1fr 48px) 1fr;
             grid-template-rows: auto 16px auto;
 
-            img {
+            .work-cover {
                 grid-column: 1 / span 13;
             }
 
@@ -526,7 +529,7 @@ and (min-width: 960px) {
             grid-template-columns: repeat(5, 1fr 48px) 1fr;
             grid-template-rows: auto 16px auto;
 
-            img {
+            .work-cover {
                 grid-column: 1 / span 11;
             }
 
